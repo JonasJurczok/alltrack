@@ -12,10 +12,14 @@ Either you install (and find!) a specific solution to this problem or you use Al
 With this application you can configure multiple datasets and then add values to them.
 
 
-# TODO
+## TODO
 - create dataset
 - add value to dataset
 - group datasets together
 - visualize single dataset
 - visualize groups
 - create widget for easy adding of values
+- find a proper name for the project
+- integrate with google play
+- create a logo for the app
+- create proper purpose and documentation
