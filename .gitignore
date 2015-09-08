@@ -1,0 +1,9 @@
+#idea
+.idea/*
+*.iml
+
+#maven
+target/
+
+#androi
+gen/

@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.linesofcode</groupId>
+    <artifactId>alltrack</artifactId>
+    <version>0.0.1</version>
+
+    <packaging>apk</packaging>
+
+    <properties>
+        <!-- use UTF-8 for everything -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>4.1.1.4</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <version>4.0.0-rc.2</version>
+                <configuration>
+                    <sdk>
+                        <platform>23</platform>
+                    </sdk>
+                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                    <resourceDirectory>${project.basedir}/src/main/res</resourceDirectory>
+                </configuration>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

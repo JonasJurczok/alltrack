@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="device_available_color">@android:color/holo_green_light</color>
+    <color name="device_not_available_color">@android:color/holo_red_light</color>
+
+
+    <color name="booking_ongoing_color">@color/md_orange_200</color>
+    <color name="booking_ended_color">@android:color/holo_orange_dark</color>
+    <color name="booking_late_color">@android:color/holo_red_light</color>
+
+
+
+    <color name="window_background">@color/md_orange_50</color>
+    <color name="primaryColor">@color/md_orange_600</color>
+    <color name="primaryDarkColor">@color/md_deep_orange_600</color>
+    <color name="accentColor">@color/md_orange_300</color>
+    <color name="navigation_drawer_color">@color/md_orange_50</color>
+    <color name="toolbar_items_color">@color/md_deep_orange_50</color>
+
+    <color name="action_button_background">@color/md_deep_orange_800</color>
+    <color name="action_button_background_pressed">@color/md_deep_orange_900</color>
+    <color name="action_button_background_disabled">@android:color/darker_gray</color>
+    <color name="action_button_text_color">@color/md_deep_orange_100</color>
+
+    <!--orange-->
+    <color name="md_orange_50">#FFF3E0</color>
+    <color name="md_orange_100">#FFE0B2</color>
+    <color name="md_orange_200">#FFCC80</color>
+    <color name="md_orange_300">#FFB74D</color>
+    <color name="md_orange_400">#FFA726</color>
+    <color name="md_orange_500">#FF9800</color>
+    <color name="md_orange_600">#FB8C00</color>
+    <color name="md_orange_700">#F57C00</color>
+    <color name="md_orange_800">#EF6C00</color>
+    <color name="md_orange_900">#E65100</color>
+    <color name="md_orange_A100">#FFD180</color>
+    <color name="md_orange_A200">#FFAB40</color>
+    <color name="md_orange_A400">#FF9100</color>
+    <color name="md_orange_A700">#FF6D00</color>
+
+    <!--deep orange-->
+    <color name="md_deep_orange_50">#FBE9A7</color>
+    <color name="md_deep_orange_100">#FFCCBC</color>
+    <color name="md_deep_orange_200">#FFAB91</color>
+    <color name="md_deep_orange_300">#FF8A65</color>
+    <color name="md_deep_orange_400">#FF7043</color>
+    <color name="md_deep_orange_500">#FF5722</color>
+    <color name="md_deep_orange_600">#F4511E</color>
+    <color name="md_deep_orange_700">#E64A19</color>
+    <color name="md_deep_orange_800">#D84315</color>
+    <color name="md_deep_orange_900">#BF360C</color>
+    <color name="md_deep_orange_A100">#FF9E80</color>
+    <color name="md_deep_orange_A200">#FF6E40</color>
+    <color name="md_deep_orange_A400">#FF3D00</color>
+    <color name="md_deep_orange_A700">#DD2600</color>
+
+    <color name="calendar_event_color_future">#59dbe0</color>
+    <color name="calendar_event_color_late">#f57f68</color>
+    <color name="calendar_event_color_ongoing">#87d288</color>
+    <color name="calendar_event_color_04">#f8b552</color>
+    <color name="calendar_toolbar">#efefef</color>
+    <color name="calendar_toolbar_text">#8f000000</color>
+    <color name="calendar_accent">#2789e4</color>
+
+</resources>
