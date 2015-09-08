@@ -1,6 +1,8 @@
 # AllTrack
 
-[![Build Status](https://travis-ci.org/JonasJurczok/alltrack.svg?branch=master)](https://travis-ci.org/JonasJurczok/alltrack) [![Coverage Status](https://coveralls.io/repos/JonasJurczok/alltrack/badge.svg?branch=master&service=github)](https://coveralls.io/github/JonasJurczok/alltrack?branch=master)
+[![Build Status](https://travis-ci.org/JonasJurczok/alltrack.svg?branch=master)](https://travis-ci.org/JonasJurczok/alltrack)
+[![Coverage Status](https://coveralls.io/repos/JonasJurczok/alltrack/badge.svg?branch=master&service=github)](https://coveralls.io/github/JonasJurczok/alltrack?branch=master)
+[![GitHub version](https://badge.fury.io/gh/jonasjurczok%2Falltrack.svg)](http://badge.fury.io/gh/jonasjurczok%2Falltrack)
 
 AllTrack is an Android app that solves one problem that bugged me for a long time: general tracking of things.
 There are hundreds of apps out there that do specific tracking for you: weight, running time, money spending etc.
