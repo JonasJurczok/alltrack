@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="android:windowBackground">@color/window_background</item>
+
+        <item name="android:dialogTheme">@style/AppTheme.DialogTheme</item>
+    </style>
+
+    <style name="DeviceRowNameStyle">
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+    <style name="AppTheme.DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+    </style>-->
+
+    <style name="FabStyle" >
+        <item name="elevation">6dp</item>
+        <item name="borderWidth">0dp</item>
+        <item name="pressedTranslationZ">12dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="backgroundTint">@color/primaryColor</item>
+    </style>
+
+<!--    <style name="DateTextViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">#646464</item>
+    </style>
+
+    <style name="DateHeaderTextViewStyle" parent="DateTextViewStyle">
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <style name="SelectActionButton" parent="ActionButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>-->
+
+    <style name="ActionButton">
+<!--        <item name="android:background">@drawable/action_button</item>-->
+        <item name="android:textColor">@color/action_button_text_color</item>
+        <item name="android:layout_margin">3dp</item>
+    </style>
+
+<!--    <style name="ImageViewButton">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:padding">3dp</item>
+    </style>-->
+</resources>

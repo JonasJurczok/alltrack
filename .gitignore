@@ -5,5 +5,10 @@
 #maven
 target/
 
-#androi
+#android
 gen/
+gen-external-apklibs/
+
+# gradle
+.gradle/
+build/

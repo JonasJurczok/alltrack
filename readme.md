@@ -23,3 +23,5 @@ With this application you can configure multiple datasets and then add values to
 - integrate with google play
 - create a logo for the app
 - create proper purpose and documentation
+- delete dataset
+- configure dataset?????

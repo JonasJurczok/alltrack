@@ -1,0 +1,20 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "org.linesofcode.alltrack"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "0.1"
+    }
+}
+
+dependencies {
+    compile "com.android.support:design:23.0.1"
+
+    testCompile 'junit:junit:4.12'
+}
