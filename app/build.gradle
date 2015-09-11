@@ -29,7 +29,5 @@ dependencies {
 }
 
 coveralls {
-    if(project.hasProperty('travisCi')) { // avoid android studio source root conflicts
-        sourceSets.main.java.srcDirs += coverageSourceDirs
-    }
+    coberturaReportPath = 'build/reports/debug/coverage.xml'
 }
