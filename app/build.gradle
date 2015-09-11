@@ -29,5 +29,5 @@ dependencies {
 }
 
 coveralls {
-    coberturaReportPath = 'build/reports/coverage/debug/report.xml'
+    jacocoReportPath = 'build/reports/coverage/debug/report.xml'
 }
