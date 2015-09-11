@@ -29,5 +29,5 @@ dependencies {
 }
 
 coveralls {
-    coberturaReportPath = 'build/reports/debug/coverage.xml'
+    coberturaReportPath = 'build/reports/coverage/debug/report.xml'
 }
