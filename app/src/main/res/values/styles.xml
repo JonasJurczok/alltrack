@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<!--    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/accentColor</item>
@@ -10,12 +10,12 @@
         <item name="android:dialogTheme">@style/AppTheme.DialogTheme</item>
     </style>
 
-    <style name="DeviceRowNameStyle">
+<!--    <style name="DeviceRowNameStyle">
         <item name="android:padding">10dp</item>
         <item name="android:textSize">20sp</item>
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:gravity">center_vertical</item>
-    </style>
+    </style>-->
 
 
     <style name="AppTheme.DialogTheme" parent="Theme.AppCompat.Light.Dialog">

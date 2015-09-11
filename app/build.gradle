@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'jacoco'
+apply plugin: 'com.github.kt3k.coveralls'
 
 android {
     compileSdkVersion 23
@@ -11,10 +13,23 @@ android {
         versionCode 1
         versionName "0.1"
     }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+    }
 }
 
 dependencies {
+    compile 'com.android.support:appcompat-v7:23.0.1'
     compile "com.android.support:design:23.0.1"
 
     testCompile 'junit:junit:4.12'
+}
+
+coveralls {
+    if(project.hasProperty('travisCi')) { // avoid android studio source root conflicts
+        sourceSets.main.java.srcDirs += coverageSourceDirs
+    }
 }

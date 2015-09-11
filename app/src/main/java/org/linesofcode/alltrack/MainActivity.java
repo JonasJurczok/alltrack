@@ -12,8 +12,4 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main_layout);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
 }
