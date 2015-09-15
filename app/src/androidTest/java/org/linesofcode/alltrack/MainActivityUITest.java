@@ -12,7 +12,9 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 
 public class MainActivityUITest {
+
     @Rule
+    @SuppressWarnings("unchecked")
     public ActivityTestRule<MainActivity> rule = new ActivityTestRule(MainActivity.class);
 
     @Before
@@ -21,7 +23,12 @@ public class MainActivityUITest {
     }
 
     @Test
-    public void testActivityShouldBeStarted() {
+    public void mainActivityShouldBeStarted() {
         onView(withId(R.id.mainLayout)).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void floatingActionButtonShouldBeRendered() {
+        onView(withId(R.id.fab)).check(matches(isDisplayed()));
     }
 }
