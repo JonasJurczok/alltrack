@@ -11,4 +11,8 @@ gen-external-apklibs/
 
 # gradle
 .gradle/
+gradle/
+gradlew
+gradlew.bat
+local.properties
 build/
