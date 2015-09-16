@@ -16,8 +16,8 @@ With this application you can configure multiple datasets and then add values to
 
 ### 0.0.1 - It's something \o/
 - Basic UI implemented
--- [X] collapsing Toolbar
--- [ ] navigation view
+ - [X] collapsing Toolbar
+ - [ ] navigation view
 
 ### TODO
 - create dataset
@@ -33,5 +33,5 @@ With this application you can configure multiple datasets and then add values to
 - delete dataset
 - configure dataset?????
 - integrate with other tracking apps
--- google fit
--- runtastic
+ - google fit
+ - runtastic
