@@ -12,7 +12,14 @@ Either you install (and find!) a specific solution to this problem or you use Al
 With this application you can configure multiple datasets and then add values to them.
 
 
-## TODO
+## Versions
+
+### 0.0.1 - It's something \o/
+- Basic UI implemented
+-- [X] collapsing Toolbar
+-- [ ] navigation view
+
+### TODO
 - create dataset
 - add value to dataset
 - group datasets together
@@ -25,3 +32,6 @@ With this application you can configure multiple datasets and then add values to
 - create proper purpose and documentation
 - delete dataset
 - configure dataset?????
+- integrate with other tracking apps
+-- google fit
+-- runtastic
