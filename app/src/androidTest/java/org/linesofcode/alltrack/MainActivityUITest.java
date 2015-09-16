@@ -31,4 +31,14 @@ public class MainActivityUITest {
     public void floatingActionButtonShouldBeRendered() {
         onView(withId(R.id.fab)).check(matches(isDisplayed()));
     }
+
+    @Test
+    public void recyclerViewShouldBeRendered() {
+        onView(withId(R.id.recyclerView)).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void toolBarShouldBeRendered() {
+        onView(withId(R.id.toolbar)).check(matches(isDisplayed()));
+    }
 }

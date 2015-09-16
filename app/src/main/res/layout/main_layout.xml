@@ -5,42 +5,29 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:id="@+id/mainLayout">
-	<ScrollView
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:scrollbars="vertical">
-		<TextView
-			android:layout_width="match_parent"
-			android:layout_height="2000dp"
-			android:textSize="220sp"
-			android:scrollbars="vertical"
-			android:text="asd\nasd\nasd\nasd"/>
-
-
-	</ScrollView>
 
 	<android.support.v7.widget.RecyclerView
+		android:id="@+id/recyclerView"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
+		android:scrollbars="vertical"
 		app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 	<android.support.design.widget.AppBarLayout
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content">
-		<android.support.v7.widget.Toolbar
-			android:layout_height="80dp"
+		android:layout_height="140dp">
+		<android.support.design.widget.CollapsingToolbarLayout
 			android:layout_width="match_parent"
-			android:minHeight="20dp"
-			app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
-
-			<TextView
+			android:layout_height="match_parent"
+			app:layout_scrollFlags="scroll|exitUntilCollapsed">
+			<android.support.v7.widget.Toolbar
+				android:id="@+id/toolbar"
+				android:layout_height="?attr/actionBarSize"
 				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:textSize="60sp"
-				android:text="@string/app_name"/>
-		</android.support.v7.widget.Toolbar>
-
-
+				app:layout_collapseMode="pin"
+				android:theme="@style/ThemeOverlay.AppCompat.Dark">
+			</android.support.v7.widget.Toolbar>
+		</android.support.design.widget.CollapsingToolbarLayout>
 	</android.support.design.widget.AppBarLayout>
 
 	<android.support.design.widget.FloatingActionButton
