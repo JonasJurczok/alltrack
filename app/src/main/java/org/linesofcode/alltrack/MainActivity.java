@@ -22,16 +22,24 @@ public class MainActivity extends AppCompatActivity {
         initializeToolbar();
 
         inizializeContent();
-
     }
 
     private void inizializeContent() {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
 
-        // TODO: add adapter to datasource
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
+        // TODO: add adapter to datasource
+        String[] data = new String[100];
+
+        for (int i = 0; i < 100; i++) {
+            data[i] = "Teststring " + i;
+        }
+
+        GraphAdapter graphAdapter = new GraphAdapter(data);
+        recyclerView.setAdapter(graphAdapter);
     }
 
     private void initializeToolbar() {
@@ -43,5 +51,4 @@ public class MainActivity extends AppCompatActivity {
         mainLayout.setDrawerListener(drawerToggle);
         drawerToggle.syncState();
     }
-
 }
