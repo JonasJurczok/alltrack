@@ -3,4 +3,5 @@
     <string name="app_name">Alltrack</string>
     <string name="menu_item_devices_title">Devices</string>
     <string name="menu_item_bookings_title">Bookings</string>
+    <string name="navigation_series">Data series</string>
 </resources>
