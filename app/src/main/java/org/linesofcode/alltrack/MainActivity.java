@@ -2,6 +2,8 @@ package org.linesofcode.alltrack;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private ActionBarDrawerToggle drawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         initializeToolbar();
 
         inizializeContent();
+
     }
 
     private void inizializeContent() {
@@ -33,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
     private void initializeToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        DrawerLayout mainLayout = (DrawerLayout) findViewById(R.id.mainLayout);
+        drawerToggle = new ActionBarDrawerToggle(this, mainLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
+        mainLayout.setDrawerListener(drawerToggle);
+        drawerToggle.syncState();
     }
 
 }
