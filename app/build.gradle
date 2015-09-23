@@ -28,10 +28,10 @@ dependencies {
     compile "com.android.support:recyclerview-v7:23.0.1"
 
     testCompile 'junit:junit:4.12'
-    androidTestCompile('com.android.support.test:runner:0.3') {
+    androidTestCompile('com.android.support.test:runner:0.4') {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestCompile('com.android.support.test:rules:0.3') {
+    androidTestCompile('com.android.support.test:rules:0.4') {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2') {
