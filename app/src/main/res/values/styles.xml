@@ -39,8 +39,10 @@
 	</style>
 
     <style name="GraphViewName">
-		<item name="android:textSize">50sp</item>
+		<item name="android:textSize">40sp</item>
 		<item name="android:layout_margin">5dp</item>
 		<item name="android:layout_height">50dp</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@color/md_black</item>
     </style>
 </resources>
