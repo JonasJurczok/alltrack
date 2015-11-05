@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fitsSystemWindows="true"
+		android:id="@+id/graphView">
+
+	<ImageView android:id="@+id/icon"
+			   style="@style/GraphviewIcon"
+			   android:src="@drawable/ic_chart_line_black_48dp"
+			   android:contentDescription="@string/graph_view_icon_description"/>
+
+	<TextView android:id="@+id/title"
+			  android:layout_width="wrap_content"
+			  style="@style/GraphViewName"
+			  android:text="Längerer Titel"
+			  android:layout_toEndOf="@+id/icon"
+			  android:layout_toRightOf="@+id/icon"/>
+
+	<TextView android:layout_width="match_parent"
+			  android:layout_height="140dp"
+			  android:text="Graph"
+			  android:layout_below="@+id/icon"/>
+
+</RelativeLayout>
