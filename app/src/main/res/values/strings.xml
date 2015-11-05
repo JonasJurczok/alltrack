@@ -7,4 +7,6 @@
     <string name="navigation_series">Data series</string>
     <string name="navigation_open">open</string>
     <string name="navigation_close">close</string>
+
+    <string name="graph_view_icon_description">The icon of the graph.</string>
 </resources>
