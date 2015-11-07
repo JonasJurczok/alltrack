@@ -5,13 +5,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import com.echo.holographlibrary.Line;
-import com.echo.holographlibrary.LineGraph;
-import com.echo.holographlibrary.LinePoint;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.data.LineData;
 import org.linesofcode.alltrack.R;
 
+import javax.inject.Inject;
+
 public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> {
+
+    private LineDataProvider lineProvider;
 
     private String[] dataset;
 
@@ -24,18 +26,21 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
             this.view = view;
         }
 
-        public void setText(final Line line) {
+        public void setText(final LineData line) {
             Log.d("ViewHolder", "ViewHolder setting line to [" + line.toString() + "].");
-            LineGraph graphView = (LineGraph) view.findViewById(R.id.graph);
-            graphView.removeAllLines();
-            graphView.addLine(line);
-            graphView.setRangeY(0, 10);
-            graphView.setLineToFill(0);
+            LineChart graphView = (LineChart) view.findViewById(R.id.graph);
+            graphView.setData(line);
+            graphView.setDescription("");
+            graphView.setDrawGridBackground(false);
+            graphView.setDrawBorders(false);
+            graphView.invalidate();
         }
     }
 
-    public GraphAdapter(String[] dataset) {
+    @Inject
+    public GraphAdapter(String[] dataset, LineDataProvider lineProvider) {
         this.dataset = dataset;
+        this.lineProvider = lineProvider;
     }
 
     @Override
@@ -50,16 +55,7 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Log.d("GraphAdapter", "onBindViewHolder for position [" + position + "].");
-        holder.setText(generateRandomLine());
-    }
-
-    private Line generateRandomLine() {
-        Line line = new Line();
-        line.addPoint(new LinePoint(0, 0));
-        line.addPoint(new LinePoint(1, 1));
-        line.addPoint(new LinePoint(2, 2));
-
-        return line;
+        holder.setText(lineProvider.get());
     }
 
     @Override
