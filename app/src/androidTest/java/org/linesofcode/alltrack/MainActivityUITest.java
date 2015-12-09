@@ -1,11 +1,7 @@
 package org.linesofcode.alltrack;
 
-import android.support.test.espresso.ViewAssertion;
 import android.support.test.espresso.action.GeneralSwipeAction;
-import android.support.test.espresso.action.ViewActions;
-import android.support.test.espresso.assertion.ViewAssertions;
 import android.support.test.rule.ActivityTestRule;
-import android.test.ViewAsserts;
 
 import org.junit.Before;
 import org.junit.Rule;
