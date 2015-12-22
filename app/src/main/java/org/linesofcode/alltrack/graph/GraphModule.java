@@ -1,34 +1,37 @@
 package org.linesofcode.alltrack.graph;
 
+import android.content.Context;
+
 import dagger.Module;
 import dagger.Provides;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 
-@Module(injects = {GraphAdapter.class})
+@Module(injects = {}, library = true)
 public class GraphModule {
+    /*private final Context context;
 
-    @Provides
+    @Inject
+    public GraphModule(Context context) {
+        this.context = context;
+    }*/
+
+/*    @Provides
     @Singleton
-    public LineDataProvider providesLineProvider() {
-        return new LineDataProvider();
+    public GraphAdapter providesGraphAdapter(GraphService graphService) {
+        return new GraphAdapter(graphService);
     }
 
     @Provides
     @Singleton
-    public GraphAdapter providesGraphAdapter(String[] datasource, LineDataProvider lineProvider) {
-        return new GraphAdapter(datasource, lineProvider);
-    }
+    public GraphService graphService(Context context) {
+        return new GraphService(context);
+    }*/
 
-    @Provides
+    /*@Provides
     @Singleton
-    public String[] providesDataSource() {
-        String[] data = new String[100];
-
-        for (int i = 0; i < 100; i++) {
-            data[i] = "Teststring " + i;
-        }
-        return data;
-    }
-
+    public Context context() {
+        return context;
+    }*/
 }

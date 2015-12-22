@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        // TODO: add adapter to datasource
         recyclerView.setAdapter(graphAdapter);
     }
 
