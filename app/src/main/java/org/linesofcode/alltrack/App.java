@@ -3,8 +3,6 @@ package org.linesofcode.alltrack;
 import android.app.Application;
 
 import dagger.ObjectGraph;
-import io.realm.Realm;
-import io.realm.RealmConfiguration;
 
 public class App extends Application {
 
@@ -14,10 +12,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
-        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this).build();
-        Realm.setDefaultConfiguration(realmConfiguration);
-
-        objectGraph = ObjectGraph.create(new ApplicationModule());
+        objectGraph = ObjectGraph.create(new ApplicationModule(this));
     }
 
     public ObjectGraph getObjectGraph() {

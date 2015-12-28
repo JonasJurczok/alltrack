@@ -1,16 +1,32 @@
 package org.linesofcode.alltrack.graph;
 
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
 import java.util.Date;
 
-import io.realm.RealmObject;
-import io.realm.annotations.Required;
+@DatabaseTable(tableName = "datapoint")
+public class DataPoint{
 
-public class DataPoint extends RealmObject {
+    @DatabaseField(generatedId = true)
+    private int id;
 
-    @Required
+    @DatabaseField
     private Date datetime;
 
+    @DatabaseField
     private int value;
+
+    @DatabaseField(foreign = true, foreignAutoCreate = true, foreignAutoRefresh = true)
+    private Graph graph;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public Date getDatetime() {
         return datetime;
@@ -26,5 +42,13 @@ public class DataPoint extends RealmObject {
 
     public void setValue(int value) {
         this.value = value;
+    }
+
+    public Graph getGraph() {
+        return graph;
+    }
+
+    public void setGraph(Graph graph) {
+        this.graph = graph;
     }
 }

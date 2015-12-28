@@ -1,18 +1,28 @@
 package org.linesofcode.alltrack.graph;
 
-import io.realm.RealmList;
-import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
+import com.j256.ormlite.dao.EagerForeignCollection;
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.field.ForeignCollectionField;
+import com.j256.ormlite.table.DatabaseTable;
 
-public class Graph extends RealmObject {
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
-    @PrimaryKey
+@DatabaseTable(tableName = "graph")
+public class Graph {
+
+    @DatabaseField(generatedId = true)
+    private int id;
+
+    @DatabaseField(canBeNull = false, uniqueIndex = true)
     private String name;
 
     // TODO: add icon support
 
     // TODO: defensive copies
-    private RealmList<DataPoint> datapoints = new RealmList<>();
+    @ForeignCollectionField(orderColumnName = "datetime")
+    private Collection<DataPoint> datapoints;
 
     public String getName() {
         return name;
@@ -22,11 +32,11 @@ public class Graph extends RealmObject {
         this.name = name;
     }
 
-    public RealmList<DataPoint> getDatapoints() {
+    public Collection<DataPoint> getDatapoints() {
         return datapoints;
     }
 
-    public void setDatapoints(RealmList<DataPoint> datapoints) {
+    public void setDatapoints(Collection<DataPoint> datapoints) {
         this.datapoints = datapoints;
     }
 }
