@@ -39,7 +39,7 @@ public class ApplicationModule {
     public GraphService graphService() {
         try {
             OrmLiteSqliteOpenHelper openHelper = OpenHelperManager.getHelper(context, DatabaseHelper.class);
-            Dao<Graph, String> graphDao = openHelper.getDao(Graph.class);
+            Dao<Graph, Integer> graphDao = openHelper.getDao(Graph.class);
             Dao<DataPoint, Integer> dataPointDao = openHelper.getDao(DataPoint.class);
             return new GraphService(graphDao, dataPointDao);
         } catch (SQLException e) {

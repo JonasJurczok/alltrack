@@ -15,10 +15,10 @@ public class GraphService {
 
     private static final String TAG = GraphService.class.getName();
 
-    private final Dao<Graph, String> graphDao;
+    private final Dao<Graph, Integer> graphDao;
     private final Dao<DataPoint, Integer> dataPointDao;
 
-    public GraphService(Dao<Graph, String> graphStringDao, Dao<DataPoint, Integer> dataPointDao) {
+    public GraphService(Dao<Graph, Integer> graphStringDao, Dao<DataPoint, Integer> dataPointDao) {
 
         this.graphDao = graphStringDao;
         this.dataPointDao = dataPointDao;
@@ -49,9 +49,7 @@ public class GraphService {
             pointDelete.where().in("id", pointIds);
             dataPointDao.delete(pointDelete.prepare());
 
-            DeleteBuilder<Graph, String> graphDelete = graphDao.deleteBuilder();
-            graphDelete.where().eq("name", graph.getName());
-            graphDao.delete(graphDelete.prepare());
+            graphDao.delete(graph);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
