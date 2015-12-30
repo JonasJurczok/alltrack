@@ -5,6 +5,7 @@ import android.content.Context;
 import com.j256.ormlite.android.apptools.OpenHelperManager;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
+import com.j256.ormlite.dao.RuntimeExceptionDao;
 
 import org.linesofcode.alltrack.framework.persistence.DatabaseHelper;
 import org.linesofcode.alltrack.graph.DataPoint;
@@ -37,13 +38,10 @@ public class ApplicationModule {
     @Provides
     @Singleton
     public GraphService graphService() {
-        try {
-            OrmLiteSqliteOpenHelper openHelper = OpenHelperManager.getHelper(context, DatabaseHelper.class);
-            Dao<Graph, Integer> graphDao = openHelper.getDao(Graph.class);
-            Dao<DataPoint, Integer> dataPointDao = openHelper.getDao(DataPoint.class);
-            return new GraphService(graphDao, dataPointDao);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        OrmLiteSqliteOpenHelper openHelper = OpenHelperManager.getHelper(context, DatabaseHelper.class);
+        RuntimeExceptionDao<Graph, Integer> graphDao = openHelper.getRuntimeExceptionDao(Graph.class);
+        //Dao<Graph, Integer> graphDao = openHelper.getDao(Graph.class);
+        RuntimeExceptionDao<DataPoint, Integer> dataPointDao = openHelper.getRuntimeExceptionDao(DataPoint.class);
+        return new GraphService(graphDao, dataPointDao);
     }
 }
