@@ -28,6 +28,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.linesofcode.alltrack.GraphGenerationUtil.generateSimpleTestGraph;
 
 public class BasicGraphViewUITest {
 
@@ -58,7 +59,7 @@ public class BasicGraphViewUITest {
     @Test
     public void showSimpleGraph() {
 
-        Graph graph = generateLinearTestGraph();
+        Graph graph = generateSimpleTestGraph(graphService, "SimpleLineGraph");
         updateGraphView();
 
         onView(withId(R.id.recyclerView)).perform(new ViewAction() {
@@ -86,7 +87,6 @@ public class BasicGraphViewUITest {
                 List<Entry> yVals = lineDataSet.getYVals();
 
                 assertThat("Wrong number of yVals returned.", yVals.size(), is(5));
-
             }
         });
 
@@ -96,35 +96,5 @@ public class BasicGraphViewUITest {
     public void updateGraphView() {
         App app = (App) rule.getActivity().getApplication();
         app.getObjectGraph().get(GraphAdapter.class).updateGraphs();
-    }
-
-    public Graph generateLinearTestGraph() {
-
-        // There seems to be a trick on how to use realm correctly. The github repo has a threading example.
-        // it seems usefull to add a listener to the realm...
-
-        // Options:
-        // - put a layer between realm and the app
-        // - create a special "database thread"
-        // - transform the test graph creation to a ui based execution, using existing methods to create graphs via the ui.
-
-        Graph graph = graphService.createNewGraph("Test Linegraph");
-
-        //graphService.save(graph);
-
-        Calendar startDate = Calendar.getInstance();
-
-        for (int i = 0; i < 5; i++) {
-            DataPoint dataPoint = new DataPoint();
-            dataPoint.setValue(i);
-            dataPoint.setGraph(graph);
-
-            startDate.set(Calendar.DAY_OF_MONTH, i+1);
-            dataPoint.setDatetime(startDate.getTime());
-
-            graph.getDatapoints().add(dataPoint);
-        }
-
-        return graph;
     }
 }
