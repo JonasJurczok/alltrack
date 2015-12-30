@@ -3,7 +3,6 @@ package org.linesofcode.alltrack;
 import android.support.test.espresso.UiController;
 import android.support.test.espresso.ViewAction;
 import android.support.test.rule.ActivityTestRule;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.github.mikephil.charting.charts.LineChart;
@@ -14,18 +13,16 @@ import org.hamcrest.Matcher;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.linesofcode.alltrack.graph.DataPoint;
 import org.linesofcode.alltrack.graph.Graph;
 import org.linesofcode.alltrack.graph.GraphAdapter;
 import org.linesofcode.alltrack.graph.GraphService;
 
-import java.util.Calendar;
 import java.util.List;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.matcher.ViewMatchers.assertThat;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.linesofcode.alltrack.GraphGenerationUtil.generateSimpleTestGraph;
@@ -59,38 +56,38 @@ public class BasicGraphViewUITest {
     @Test
     public void showSimpleGraph() {
 
-        Graph graph = generateSimpleTestGraph(graphService, "SimpleLineGraph");
+        String graphName = "SimpleLineGraph";
+        Graph graph = generateSimpleTestGraph(graphService, graphName);
         updateGraphView();
 
-        onView(withId(R.id.recyclerView)).perform(new ViewAction() {
-            @Override
-            public Matcher<View> getConstraints() {
-                return isDisplayed();
-            }
+        try {
+            onView(withText(graphName)).perform(new ViewAction() {
+                @Override
+                public Matcher<View> getConstraints() {
+                    return isDisplayed();
+                }
 
-            @Override
-            public String getDescription() {
-                return "Check for display of graph view.";
-            }
+                @Override
+                public String getDescription() {
+                    return "Check for display of graph view.";
+                }
 
-            @Override
-            public void perform(UiController uiController, View view) {
-                assertThat("No view found", view, is(notNullValue()));
+                @Override
+                public void perform(UiController uiController, View view) {
+                    assertThat("No view found", view, is(notNullValue()));
 
-                RecyclerView recyclerView = (RecyclerView) view;
+                    View parent = (View) view.getParent();
+                    LineChart graph = (LineChart) parent.findViewById(R.id.graph);
+                    LineDataSet lineDataSet = graph.getLineData().getDataSets().get(0);
 
-                View graphView = recyclerView.getChildAt(0);
+                    List<Entry> yVals = lineDataSet.getYVals();
 
-                LineChart graph = (LineChart) graphView.findViewById(R.id.graph);
-                LineDataSet lineDataSet = graph.getLineData().getDataSets().get(0);
-
-                List<Entry> yVals = lineDataSet.getYVals();
-
-                assertThat("Wrong number of yVals returned.", yVals.size(), is(5));
-            }
-        });
-
-        graphService.delete(graph);
+                    assertThat("Wrong number of yVals returned.", yVals.size(), is(5));
+                }
+            });
+        } finally {
+            graphService.delete(graph);
+        }
     }
 
     public void updateGraphView() {

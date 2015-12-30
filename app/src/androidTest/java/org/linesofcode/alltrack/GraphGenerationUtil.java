@@ -16,7 +16,7 @@ public class GraphGenerationUtil {
      * @return a persisted dummy graph
      */
     public static Graph generateSimpleTestGraph(final GraphService graphService, final String name) {
-        Graph graph = graphService.createNewGraph("Test Linegraph");
+        Graph graph = graphService.createNewGraph(name);
 
         Calendar startDate = Calendar.getInstance();
 
