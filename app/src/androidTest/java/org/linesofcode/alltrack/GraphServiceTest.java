@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.j256.ormlite.android.apptools.OpenHelperManager;
 import com.j256.ormlite.dao.Dao;
+import com.j256.ormlite.dao.RuntimeExceptionDao;
 import com.j256.ormlite.table.TableUtils;
 
 import org.hamcrest.collection.IsEmptyCollection;
@@ -30,9 +31,9 @@ public class GraphServiceTest extends AndroidTestCase {
 
     private DatabaseHelper openHelper;
     private GraphService graphService;
-    private Dao<Graph, Integer> graphDao;
+    private RuntimeExceptionDao<Graph, Integer> graphDao;
     private RenamingDelegatingContext context;
-    private Dao<DataPoint, Integer> dataPointDao;
+    private RuntimeExceptionDao<DataPoint, Integer> dataPointDao;
 
     @Override
     protected void setUp() throws Exception {
@@ -41,8 +42,8 @@ public class GraphServiceTest extends AndroidTestCase {
         context = new RenamingDelegatingContext(getContext(), PREFIX);
 
         openHelper = new DatabaseHelper(context);
-        graphDao = openHelper.getDao(Graph.class);
-        dataPointDao = openHelper.getDao(DataPoint.class);
+        graphDao = openHelper.getRuntimeExceptionDao(Graph.class);
+        dataPointDao = openHelper.getRuntimeExceptionDao(DataPoint.class);
         graphService = new GraphService(graphDao, dataPointDao);
     }
 
