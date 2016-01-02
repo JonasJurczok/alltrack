@@ -2,14 +2,9 @@ package org.linesofcode.alltrack;
 
 import android.test.AndroidTestCase;
 import android.test.RenamingDelegatingContext;
-import android.util.Log;
 
-import com.j256.ormlite.android.apptools.OpenHelperManager;
-import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
-import com.j256.ormlite.table.TableUtils;
 
-import org.hamcrest.collection.IsEmptyCollection;
 import org.linesofcode.alltrack.framework.persistence.DatabaseHelper;
 import org.linesofcode.alltrack.graph.DataPoint;
 import org.linesofcode.alltrack.graph.Graph;
@@ -18,6 +13,7 @@ import org.linesofcode.alltrack.graph.GraphService;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -27,6 +23,8 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.collection.IsEmptyCollection.empty;
 import static org.junit.Assert.assertThat;
+import static org.linesofcode.alltrack.GraphGenerationUtil.GraphOrdering.RANDOM;
+import static org.linesofcode.alltrack.GraphGenerationUtil.generateGraph;
 import static org.linesofcode.alltrack.GraphGenerationUtil.generateSimpleTestGraph;
 
 public class GraphServiceTest extends AndroidTestCase {
@@ -136,6 +134,46 @@ public class GraphServiceTest extends AndroidTestCase {
     }
 
     public void testGetAllShouldHaveDatapointsOrdererdByTime() {
-        assertThat("not implemented", true, is(false));
+        Graph graph = generateGraph(graphService, "testGetAllShouldHaveDatapointsOrdererdByTime", 5, RANDOM);
+
+        while (!isRandomlyOrdered(graph)) {
+            graph = generateGraph(graphService, "testGetAllShouldHaveDatapointsOrdererdByTime", 5, RANDOM);
+        }
+
+        List<Graph> allGraphs = graphService.getAll();
+
+        for (Graph dbGraph : allGraphs) {
+            verifyOrdering(dbGraph);
+        }
+    }
+
+    private void verifyOrdering(Graph graph) {
+        Date current = null;
+        for (DataPoint dataPoint : graph.getDatapoints()) {
+            if (current == null) {
+                current = dataPoint.getDatetime();
+            } else {
+                Date nextDate = dataPoint.getDatetime();
+                assertThat("current: [" + current + "] next: [" + nextDate + "].",
+                        current.compareTo(nextDate) <= 0, is(true));
+                current = nextDate;
+            }
+        }
+    }
+
+    private boolean isRandomlyOrdered(Graph graph) {
+
+        Date current = null;
+        for (DataPoint dataPoint : graph.getDatapoints()) {
+            if (current == null) {
+                current = dataPoint.getDatetime();
+            } else {
+                if (current.after(dataPoint.getDatetime())) {
+                    return true;
+                }
+                current = dataPoint.getDatetime();
+            }
+        }
+        return false;
     }
 }
