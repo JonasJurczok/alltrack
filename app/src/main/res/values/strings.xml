@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Alltrack</string>
-    <string name="menu_item_devices_title">Devices</string>
-    <string name="menu_item_bookings_title">Bookings</string>
 
     <string name="navigation_series">Data series</string>
     <string name="navigation_open">open</string>

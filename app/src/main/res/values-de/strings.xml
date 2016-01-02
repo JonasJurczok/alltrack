@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Alltrack</string>
+
+    <string name="navigation_open">öffnen</string>
+    <string name="navigation_close">schließen</string>
+
+    <string name="graph_view_icon_description">Das Icon des Graphs.</string>
+    <string name="navigation_series">Datenlinien</string>
+</resources>
