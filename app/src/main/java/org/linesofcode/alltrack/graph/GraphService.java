@@ -59,7 +59,7 @@ public class GraphService {
         }
     }
 
-    public void save(Graph  graph) {
+    public void save(Graph graph) {
         graphDao.createOrUpdate(graph);
     }
 

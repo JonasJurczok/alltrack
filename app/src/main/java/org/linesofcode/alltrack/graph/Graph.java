@@ -47,4 +47,23 @@ public class Graph {
     public void setDatapoints(Collection<DataPoint> datapoints) {
         this.datapoints = datapoints;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Graph graph = (Graph) o;
+
+        if (getId() != graph.getId()) return false;
+        return getName().equals(graph.getName());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getId();
+        result = 31 * result + getName().hashCode();
+        return result;
+    }
 }

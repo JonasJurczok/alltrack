@@ -51,4 +51,27 @@ public class DataPoint{
     public void setGraph(Graph graph) {
         this.graph = graph;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        DataPoint dataPoint = (DataPoint) o;
+
+        if (getId() != dataPoint.getId()) return false;
+        if (getValue() != dataPoint.getValue()) return false;
+        if (!getDatetime().equals(dataPoint.getDatetime())) return false;
+        return getGraph().equals(dataPoint.getGraph());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getId();
+        result = 31 * result + getDatetime().hashCode();
+        result = 31 * result + getValue();
+        result = 31 * result + getGraph().hashCode();
+        return result;
+    }
 }

@@ -16,10 +16,13 @@ import org.linesofcode.alltrack.graph.Graph;
 import org.linesofcode.alltrack.graph.GraphService;
 
 import java.sql.SQLException;
+import java.util.Calendar;
+import java.util.Collection;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.collection.IsEmptyCollection.empty;
@@ -95,5 +98,44 @@ public class GraphServiceTest extends AndroidTestCase {
         List<DataPoint> dataPoints = dataPointDao.queryForEq("graph_id", graph.getId());
 
         assertThat(dataPoints, is(empty()));
+    }
+
+    public void testSaveShouldCreateNewDatapoints() {
+        Graph graph = generateSimpleTestGraph(graphService, "testSaveShouldCreateNewDatapoints");
+
+        final DataPoint newPoint = new DataPoint();
+        newPoint.setGraph(graph);
+        newPoint.setValue(-1234567);
+        newPoint.setDatetime(Calendar.getInstance().getTime());
+        graph.getDatapoints().add(newPoint);
+
+        graphService.save(graph);
+
+        List<DataPoint> dbPoints = dataPointDao.queryForEq("value", newPoint.getValue());
+        assertThat(dbPoints.size(), is(1));
+        DataPoint dbPoint = dbPoints.get(0);
+        assertThat(dbPoint.getGraph(), is(graph));
+    }
+
+    public void testSaveShouldDeleteDataPoints() {
+        Graph graph = generateSimpleTestGraph(graphService, "testSaveShouldDeleteDataPoints");
+
+        Collection<DataPoint> graphPoints = graph.getDatapoints();
+        int initialSize = graphPoints.size();
+        DataPoint dataPoint = (DataPoint) graphPoints.toArray()[0];
+        graphPoints.remove(dataPoint);
+
+        graphService.save(graph);
+
+        List<DataPoint> dataPoints = dataPointDao.queryForEq("graph_id", graph.getId());
+        assertThat(dataPoints.size(), is(initialSize - 1));
+        assertThat(dataPoints.size(), is(graph.getDatapoints().size()));
+
+        assertThat(dataPoints.containsAll(graph.getDatapoints()), is(true));
+        assertThat(graph.getDatapoints().containsAll(dataPoints), is(true));
+    }
+
+    public void testGetAllShouldHaveDatapointsOrdererdByTime() {
+        assertThat("not implemented", true, is(false));
     }
 }
