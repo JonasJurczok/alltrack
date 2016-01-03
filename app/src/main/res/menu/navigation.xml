@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item android:title="@string/navigation_series"
-            android:checked="true"
-            android:icon="@drawable/ic_chart_line_black_48dp"/>
+            android:icon="@drawable/ic_chart_line_black_48dp"
+            android:id="@+id/nav_data_series"/>
     </group>
 </menu>

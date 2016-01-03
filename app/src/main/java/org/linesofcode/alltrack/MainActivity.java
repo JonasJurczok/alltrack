@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.View;
+
 import org.linesofcode.alltrack.graph.GraphAdapter;
 
 import javax.inject.Inject;
@@ -26,7 +29,7 @@ import javax.inject.Inject;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends NavigatableBaseActivity {
     private ActionBarDrawerToggle drawerToggle;
 
     @Inject
@@ -41,6 +44,12 @@ public class MainActivity extends AppCompatActivity {
         initializeToolbar();
 
         inizializeContent();
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        setActiveMenuItem(R.id.nav_data_series);
     }
 
     private void inizializeContent() {

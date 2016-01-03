@@ -39,9 +39,6 @@ import static org.hamcrest.CoreMatchers.not;
  */
 public class MainActivityUITest {
 
-    public static final GeneralSwipeAction SWIPE_OPEN = new GeneralSwipeAction(FAST, CENTER_LEFT, CENTER_RIGHT, FINGER);
-    public static final GeneralSwipeAction SWIPE_UP = new GeneralSwipeAction(FAST, BOTTOM_CENTER, TOP_CENTER, FINGER);
-
     @Rule
     @SuppressWarnings("unchecked")
     public ActivityTestRule<MainActivity> rule = new ActivityTestRule(MainActivity.class);
@@ -69,19 +66,6 @@ public class MainActivityUITest {
     @Test
     public void toolBarShouldBeRendered() {
         onView(withId(R.id.toolbar)).check(matches(isDisplayed()));
-    }
-
-    @Test
-    public void navigationViewShouldBeRendered() {
-        onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
-        onView(withId(R.id.navigation)).check(matches(isDisplayed()));
-    }
-
-    @Test
-    public void navigationViewShouldBeClosable() {
-        onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
-        onView(withId(R.id.mainLayout)).perform(swipeLeft());
-        onView(withId(R.id.navigation)).check(matches(not(isDisplayed())));
     }
 
     @Test
