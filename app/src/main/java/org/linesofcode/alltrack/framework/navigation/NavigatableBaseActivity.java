@@ -1,4 +1,4 @@
-package org.linesofcode.alltrack;
+package org.linesofcode.alltrack.framework.navigation;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import org.linesofcode.alltrack.GraphActivity;
+import org.linesofcode.alltrack.R;
 
 /**
  * Copyright 2015 Jonas Jurczok (jonasjurczok@gmail.com)
@@ -57,7 +60,7 @@ import android.view.MenuItem;
     }
 
     private void navigateToDataSeries() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, GraphActivity.class);
         startActivity(intent);
     }
 }

@@ -1,6 +1,5 @@
 package org.linesofcode.alltrack;
 
-import android.support.test.espresso.action.GeneralSwipeAction;
 import android.support.test.rule.ActivityTestRule;
 
 import org.junit.Before;
@@ -8,14 +7,7 @@ import org.junit.Rule;
 import org.junit.Test;
 
 import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.GeneralLocation.BOTTOM_CENTER;
-import static android.support.test.espresso.action.GeneralLocation.CENTER_LEFT;
-import static android.support.test.espresso.action.GeneralLocation.CENTER_RIGHT;
-import static android.support.test.espresso.action.GeneralLocation.TOP_CENTER;
-import static android.support.test.espresso.action.Press.FINGER;
-import static android.support.test.espresso.action.Swipe.FAST;
 import static android.support.test.espresso.action.ViewActions.swipeDown;
-import static android.support.test.espresso.action.ViewActions.swipeLeft;
 import static android.support.test.espresso.action.ViewActions.swipeUp;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -37,11 +29,11 @@ import static org.hamcrest.CoreMatchers.not;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class MainActivityUITest {
+public class GraphActivityUITest {
 
     @Rule
     @SuppressWarnings("unchecked")
-    public ActivityTestRule<MainActivity> rule = new ActivityTestRule(MainActivity.class);
+    public ActivityTestRule<GraphActivity> rule = new ActivityTestRule(GraphActivity.class);
 
     @Before
     public void setUp() {

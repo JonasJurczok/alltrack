@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.j256.ormlite.android.apptools.OpenHelperManager;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
-import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
 
 import org.linesofcode.alltrack.framework.persistence.DatabaseHelper;
@@ -12,8 +11,6 @@ import org.linesofcode.alltrack.graph.DataPoint;
 import org.linesofcode.alltrack.graph.Graph;
 import org.linesofcode.alltrack.graph.GraphAdapter;
 import org.linesofcode.alltrack.graph.GraphService;
-
-import java.sql.SQLException;
 
 import javax.inject.Singleton;
 
@@ -35,7 +32,7 @@ import dagger.Provides;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@Module(injects = {MainActivity.class, GraphAdapter.class, GraphService.class, DatabaseHelper.class})
+@Module(injects = {GraphActivity.class, GraphAdapter.class, GraphService.class, DatabaseHelper.class})
 public class ApplicationModule {
 
     private final Context context;

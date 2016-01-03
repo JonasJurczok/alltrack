@@ -50,7 +50,7 @@ public class BasicGraphViewUITest {
 
     @Rule
     @SuppressWarnings("unchecked")
-    public ActivityTestRule<MainActivity> rule = new ActivityTestRule(MainActivity.class);
+    public ActivityTestRule<GraphActivity> rule = new ActivityTestRule(GraphActivity.class);
 
     @Before
     public void setUp() {

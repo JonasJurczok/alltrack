@@ -3,13 +3,11 @@ package org.linesofcode.alltrack;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.View;
 
+import org.linesofcode.alltrack.framework.navigation.NavigatableBaseActivity;
 import org.linesofcode.alltrack.graph.GraphAdapter;
 
 import javax.inject.Inject;
@@ -29,7 +27,7 @@ import javax.inject.Inject;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class MainActivity extends NavigatableBaseActivity {
+public class GraphActivity extends NavigatableBaseActivity {
     private ActionBarDrawerToggle drawerToggle;
 
     @Inject
