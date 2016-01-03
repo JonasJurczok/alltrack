@@ -10,6 +10,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineDataSet;
 
 import org.hamcrest.Matcher;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -45,6 +46,7 @@ import static org.linesofcode.alltrack.GraphGenerationUtil.generateSimpleTestGra
 public class BasicGraphViewUITest {
 
     private GraphService graphService;
+    private Graph graphForTest = null;
 
     @Rule
     @SuppressWarnings("unchecked")
@@ -56,53 +58,51 @@ public class BasicGraphViewUITest {
         graphService = app.getObjectGraph().get(GraphService.class);
     }
 
-    // TODO: improve clenaup (currently each test has to care).
+    @After
+    public void tearDown() {
+        if (graphForTest != null) {
+            graphService.delete(graphForTest);
+        }
+    }
 
     /**
      * TESTMAP:
      *
-     * inject graphs into the system to verify ui
      * line graph should be displayed
      * bar graph should be displayed
-     *
-     *
      */
 
     @Test
     public void showSimpleGraph() {
 
         String graphName = "SimpleLineGraph";
-        Graph graph = generateSimpleTestGraph(graphService, graphName);
+        graphForTest = generateSimpleTestGraph(graphService, graphName);
         updateGraphView();
 
-        try {
-            onView(withText(graphName)).perform(new ViewAction() {
-                @Override
-                public Matcher<View> getConstraints() {
-                    return isDisplayed();
-                }
+        onView(withText(graphName)).perform(new ViewAction() {
+            @Override
+            public Matcher<View> getConstraints() {
+                return isDisplayed();
+            }
 
-                @Override
-                public String getDescription() {
-                    return "Check for display of graph view.";
-                }
+            @Override
+            public String getDescription() {
+                return "Check for display of graph view.";
+            }
 
-                @Override
-                public void perform(UiController uiController, View view) {
-                    assertThat("No view found", view, is(notNullValue()));
+            @Override
+            public void perform(UiController uiController, View view) {
+                assertThat("No view found", view, is(notNullValue()));
 
-                    View parent = (View) view.getParent();
-                    LineChart graph = (LineChart) parent.findViewById(R.id.graph);
-                    LineDataSet lineDataSet = graph.getLineData().getDataSets().get(0);
+                View parent = (View) view.getParent();
+                LineChart graph = (LineChart) parent.findViewById(R.id.graph);
+                LineDataSet lineDataSet = graph.getLineData().getDataSets().get(0);
 
-                    List<Entry> yVals = lineDataSet.getYVals();
+                List<Entry> yVals = lineDataSet.getYVals();
 
-                    assertThat("Wrong number of yVals returned.", yVals.size(), is(5));
-                }
-            });
-        } finally {
-            graphService.delete(graph);
-        }
+                assertThat("Wrong number of yVals returned.", yVals.size(), is(5));
+            }
+        });
     }
 
     public void updateGraphView() {
