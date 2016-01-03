@@ -22,8 +22,11 @@ import static android.support.test.espresso.action.ViewActions.swipeLeft;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.assertThat;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withClassName;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static org.hamcrest.CoreMatchers.allOf;
+import static org.hamcrest.CoreMatchers.endsWith;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 
@@ -71,7 +74,33 @@ public class NavigationUITest {
     public void openNavFromMainShouldHaveMainChecked() {
         onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
 
-        onView(withText(R.string.navigation_series)).perform(new ViewAction() {
+        onView(withText(R.string.navigation_graphs)).perform(new ViewAction() {
+            @Override
+            public Matcher<View> getConstraints() {
+                return isDisplayed();
+            }
+
+            @Override
+            public String getDescription() {
+                return "Check if menu item is checked.";
+            }
+
+            @Override
+            public void perform(UiController uiController, View view) {
+                NavigationMenuItemView menuItem = (NavigationMenuItemView) view;
+                assertThat(menuItem.getItemData().isChecked(), is(true));
+            }
+        });
+    }
+
+    @Test
+    public void openNavFromSettingsShouldHaveSettingsChecked() {
+        onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
+
+        onView(withText(R.string.navigation_settings)).perform(click());
+
+        onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
+        onView(allOf(withText(R.string.navigation_settings), withClassName(endsWith("MenuItemView")))).perform(new ViewAction() {
             @Override
             public Matcher<View> getConstraints() {
                 return isDisplayed();
@@ -93,9 +122,29 @@ public class NavigationUITest {
     @Test
     public void clickOnDataSeriesShouldCloseNavigation() {
         onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
-        onView(withText(R.string.navigation_series)).perform(click());
+        onView(withText(R.string.navigation_graphs)).perform(click());
 
         onView(withId(R.id.navigation)).check(matches(not(isDisplayed())));
         onView(withId(R.id.mainLayout)).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void clickOnSettingsShouldSwitchActivity() {
+        onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
+        onView(withText(R.string.navigation_settings)).perform(click());
+
+        onView(withId(R.id.navigation)).check(matches(not(isDisplayed())));
+        onView(withText(R.string.settings_temp_label)).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void navigatingBackToGraphActivityShouldHaveNavigationClosed() {
+        onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
+        onView(withText(R.string.navigation_settings)).perform(click());
+
+        onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
+        onView(withText(R.string.navigation_graphs)).perform(click());
+
+        onView(withId(R.id.navigation)).check(matches(not(isDisplayed())));
     }
 }

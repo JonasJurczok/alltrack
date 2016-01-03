@@ -32,7 +32,11 @@ import dagger.Provides;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@Module(injects = {GraphActivity.class, GraphAdapter.class, GraphService.class, DatabaseHelper.class})
+@Module(injects = {GraphActivity.class,
+        GraphAdapter.class,
+        GraphService.class,
+        DatabaseHelper.class,
+        SettingsActivity.class})
 public class ApplicationModule {
 
     private final Context context;
@@ -52,7 +56,6 @@ public class ApplicationModule {
     public GraphService graphService() {
         OrmLiteSqliteOpenHelper openHelper = OpenHelperManager.getHelper(context, DatabaseHelper.class);
         RuntimeExceptionDao<Graph, Integer> graphDao = openHelper.getRuntimeExceptionDao(Graph.class);
-        //Dao<Graph, Integer> graphDao = openHelper.getDao(Graph.class);
         RuntimeExceptionDao<DataPoint, Integer> dataPointDao = openHelper.getRuntimeExceptionDao(DataPoint.class);
         return new GraphService(graphDao, dataPointDao);
     }

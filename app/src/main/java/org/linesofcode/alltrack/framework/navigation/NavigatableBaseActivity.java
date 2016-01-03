@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import org.linesofcode.alltrack.SettingsActivity;
 import org.linesofcode.alltrack.GraphActivity;
 import org.linesofcode.alltrack.R;
 
@@ -24,7 +25,7 @@ import org.linesofcode.alltrack.R;
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */public class NavigatableBaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+ */public abstract class NavigatableBaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private NavigationView navigationView;
 
@@ -45,18 +46,34 @@ import org.linesofcode.alltrack.R;
         navigationView.setCheckedItem(itemId);
     }
 
+    /**
+     * This method should find the main drawer layout used to house the navigation drawer.
+     * As this might be different in every activity the activity itself has to provide it.
+     *
+     * @return the DrawerLayout used to draw the navigation.
+     */
+    protected abstract DrawerLayout getMainDrawerLayout();
+
     @Override
     public boolean onNavigationItemSelected(MenuItem menuItem) {
+        DrawerLayout mainLayout = getMainDrawerLayout();
+        mainLayout.closeDrawers();
+
         switch(menuItem.getItemId()) {
             case R.id.nav_data_series:
                 navigateToDataSeries();
                 break;
+            case R.id.nav_settings:
+                navigateToConfigDataSeries();
             default:
                 return false;
         }
-        DrawerLayout mainLayout = (DrawerLayout) findViewById(R.id.mainLayout);
-        mainLayout.closeDrawers();
         return true;
+    }
+
+    private void navigateToConfigDataSeries() {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 
     private void navigateToDataSeries() {

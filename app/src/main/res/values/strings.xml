@@ -2,9 +2,13 @@
 <resources>
     <string name="app_name">Alltrack</string>
 
-    <string name="navigation_series">Data series</string>
     <string name="navigation_open">open</string>
     <string name="navigation_close">close</string>
+    <string name="navigation_graphs">Data series</string>
+    <string name="navigation_settings">Settings</string>
 
     <string name="graph_view_icon_description">The icon of the graph.</string>
+
+    <string name="settings_activity_label">Settings</string>
+    <string name="settings_temp_label">At some point there will be settings here.</string>
 </resources>

@@ -4,7 +4,10 @@
 
     <string name="navigation_open">öffnen</string>
     <string name="navigation_close">schließen</string>
+    <string name="navigation_graphs">Datenlinien</string>
+    <string name="navigation_settings">Einstellungen</string>
 
     <string name="graph_view_icon_description">Das Icon des Graphs.</string>
-    <string name="navigation_series">Datenlinien</string>
+
+    <string name="settings_activity_label">Einstellungen</string>
 </resources>

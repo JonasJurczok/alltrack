@@ -3,14 +3,9 @@ package org.linesofcode.alltrack;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import org.linesofcode.alltrack.framework.navigation.NavigatableBaseActivity;
-import org.linesofcode.alltrack.graph.GraphAdapter;
-
-import javax.inject.Inject;
 
 /**
  * Copyright 2015 Jonas Jurczok (jonasjurczok@gmail.com)
@@ -27,15 +22,12 @@ import javax.inject.Inject;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class GraphActivity extends NavigatableBaseActivity {
-
-    @Inject
-    GraphAdapter graphAdapter;
+public class SettingsActivity extends NavigatableBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.graph_activity_layout);
+        setContentView(R.layout.settings_activity_layout);
         ((App) getApplication()).getObjectGraph().inject(this);
 
         initializeToolbar();
@@ -46,17 +38,10 @@ public class GraphActivity extends NavigatableBaseActivity {
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        setActiveMenuItem(R.id.nav_data_series);
+        setActiveMenuItem(R.id.nav_settings);
     }
 
     private void inizializeContent() {
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        recyclerView.setHasFixedSize(true);
-
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
-        recyclerView.setAdapter(graphAdapter);
     }
 
     private void initializeToolbar() {
@@ -73,4 +58,5 @@ public class GraphActivity extends NavigatableBaseActivity {
     protected DrawerLayout getMainDrawerLayout() {
         return (DrawerLayout) findViewById(R.id.mainLayout);
     }
+
 }
