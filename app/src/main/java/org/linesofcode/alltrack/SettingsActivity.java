@@ -35,12 +35,6 @@ public class SettingsActivity extends NavigatableBaseActivity {
         inizializeContent();
     }
 
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        setActiveMenuItem(R.id.nav_settings);
-    }
-
     private void inizializeContent() {
     }
 
@@ -52,6 +46,12 @@ public class SettingsActivity extends NavigatableBaseActivity {
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, mainLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
         mainLayout.setDrawerListener(drawerToggle);
         drawerToggle.syncState();
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        setActiveMenuItem(R.id.nav_settings);
     }
 
     @Override

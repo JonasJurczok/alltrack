@@ -1,14 +1,21 @@
 package org.linesofcode.alltrack;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.InputType;
+import android.view.View;
+import android.widget.EditText;
 
 import org.linesofcode.alltrack.framework.navigation.NavigatableBaseActivity;
 import org.linesofcode.alltrack.graph.GraphAdapter;
+import org.linesofcode.alltrack.graph.GraphService;
 
 import javax.inject.Inject;
 
@@ -32,6 +39,9 @@ public class GraphActivity extends NavigatableBaseActivity {
     @Inject
     GraphAdapter graphAdapter;
 
+    @Inject
+    GraphService graphService;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,12 +53,6 @@ public class GraphActivity extends NavigatableBaseActivity {
         inizializeContent();
     }
 
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        setActiveMenuItem(R.id.nav_data_series);
-    }
-
     private void inizializeContent() {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -57,6 +61,43 @@ public class GraphActivity extends NavigatableBaseActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         recyclerView.setAdapter(graphAdapter);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createGraph();
+            }
+        });
+    }
+
+    // TODO: tests
+    // TODO: transform into fragments (show graphs, create new graph, ...)
+    protected void createGraph() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.graph_view_create_graph_title);
+
+        final EditText input = new EditText(this);
+        input.setInputType(InputType.TYPE_CLASS_TEXT);
+        input.setHint(R.string.graph_view_create_graph_hint);
+        builder.setView(input);
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String graphName = input.getText().toString();
+                graphService.createNewGraph(graphName);
+                graphAdapter.updateGraphs();
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
     }
 
     private void initializeToolbar() {
@@ -67,6 +108,12 @@ public class GraphActivity extends NavigatableBaseActivity {
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, mainLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
         mainLayout.setDrawerListener(drawerToggle);
         drawerToggle.syncState();
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        setActiveMenuItem(R.id.nav_data_series);
     }
 
     @Override

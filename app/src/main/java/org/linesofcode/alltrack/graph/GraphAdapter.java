@@ -74,7 +74,7 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
 
     public void updateGraphs() {
         allGraphs = graphService.getAll();
-        notifyItemRangeInserted(0, allGraphs.size());
+        notifyDataSetChanged();
     }
 
     @Override
