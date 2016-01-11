@@ -72,7 +72,7 @@ public class GraphActivity extends NavigatableBaseActivity {
     }
 
     // TODO: tests
-    // TODO: transform into fragments (show graphs, create new graph, ...)
+    // TODO: transform into customViews (show graphs, create new graph, ...)
     protected void createGraph() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.graph_view_create_graph_title);

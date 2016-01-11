@@ -10,4 +10,7 @@
     <string name="graph_view_icon_description">Das Icon des Graphs.</string>
 
     <string name="settings_activity_label">Einstellungen</string>
+    <string name="graph_view_create_graph_hint">Der Name des neuen Graphen</string>
+    <string name="graph_view_create_graph_title">Neuen Graph erstellen</string>
+    <string name="settings_temp_label">Irgendwann gibt es hier Einstellungen.</string>
 </resources>
