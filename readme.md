@@ -17,21 +17,4 @@ With this application you can configure multiple datasets and then add values to
 ### 0.0.1 - It's something \o/
 - Basic UI implemented
  - [X] collapsing Toolbar
- - [ ] navigation view
-
-### TODO
-- create dataset
-- add value to dataset
-- group datasets together
-- visualize single dataset
-- visualize groups
-- create widget for easy adding of values
-- find a proper name for the project
-- integrate with google play
-- create a logo for the app
-- create proper purpose and documentation
-- delete dataset
-- configure dataset?????
-- integrate with other tracking apps
- - google fit
- - runtastic
+ - [X] navigation view
