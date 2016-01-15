@@ -28,7 +28,7 @@
         <item name="android:layout_alignParentRight">true</item>
         <item name="android:layout_alignParentBottom">true</item>
         <item name="android:scaleType">center</item>
-        <item name="android:src">@drawable/ic_plus_white_48dp</item>
+        <item name="android:src">@drawable/plus</item>
         <item name="backgroundTint">@color/primaryColor</item>
     </style>
 

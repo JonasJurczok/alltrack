@@ -10,7 +10,7 @@
 
 	<ImageView android:id="@+id/icon"
 			   style="@style/GraphviewIcon"
-			   android:src="@drawable/ic_chart_line_black_48dp"
+			   android:src="@drawable/chart"
 			   android:contentDescription="@string/graph_view_icon_description"/>
 
 	<TextView android:id="@+id/title"
