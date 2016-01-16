@@ -41,23 +41,6 @@ public class GraphGenerationUtil {
      * @return a persisted dummy graph
      */
     public static Graph generateSimpleTestGraph(final GraphService graphService, final String name) {
-/*        Graph graph = graphService.createNewGraph(name);
-
-        Calendar startDate = Calendar.getInstance();
-
-        for (int i = 0; i < 5; i++) {
-            DataPoint dataPoint = new DataPoint();
-            dataPoint.setValue(i);
-            dataPoint.setGraph(graph);
-
-            startDate.set(Calendar.DAY_OF_MONTH, i+1);
-            dataPoint.setDatetime(startDate.getTime());
-
-            graph.getDatapoints().add(dataPoint);
-        }
-
-        return graph;*/
-
         return generateGraph(graphService, name, 5, ASC);
     }
 

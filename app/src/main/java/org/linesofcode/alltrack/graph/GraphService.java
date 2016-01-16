@@ -50,8 +50,7 @@ public class GraphService {
     public List<Graph> getAll() {
 
         List<Graph> results = graphDao.query(allOrderByName);
-        Log.d("GraphService", "Found [" + results.size() + "] graphs to return to the caller.");
-
+        Log.d(TAG, "Found [" + results.size() + "] graphs to return to the caller.");
         return results;
     }
 

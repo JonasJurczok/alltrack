@@ -1,5 +1,6 @@
 package org.linesofcode.alltrack.graph;
 
+import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import static com.github.mikephil.charting.components.XAxis.XAxisPosition.BOTTOM;
+import static org.linesofcode.alltrack.graph.GraphToLineTransformer.toLineData;
 
 /**
  * Copyright 2015 Jonas Jurczok (jonasjurczok@gmail.com)
@@ -39,6 +41,28 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
     private final GraphService graphService;
     private List<Graph> allGraphs = new ArrayList<>();
 
+    private final class LoadGraphsTask extends AsyncTask<Void, List<Graph>, List<Graph>> {
+        private final GraphService graphService;
+        private final GraphAdapter adapter;
+
+        private LoadGraphsTask(GraphService graphService, GraphAdapter adapter) {
+            this.graphService = graphService;
+            this.adapter = adapter;
+        }
+
+        @Override
+        protected List<Graph> doInBackground(Void... params) {
+            return graphService.getAll();
+        }
+
+        @Override
+        protected void onPostExecute(List<Graph> graphs) {
+            allGraphs.clear();
+            allGraphs.addAll(graphs);
+            adapter.notifyDataSetChanged();
+        }
+    }
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private View view;
@@ -55,7 +79,7 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
             title.setText(graph.getName());
 
             LineChart graphView = (LineChart) view.findViewById(R.id.graph);
-            graphView.setData(GraphToLineTransformer.toLineData(graph));
+            graphView.setData(toLineData(graph));
             graphView.setDescription("");
             graphView.setDrawGridBackground(false);
             graphView.setDrawBorders(false);
@@ -73,8 +97,7 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
     }
 
     public void updateGraphs() {
-        allGraphs = graphService.getAll();
-        notifyDataSetChanged();
+        new LoadGraphsTask(graphService, this).execute();
     }
 
     @Override

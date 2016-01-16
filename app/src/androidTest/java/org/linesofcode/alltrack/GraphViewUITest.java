@@ -50,7 +50,7 @@ import static org.linesofcode.alltrack.GraphGenerationUtil.generateSimpleTestGra
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class BasicGraphViewUITest {
+public class GraphViewUITest {
 
     private GraphService graphService;
     private RuntimeExceptionDao<Graph, Integer> graphDao;
