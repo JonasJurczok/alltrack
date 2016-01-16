@@ -55,7 +55,6 @@ public class GraphService {
         return results;
     }
 
-    // TODO: add tests that points are also gone.
     public void delete(Graph graph) {
 
         try {

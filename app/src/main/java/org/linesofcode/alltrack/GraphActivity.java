@@ -78,6 +78,8 @@ public class GraphActivity extends NavigatableBaseActivity {
         builder.setTitle(R.string.graph_view_create_graph_title);
 
         final EditText input = new EditText(this);
+        // TODO: remove!!
+        input.setId(12345);
         input.setInputType(InputType.TYPE_CLASS_TEXT);
         input.setHint(R.string.graph_view_create_graph_hint);
         builder.setView(input);

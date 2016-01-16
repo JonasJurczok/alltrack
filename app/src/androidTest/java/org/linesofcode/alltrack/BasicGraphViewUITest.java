@@ -8,12 +8,14 @@ import android.view.View;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.j256.ormlite.dao.RuntimeExceptionDao;
 
 import org.hamcrest.Matcher;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.linesofcode.alltrack.framework.persistence.DatabaseHelper;
 import org.linesofcode.alltrack.graph.Graph;
 import org.linesofcode.alltrack.graph.GraphAdapter;
 import org.linesofcode.alltrack.graph.GraphService;
@@ -21,11 +23,16 @@ import org.linesofcode.alltrack.graph.GraphService;
 import java.util.List;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.matcher.ViewMatchers.assertThat;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.linesofcode.alltrack.GraphGenerationUtil.generateSimpleTestGraph;
 
 /**
@@ -46,6 +53,7 @@ import static org.linesofcode.alltrack.GraphGenerationUtil.generateSimpleTestGra
 public class BasicGraphViewUITest {
 
     private GraphService graphService;
+    private RuntimeExceptionDao<Graph, Integer> graphDao;
     private Graph graphForTest = null;
 
     @Rule
@@ -56,6 +64,9 @@ public class BasicGraphViewUITest {
     public void setUp() {
         App app = (App) rule.getActivity().getApplication();
         graphService = app.getObjectGraph().get(GraphService.class);
+
+        DatabaseHelper openHelper = new DatabaseHelper(app);
+        graphDao = openHelper.getRuntimeExceptionDao(Graph.class);
     }
 
     @After
@@ -103,6 +114,25 @@ public class BasicGraphViewUITest {
                 assertThat("Wrong number of yVals returned.", yVals.size(), is(5));
             }
         });
+    }
+
+    @Test
+    public void addNewGraphShouldCreateNewGraph() {
+        String graphName = "addNewGraphShouldCreateNewGraph";
+
+        onView(withId(R.id.fab)).perform(click());
+
+        onView(withId(12345)).perform(typeText(graphName));
+        onView(withId(16908313)).perform(click());
+
+        List<Graph> graphs = graphDao.queryForEq("name", graphName);
+
+        assertThat(graphs.size(), is(1));
+
+        graphForTest = graphs.get(0);
+
+        assertThat(graphForTest, is(not(nullValue())));
+        assertThat(graphForTest.getName(), is(graphName));
     }
 
     public void updateGraphView() {
