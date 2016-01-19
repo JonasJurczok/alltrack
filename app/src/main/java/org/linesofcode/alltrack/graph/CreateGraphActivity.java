@@ -1,18 +1,12 @@
 package org.linesofcode.alltrack.graph;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.InputType;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -74,13 +68,27 @@ public class CreateGraphActivity extends NavigatableBaseActivity {
                 finish();
             }
         });
+
+        EditText graphName = (EditText) findViewById(R.id.edit_graph_name);
+        graphName.setOnKeyListener(new View.OnKeyListener() {
+
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    switch (keyCode) {
+                        case KeyEvent.KEYCODE_ENTER:
+                            createGraph();
+                            return true;
+                    }
+                }
+                return false;
+            }
+        });
     }
 
     private void createGraph() {
         EditText graphEdit = (EditText) findViewById(R.id.edit_graph_name);
         String graphName = graphEdit.getText().toString();
 
-        // handle errors
         if (graphName.length() == 0) {
             Toast.makeText(this, R.string.graph_detail_graph_name_empty, Toast.LENGTH_SHORT).show();
             return;

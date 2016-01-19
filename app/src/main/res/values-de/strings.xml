@@ -15,4 +15,7 @@
     <string name="settings_temp_label">Irgendwann gibt es hier Einstellungen.</string>
     <string name="button_ok">Ok</string>
     <string name="button_cancel">Abbrechen</string>
+    <string name="graph_detail_graph_name">Der Name des Graphen</string>
+    <string name="graph_detail_graph_name_empty">Der Name darf nicht leer sein!</string>
+    <string name="graph_detail_title_create">Erstelle einen Graphen.</string>
 </resources>

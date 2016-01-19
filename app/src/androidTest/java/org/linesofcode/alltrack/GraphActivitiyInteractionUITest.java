@@ -2,7 +2,6 @@ package org.linesofcode.alltrack;
 
 import android.support.test.espresso.UiController;
 import android.support.test.espresso.ViewAction;
-import android.support.test.espresso.assertion.ViewAssertions;
 import android.support.test.rule.ActivityTestRule;
 import android.view.View;
 
@@ -148,6 +147,19 @@ public class GraphActivitiyInteractionUITest {
         List<Graph> graphs = graphDao.queryForEq("name", graphName);
 
         assertThat(graphs.size(), is(0));
+    }
+
+    @Test
+    public void hittingEnterInGraphNameFieldShouldCreateNewGraph() {
+        String graphName = "hittingEnterInGraphNameFieldShouldCreateNewGraph";
+        onView(withId(R.id.fab)).perform(click());
+
+        onView(withId(R.id.edit_graph_name)).perform(typeText(graphName + "\n"));
+        List<Graph> graphs = graphDao.queryForEq("name", graphName);
+
+        assertThat(graphs.size(), is(1));
+
+        graphForTest = graphs.get(0);
     }
 
     public Graph createGraph(String graphName) {
