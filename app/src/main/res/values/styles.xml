@@ -44,5 +44,16 @@
 		<item name="android:layout_height">50dp</item>
 		<item name="android:textStyle">bold</item>
 		<item name="android:textColor">@color/md_black</item>
+
+        <item name="android:ellipsize">marquee</item>
+        <!--<item name="android:fadingEdge">horizontal</item>-->
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:scrollHorizontally">true</item>
+
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:duplicateParentState">true</item>
     </style>
 </resources>

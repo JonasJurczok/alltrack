@@ -77,6 +77,7 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
 
             TextView title = (TextView) view.findViewById(R.id.title);
             title.setText(graph.getName());
+            title.setSelected(true);
 
             LineChart graphView = (LineChart) view.findViewById(R.id.graph);
             graphView.setData(toLineData(graph));
