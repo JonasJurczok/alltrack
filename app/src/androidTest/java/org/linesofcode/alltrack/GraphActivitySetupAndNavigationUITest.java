@@ -5,6 +5,7 @@ import android.support.test.rule.ActivityTestRule;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.linesofcode.alltrack.graph.GraphActivity;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.swipeDown;
@@ -29,7 +30,7 @@ import static org.hamcrest.CoreMatchers.not;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class GraphActivityUITest {
+public class GraphActivitySetupAndNavigationUITest {
 
     @Rule
     @SuppressWarnings("unchecked")

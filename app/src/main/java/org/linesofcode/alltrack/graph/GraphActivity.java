@@ -1,21 +1,18 @@
-package org.linesofcode.alltrack;
+package org.linesofcode.alltrack.graph;
 
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.InputType;
 import android.view.View;
-import android.widget.EditText;
 
+import org.linesofcode.alltrack.App;
+import org.linesofcode.alltrack.R;
 import org.linesofcode.alltrack.framework.navigation.NavigatableBaseActivity;
-import org.linesofcode.alltrack.graph.GraphAdapter;
-import org.linesofcode.alltrack.graph.GraphService;
 
 import javax.inject.Inject;
 
@@ -35,6 +32,8 @@ import javax.inject.Inject;
  * limitations under the License.
  */
 public class GraphActivity extends NavigatableBaseActivity {
+
+    public static final Integer CREATE_GRAPH_INTENT_CODE = 1;
 
     @Inject
     GraphAdapter graphAdapter;
@@ -71,35 +70,19 @@ public class GraphActivity extends NavigatableBaseActivity {
         });
     }
 
-    // TODO: tests
-    // TODO: transform into customViews (show graphs, create new graph, ...)
     protected void createGraph() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.graph_view_create_graph_title);
+        Intent graphDetailIntent = new Intent(this, CreateGraphActivity.class);
+        startActivityForResult(graphDetailIntent, CREATE_GRAPH_INTENT_CODE);
+    }
 
-        final EditText input = new EditText(this);
-        // TODO: remove!!
-        input.setId(12345);
-        input.setInputType(InputType.TYPE_CLASS_TEXT);
-        input.setHint(R.string.graph_view_create_graph_hint);
-        builder.setView(input);
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                String graphName = input.getText().toString();
-                graphService.createNewGraph(graphName);
+        if (requestCode == CREATE_GRAPH_INTENT_CODE) {
+            if (resultCode == RESULT_OK) {
                 graphAdapter.updateGraphs();
             }
-        });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        });
-
-        builder.show();
+        }
     }
 
     private void initializeToolbar() {

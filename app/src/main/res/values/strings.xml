@@ -13,4 +13,11 @@
     <string name="settings_temp_label">At some point there will be settings here.</string>
     <string name="graph_view_create_graph_title">Create new graph</string>
     <string name="graph_view_create_graph_hint">The name of the new graph</string>
+
+    <string name="button_ok">Ok</string>
+    <string name="button_cancel">Cancel</string>
+
+    <string name="graph_detail_graph_name">Name of the graph: </string>
+    <string name="graph_detail_title_create">Create a graph</string>
+    <string name="graph_detail_graph_name_empty">The graph name must not be empty!</string>
 </resources>

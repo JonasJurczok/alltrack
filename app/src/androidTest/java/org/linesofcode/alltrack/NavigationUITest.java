@@ -11,6 +11,7 @@ import org.hamcrest.Matcher;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.linesofcode.alltrack.graph.GraphActivity;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.GeneralLocation.CENTER_LEFT;

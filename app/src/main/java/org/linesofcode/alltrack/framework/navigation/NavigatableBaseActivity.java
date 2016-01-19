@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import org.linesofcode.alltrack.SettingsActivity;
-import org.linesofcode.alltrack.GraphActivity;
+import org.linesofcode.alltrack.graph.GraphActivity;
 import org.linesofcode.alltrack.R;
 
 /**

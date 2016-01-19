@@ -2,6 +2,7 @@ package org.linesofcode.alltrack;
 
 import android.support.test.espresso.UiController;
 import android.support.test.espresso.ViewAction;
+import android.support.test.espresso.assertion.ViewAssertions;
 import android.support.test.rule.ActivityTestRule;
 import android.view.View;
 
@@ -17,6 +18,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.linesofcode.alltrack.framework.persistence.DatabaseHelper;
 import org.linesofcode.alltrack.graph.Graph;
+import org.linesofcode.alltrack.graph.GraphActivity;
 import org.linesofcode.alltrack.graph.GraphAdapter;
 import org.linesofcode.alltrack.graph.GraphService;
 
@@ -25,6 +27,7 @@ import java.util.List;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.typeText;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.assertThat;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
@@ -50,7 +53,7 @@ import static org.linesofcode.alltrack.GraphGenerationUtil.generateSimpleTestGra
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class GraphViewUITest {
+public class GraphActivitiyInteractionUITest {
 
     private GraphService graphService;
     private RuntimeExceptionDao<Graph, Integer> graphDao;
@@ -120,19 +123,43 @@ public class GraphViewUITest {
     public void addNewGraphShouldCreateNewGraph() {
         String graphName = "addNewGraphShouldCreateNewGraph";
 
+        graphForTest = createGraph(graphName);
+
+        assertThat(graphForTest, is(not(nullValue())));
+        assertThat(graphForTest.getName(), is(graphName));
+    }
+
+    @Test
+    public void newlyAddedGraphShouldBeDisplayedImmediately() {
+        String graphName = "newlyAddedGraphShouldBeDisplayedImmediately";
+        graphForTest = createGraph(graphName);
+
+        onView(withText(graphName)).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void clickOnCancelShouldNotCreateNewGraph() {
+        String graphName = "clickOnCancelShouldNotCreateNewGraph";
+
         onView(withId(R.id.fab)).perform(click());
 
-        onView(withId(12345)).perform(typeText(graphName));
-        onView(withId(16908313)).perform(click());
+        onView(withId(R.id.edit_graph_name)).perform(typeText(graphName));
+        onView(withId(R.id.cancel)).perform(click());
+        List<Graph> graphs = graphDao.queryForEq("name", graphName);
 
+        assertThat(graphs.size(), is(0));
+    }
+
+    public Graph createGraph(String graphName) {
+        onView(withId(R.id.fab)).perform(click());
+
+        onView(withId(R.id.edit_graph_name)).perform(typeText(graphName));
+        onView(withId(R.id.ok)).perform(click());
         List<Graph> graphs = graphDao.queryForEq("name", graphName);
 
         assertThat(graphs.size(), is(1));
 
-        graphForTest = graphs.get(0);
-
-        assertThat(graphForTest, is(not(nullValue())));
-        assertThat(graphForTest.getName(), is(graphName));
+        return graphs.get(0);
     }
 
     public void updateGraphView() {
