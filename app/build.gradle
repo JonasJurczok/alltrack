@@ -57,3 +57,13 @@ dependencies {
 coveralls {
     jacocoReportPath = 'build/reports/coverage/debug/report.xml'
 }
+
+task grantAnimationPermission(type: Exec, dependsOn: 'installDebug') {
+    commandLine "adb shell pm grant org.linesofcode.alltrack android.permission.SET_ANIMATION_SCALE".split(' ')
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name.startsWith('connected')) {
+        task.dependsOn grantAnimationPermission
+    }
+}

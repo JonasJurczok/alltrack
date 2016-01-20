@@ -13,8 +13,10 @@ import com.j256.ormlite.dao.RuntimeExceptionDao;
 import org.hamcrest.Matcher;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
+import org.linesofcode.alltrack.framework.DisableAnimationsRule;
 import org.linesofcode.alltrack.framework.persistence.DatabaseHelper;
 import org.linesofcode.alltrack.graph.Graph;
 import org.linesofcode.alltrack.graph.GraphActivity;
@@ -57,6 +59,9 @@ public class GraphActivitiyInteractionUITest {
     private GraphService graphService;
     private RuntimeExceptionDao<Graph, Integer> graphDao;
     private Graph graphForTest = null;
+
+    @ClassRule
+    public static DisableAnimationsRule disableAnimationsRule = new DisableAnimationsRule();
 
     @Rule
     @SuppressWarnings("unchecked")
