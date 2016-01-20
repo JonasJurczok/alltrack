@@ -22,11 +22,17 @@ android {
     }
 }
 
+tasks.withType(Test) {
+    testLogging {
+        exceptionFormat "full"
+    }
+}
+
 dependencies {
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.android.support:design:23.0.1"
     compile "com.android.support:recyclerview-v7:23.0.1"
-    // compile 'io.realm:realm-android:0.86.0'
+
     compile "com.j256.ormlite:ormlite-core:4.41"
     compile "com.j256.ormlite:ormlite-android:4.41"
 
