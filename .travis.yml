@@ -21,4 +21,4 @@ after_success:
   - gradle coveralls
 
 after_failure:
-  - for
+  - ./build_failure.sh
