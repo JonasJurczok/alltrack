@@ -21,4 +21,4 @@ after_success:
   - gradle coveralls
 
 after_failure:
-  - ./build_failure.sh
+  - cat app/build/reports/androidTests/connected/*.html
