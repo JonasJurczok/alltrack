@@ -37,6 +37,7 @@ import static org.linesofcode.alltrack.graph.GraphToLineTransformer.toLineData;
  * limitations under the License.
  */
 public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> {
+    private static final String TAG = GraphAdapter.class.getName();
 
     private final GraphService graphService;
     private List<Graph> allGraphs = new ArrayList<>();
@@ -57,8 +58,7 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
 
         @Override
         protected void onPostExecute(List<Graph> graphs) {
-            allGraphs.clear();
-            allGraphs.addAll(graphs);
+            allGraphs = graphs;
             adapter.notifyDataSetChanged();
         }
     }
@@ -98,6 +98,7 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
     }
 
     public void updateGraphs() {
+        Log.d(TAG, "Starting async graph update.");
         new LoadGraphsTask(graphService, this).execute();
     }
 

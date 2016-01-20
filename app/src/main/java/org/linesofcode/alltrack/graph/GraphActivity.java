@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 
 import org.linesofcode.alltrack.App;
@@ -33,6 +34,7 @@ import javax.inject.Inject;
  */
 public class GraphActivity extends NavigatableBaseActivity {
 
+    private static final String TAG = GraphActivity.class.getName();
     public static final Integer CREATE_GRAPH_INTENT_CODE = 1;
 
     @Inject
@@ -77,9 +79,10 @@ public class GraphActivity extends NavigatableBaseActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
+        Log.d(TAG, "Received onActivityResult for request [" + requestCode + "] and result [" + resultCode + "]");
         if (requestCode == CREATE_GRAPH_INTENT_CODE) {
             if (resultCode == RESULT_OK) {
+                Log.d(TAG, "updating graphs...");
                 graphAdapter.updateGraphs();
             }
         }
