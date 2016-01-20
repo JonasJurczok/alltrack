@@ -27,6 +27,7 @@ import java.util.List;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.assertThat;
@@ -148,6 +149,8 @@ public class GraphActivitiyInteractionUITest {
         onView(withId(R.id.fab)).perform(click());
 
         onView(withId(R.id.edit_graph_name)).perform(typeText(graphName));
+        onView(withId(R.id.edit_graph_name)).perform(closeSoftKeyboard());
+
         onView(withId(R.id.cancel)).perform(click());
         List<Graph> graphs = graphDao.queryForEq("name", graphName);
 
@@ -160,6 +163,7 @@ public class GraphActivitiyInteractionUITest {
         onView(withId(R.id.fab)).perform(click());
 
         onView(withId(R.id.edit_graph_name)).perform(typeText(graphName + "\n"));
+        onView(withId(R.id.edit_graph_name)).perform(closeSoftKeyboard());
         List<Graph> graphs = graphDao.queryForEq("name", graphName);
 
         assertThat(graphs.size(), is(1));
@@ -171,6 +175,7 @@ public class GraphActivitiyInteractionUITest {
         onView(withId(R.id.fab)).perform(click());
 
         onView(withId(R.id.edit_graph_name)).perform(typeText(graphName));
+        onView(withId(R.id.edit_graph_name)).perform(closeSoftKeyboard());
         onView(withId(R.id.ok)).perform(click());
         List<Graph> graphs = graphDao.queryForEq("name", graphName);
 
