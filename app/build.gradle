@@ -59,7 +59,7 @@ coveralls {
 }
 
 task grantAnimationPermission(type: Exec, dependsOn: 'installDebug') {
-    commandLine "adb shell pm grant org.linesofcode.alltrack android.permission.SET_ANIMATION_SCALE".split(' ')
+    commandLine "./adb_all.sh shell pm grant org.linesofcode.alltrack android.permission.SET_ANIMATION_SCALE".split(' ')
 }
 
 tasks.whenTaskAdded { task ->
