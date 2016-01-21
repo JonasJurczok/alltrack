@@ -21,7 +21,8 @@ env:
     # 20 is just for wearables..
     - ANDROID_TARGET=android-21    ANDROID_IMAGE=sys-img-armeabi-v7a-addon-google_apis-google-21
     - ANDROID_TARGET=android-22    ANDROID_IMAGE=sys-img-armeabi-v7a-addon-google_apis-google-22
-    - ANDROID_TARGET=android-23    ANDROID_IMAGE=sys-img-armeabi-v7a-addon-google_apis-google-23
+    # there is a bug in the android 23 emulator at the moment. This has to be done locally then.
+    #- ANDROID_TARGET=android-23    ANDROID_IMAGE=sys-img-armeabi-v7a-addon-google_apis-google-23
 
 # no
 cache: false
