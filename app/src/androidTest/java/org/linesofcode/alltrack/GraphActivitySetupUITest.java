@@ -32,14 +32,14 @@ import static org.hamcrest.CoreMatchers.not;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class GraphActivitySetupAndNavigationUITest {
-
-    @ClassRule
-    public static DisableAnimationsRule disableAnimationsRule = new DisableAnimationsRule();
+public class GraphActivitySetupUITest {
 
     @Rule
     @SuppressWarnings("unchecked")
     public ActivityTestRule<GraphActivity> rule = new ActivityTestRule(GraphActivity.class);
+
+    @ClassRule
+    public static DisableAnimationsRule disableAnimationsRule = new DisableAnimationsRule();
 
     @Before
     public void setUp() {

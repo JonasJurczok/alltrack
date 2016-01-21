@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'jacoco'
 apply plugin: 'com.github.kt3k.coveralls'
+apply plugin: 'spoon'
 
 android {
     compileSdkVersion 23
@@ -56,6 +57,10 @@ dependencies {
 
 coveralls {
     jacocoReportPath = 'build/reports/coverage/debug/report.xml'
+}
+
+spoon {
+    adbTimeout=60
 }
 
 task grantAnimationPermission(type: Exec, dependsOn: 'installDebug') {
