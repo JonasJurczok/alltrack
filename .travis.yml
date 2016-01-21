@@ -6,13 +6,13 @@ jdk:
 android:
   components:
     - build-tools-23.0.1
-    - android-23
-    - android-22
-    - android-21
+    - $ANDROID_TARGET
     - extra-android-m2repository
 
 env:
     matrix:
+    - ANDROID_TARGET=android-19
+    - ANDROID_TARGET=android-20
     - ANDROID_TARGET=android-21
     - ANDROID_TARGET=android-22
     - ANDROID_TARGET=android-23
