@@ -16,11 +16,11 @@ env:
     - ADB_INSTALL_TIMEOUT=20
 
     matrix:
-    - ANDROID_TARGET=android-19    ANDROID_IMAGE=sys-img-x86-android-19    ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-19    ANDROID_IMAGE=sys-img-armeabi-v7a-android-19    ANDROID_ABI=armeabi-v7a
     # 20 is just for wearables..
-    - ANDROID_TARGET=android-21    ANDROID_IMAGE=sys-img-x86-android-21    ANDROID_ABI=x86
-    - ANDROID_TARGET=android-22    ANDROID_IMAGE=sys-img-x86-android-22    ANDROID_ABI=x86
-    - ANDROID_TARGET=android-23    ANDROID_IMAGE=sys-img-x86-android-23    ANDROID_ABI=x86
+    - ANDROID_TARGET=android-21    ANDROID_IMAGE=sys-img-armeabi-v7a-android-21    ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-22    ANDROID_IMAGE=sys-img-armeabi-v7a-android-22    ANDROID_ABI=armeabi-v7a
+    - ANDROID_TARGET=android-23    ANDROID_IMAGE=sys-img-armeabi-v7a-android-23    ANDROID_ABI=armeabi-v7a
 
 # no
 cache: false
