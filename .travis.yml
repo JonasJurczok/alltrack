@@ -6,14 +6,14 @@ jdk:
 android:
   components:
     - build-tools-23.0.1
-    - $ANDROID_TARGET
+    - android-23
     - extra-android-m2repository
 
 env:
     matrix:
-    - ANDROID_TARGET=android-19
+    - ANDROID_TARGET=android-19    ANDROID_ABI=armeabi-v7a
     - ANDROID_TARGET=android-20
-    - ANDROID_TARGET=android-21
+    - ANDROID_TARGET=android-21    ANDROID_ABI=armeabi-v7a
     - ANDROID_TARGET=android-22
     - ANDROID_TARGET=android-23
 
