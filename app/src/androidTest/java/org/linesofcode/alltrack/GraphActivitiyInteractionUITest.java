@@ -163,7 +163,6 @@ public class GraphActivitiyInteractionUITest {
         onView(withId(R.id.fab)).perform(click());
 
         onView(withId(R.id.edit_graph_name)).perform(typeText(graphName + "\n"));
-        onView(withId(R.id.edit_graph_name)).perform(closeSoftKeyboard());
         List<Graph> graphs = graphDao.queryForEq("name", graphName);
 
         assertThat(graphs.size(), is(1));
