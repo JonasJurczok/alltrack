@@ -68,7 +68,7 @@ task grantAnimationPermission(type: Exec, dependsOn: 'installDebug') {
 }
 
 tasks.whenTaskAdded { task ->
-    if (task.name.startsWith('connected')) {
+    if (task.name.startsWith('connected') || task.name.startsWith('spoon')) {
         task.dependsOn grantAnimationPermission
     }
 }
