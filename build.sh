@@ -15,6 +15,7 @@ startupEmulatorIfNotRunning () {
 
   local running=$(adb devices | grep 'emulator' | grep 'device' | wc -l)
 
+  # TODO: hardcoded 4. Should be checking for length of targets array
   while [ "$running" -lt "4" ]
   do
     echo "Waiting for 4 running emulators. Currently running are [$running]"
@@ -62,6 +63,7 @@ bootAndUnlockEmulator() {
 
     while [ "$bootCompleted" != "1" ]; do
       sleep 2
+      echo "Waiting for boot to complete on emulator [$emulator]"
       bootCompleted=$(adb -s "$emulator" shell getprop sys.boot_completed | tr -d '\r')
     done
 
