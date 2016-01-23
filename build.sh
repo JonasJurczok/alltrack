@@ -162,11 +162,11 @@ main () {
 
   echo ""
 
-  #verifyEmulatorsRunning
+  verifyEmulatorsRunning
 
-  #runTests
+  runTests
 
-  #shutdownEmulators
+  shutdownEmulators
 
   processTestReport
 }
