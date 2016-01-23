@@ -152,6 +152,7 @@ public class GraphServiceTest extends AndroidTestCase {
         Graph graph = generateGraph(graphService, "testGetAllShouldHaveDatapointsOrdererdByTime", 5, RANDOM);
 
         while (!isRandomlyOrdered(graph)) {
+            graphService.delete(graph);
             graph = generateGraph(graphService, "testGetAllShouldHaveDatapointsOrdererdByTime", 5, RANDOM);
         }
 
