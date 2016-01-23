@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Click On Cancel Should Not Create New Graph</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet">
+        <link href="../../../static/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../static/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="../../../static/spoon.css" rel="stylesheet">
+        <script src="../../../static/jquery.min.js"></script>
+        <script src="../../../static/bootstrap.min.js"></script>
+        <meta name="description" content="Test passed in 4 seconds on android-22">
+    </head>
+    <body>
+        <div class="container">
+            <div class="hero-unit">
+                <h1>Click On Cancel Should Not Create New Graph</h1>
+                <p>Test passed in 4 seconds on android-22</p>
+            </div>
+            <div class="row log">
+                <div class="span12">
+                    <table class="table table-striped table-hover table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Level</th>
+                                <th>Tag</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="level-info info">
+                                <td>01-23 22:38:18.939</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>started: clickOnCancelShouldNotCreateNewGraph(org.linesofcode.alltrack.GraphActivitiyInteractionUITest)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-23 22:38:18.940</td>
+                                <td>info</td>
+                                <td>MonitoringInstrumentation</td>
+                                <td>Activities that are still in CREATED to STOPPED: 0</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:18.940</td>
+                                <td>debug</td>
+                                <td>ActivityInstrumentationRule</td>
+                                <td>Launching activity org.linesofcode.alltrack.graph.GraphActivity</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:18.941</td>
+                                <td>debug</td>
+                                <td>MonitoringInstrumentation</td>
+                                <td>execStartActivity(context, ibinder, ibinder, activity, intent, int, bundle</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:18.955</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@32daebf6 in: PRE_ON_CREATE</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-23 22:38:19.377</td>
+                                <td>info</td>
+                                <td>art</td>
+                                <td>Background sticky concurrent mark sweep GC freed 85921(3MB) AllocSpace objects, 6(212KB) LOS objects, 32% free, 4MB/6MB, paused 506us total 202.306ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.382</td>
+                                <td>debug</td>
+                                <td>org.linesofcode.alltrack.graph.GraphAdapter</td>
+                                <td>Starting async graph update.</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.405</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@32daebf6 in: CREATED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.417</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@32daebf6 in: STARTED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.418</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@32daebf6 in: RESUMED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.432</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.444</td>
+                                <td>debug</td>
+                                <td>org.linesofcode.alltrack.graph.GraphService</td>
+                                <td>Found [0] graphs to return to the caller.</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.454</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.459</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.459</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.471</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.471</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.473</td>
+                                <td>debug</td>
+                                <td>gralloc_goldfish</td>
+                                <td>Emulator without host-side GPU emulation detected.</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.495</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.495</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.495</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.568</td>
+                                <td>debug</td>
+                                <td>InputManagerEventInjectionStrategy</td>
+                                <td>Creating injection strategy with input manager.</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-23 22:38:19.582</td>
+                                <td>info</td>
+                                <td>ViewInteraction</td>
+                                <td>Performing &#39;single click&#39; action on view with id: org.linesofcode.alltrack:id/fab</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.655</td>
+                                <td>debug</td>
+                                <td>MonitoringInstrumentation</td>
+                                <td>execStartActivity(context, ibinder, ibinder, activity, intent, int, bundle</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.664</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@32daebf6 in: PAUSED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.679</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@4b16ec7 in: PRE_ON_CREATE</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.708</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@4b16ec7 in: CREATED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.709</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@4b16ec7 in: STARTED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.709</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@4b16ec7 in: RESUMED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:19.865</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@32daebf6 in: STOPPED</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-23 22:38:20.087</td>
+                                <td>info</td>
+                                <td>ViewInteraction</td>
+                                <td>Performing &#39;type text(clickOnCancelShouldNotCreateNewGraph)&#39; action on view with id: org.linesofcode.alltrack:id/edit_graph_name</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:20.403</td>
+                                <td>debug</td>
+                                <td>UiControllerImpl</td>
+                                <td>Injecting string: &quot;clickOnCancelShouldNotCreateNewGraph&quot;</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.404</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (c) with key code (31) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.466</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (c) with key code (31) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.489</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (l) with key code (40) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.519</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (l) with key code (40) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.521</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (i) with key code (37) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.553</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (i) with key code (37) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.555</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (c) with key code (31) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.610</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (c) with key code (31) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.613</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (k) with key code (39) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.650</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (k) with key code (39) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.655</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.693</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (O) with key code (43) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.720</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (O) with key code (43) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.725</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.744</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (n) with key code (42) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.775</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (n) with key code (42) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.778</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.802</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (C) with key code (31) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.838</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (C) with key code (31) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.841</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.862</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (a) with key code (29) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.894</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (a) with key code (29) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.898</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (n) with key code (42) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.921</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (n) with key code (42) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.951</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (c) with key code (31) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.977</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (c) with key code (31) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:20.980</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.002</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.005</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (l) with key code (40) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.057</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (l) with key code (40) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.059</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.105</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (S) with key code (47) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.133</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (S) with key code (47) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.149</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.164</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (h) with key code (36) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.192</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (h) with key code (36) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.211</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (o) with key code (43) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.241</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (o) with key code (43) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.243</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (u) with key code (49) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.279</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (u) with key code (49) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.282</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (l) with key code (40) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.308</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (l) with key code (40) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.311</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (d) with key code (32) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.346</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (d) with key code (32) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.349</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.375</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (N) with key code (42) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.415</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (N) with key code (42) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.418</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.449</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (o) with key code (43) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.489</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (o) with key code (43) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.491</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (t) with key code (48) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.519</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (t) with key code (48) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.522</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.557</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (C) with key code (31) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.591</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (C) with key code (31) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.593</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.621</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (r) with key code (46) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.659</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (r) with key code (46) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.662</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.693</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.695</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (a) with key code (29) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.733</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (a) with key code (29) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.735</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (t) with key code (48) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.761</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (t) with key code (48) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.782</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.800</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.802</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.821</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (N) with key code (42) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.850</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (N) with key code (42) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.853</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.892</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.921</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.925</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (w) with key code (51) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.960</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (w) with key code (51) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.968</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:21.990</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (G) with key code (35) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:22.021</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (G) with key code (35) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:22.025</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:22.064</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (r) with key code (46) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:22.102</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (r) with key code (46) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:22.108</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (a) with key code (29) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:22.138</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (a) with key code (29) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:22.141</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (p) with key code (44) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:22.187</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (p) with key code (44) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:22.190</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (h) with key code (36) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-23 22:38:22.240</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (h) with key code (36) downtime: (127184)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-23 22:38:22.243</td>
+                                <td>info</td>
+                                <td>ViewInteraction</td>
+                                <td>Performing &#39;close keyboard&#39; action on view with id: org.linesofcode.alltrack:id/edit_graph_name</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-23 22:38:22.557</td>
+                                <td>info</td>
+                                <td>ViewInteraction</td>
+                                <td>Performing &#39;single click&#39; action on view with id: org.linesofcode.alltrack:id/cancel</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:22.625</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@4b16ec7 in: PAUSED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:22.630</td>
+                                <td>debug</td>
+                                <td>org.linesofcode.alltrack.graph.GraphActivity</td>
+                                <td>Received onActivityResult for request [1] and result [0]</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:22.631</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@32daebf6 in: RESTARTED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:22.632</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@32daebf6 in: STARTED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:22.632</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@32daebf6 in: RESUMED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:22.704</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@4b16ec7 in: STOPPED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-23 22:38:22.704</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@4b16ec7 in: DESTROYED</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-23 22:38:22.928</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>finished: clickOnCancelShouldNotCreateNewGraph(org.linesofcode.alltrack.GraphActivitiyInteractionUITest)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

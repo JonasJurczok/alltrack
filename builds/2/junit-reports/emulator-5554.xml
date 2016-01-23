@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.linesofcode.alltrack.test" tests="25" failures="1" errors="0" skipped="0" time="82.729" timestamp="2016-01-23T21:39:59" hostname="localhost">
+  <properties />
+  <testcase name="clickOnCancelShouldNotCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="7.916" />
+  <testcase name="hittingEnterInGraphNameFieldShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="6.563" />
+  <testcase name="showSimpleGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="0.627" />
+  <testcase name="newlyAddedGraphShouldBeDisplayedImmediately" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="10.944" />
+  <testcase name="addNewGraphShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="5.627" />
+  <testcase name="swipeDownShouldMaximizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="2.62" />
+  <testcase name="toolBarShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="1.758" />
+  <testcase name="mainActivityShouldBeStarted" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.578" />
+  <testcase name="recyclerViewShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.553" />
+  <testcase name="swipeUpShouldMinimizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="1.409" />
+  <testcase name="floatingActionButtonShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.603" />
+  <testcase name="testCreateGraphShouldPersistGraph" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.101" />
+  <testcase name="testDeleteGraphShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.051" />
+  <testcase name="testDeleteGraphShouldWork" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.076" />
+  <testcase name="testGetAllShouldHaveDatapointsOrdererdByTime" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.185">
+    <failure>java.lang.RuntimeException: java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph&#64;b58ce632: INSERT INTO `graph` (`name` ) VALUES (?)
+at com.j256.ormlite.dao.RuntimeExceptionDao.createOrUpdate(RuntimeExceptionDao.java:251)
+at org.linesofcode.alltrack.graph.GraphService.createNewGraph(GraphService.java:85)
+at org.linesofcode.alltrack.GraphGenerationUtil.generateGraph(GraphGenerationUtil.java:54)
+at org.linesofcode.alltrack.GraphServiceTest.testGetAllShouldHaveDatapointsOrdererdByTime(GraphServiceTest.java:155)
+at java.lang.reflect.Method.invokeNative(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:515)
+at junit.framework.TestCase.runTest(TestCase.java:168)
+at junit.framework.TestCase.runBare(TestCase.java:134)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1701)
+Caused by: java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph&#64;b58ce632: INSERT INTO `graph` (`name` ) VALUES (?)
+at com.j256.ormlite.misc.SqlExceptionUtil.create(SqlExceptionUtil.java:22)
+at com.j256.ormlite.stmt.mapped.MappedCreate.insert(MappedCreate.java:124)
+at com.j256.ormlite.stmt.StatementExecutor.create(StatementExecutor.java:363)
+at com.j256.ormlite.dao.BaseDaoImpl.create(BaseDaoImpl.java:306)
+at com.j256.ormlite.dao.BaseDaoImpl.createOrUpdate(BaseDaoImpl.java:332)
+at com.j256.ormlite.dao.RuntimeExceptionDao.createOrUpdate(RuntimeExceptionDao.java:248)
+... 31 more
+Caused by: java.sql.SQLException: inserting to database failed: INSERT INTO `graph` (`name` ) VALUES (?)
+at com.j256.ormlite.misc.SqlExceptionUtil.create(SqlExceptionUtil.java:22)
+at com.j256.ormlite.android.AndroidDatabaseConnection.insert(AndroidDatabaseConnection.java:134)
+at com.j256.ormlite.stmt.mapped.MappedCreate.insert(MappedCreate.java:89)
+... 35 more
+Caused by: android.database.sqlite.SQLiteConstraintException: column name is not unique (code 19)
+at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:782)
+at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:788)
+at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:86)
+at com.j256.ormlite.android.AndroidDatabaseConnection.insert(AndroidDatabaseConnection.java:122)
+... 36 more
+</failure>
+  </testcase>
+  <testcase name="testSaveShouldCreateNewDatapoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.0" />
+  <testcase name="testSaveShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.076" />
+  <testcase name="testAndroidTestCaseSetupProperly" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.025" />
+  <testcase name="navigationViewShouldBeClosable" classname="org.linesofcode.alltrack.NavigationUITest" time="6.034" />
+  <testcase name="clickOnDataSeriesShouldCloseNavigation" classname="org.linesofcode.alltrack.NavigationUITest" time="5.812" />
+  <testcase name="openNavFromSettingsShouldHaveSettingsChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="7.712" />
+  <testcase name="navigatingBackToGraphActivityShouldHaveNavigationClosed" classname="org.linesofcode.alltrack.NavigationUITest" time="9.414" />
+  <testcase name="clickOnSettingsShouldSwitchActivity" classname="org.linesofcode.alltrack.NavigationUITest" time="10.442" />
+  <testcase name="navigationViewShouldBeRendered" classname="org.linesofcode.alltrack.NavigationUITest" time="2.836" />
+  <testcase name="openNavFromMainShouldHaveMainChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="2.887" />
+</testsuite>

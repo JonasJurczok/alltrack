@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Get All Should Have Datapoints Ordererd By Time</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet">
+        <link href="../../static/bootstrap.min.css" rel="stylesheet">
+        <link href="../../static/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="../../static/spoon.css" rel="stylesheet">
+        <script src="../../static/jquery.min.js"></script>
+        <script src="../../static/bootstrap.min.js"></script>
+        <meta name="description" content="Ran on 4 devices with 3 passing and 1 failing in an average of 0 seconds">
+    </head>
+    <body>
+        <div class="container">
+            <div class="hero-unit">
+                <h1>Get All Should Have Datapoints Ordererd By Time</h1>
+                <p>Ran on 4 devices with 3 passing and 1 failing in an average of 0 seconds</p>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        android-22
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../../logs/emulator-5558/org.linesofcode.alltrack.GraphServiceTest/testGetAllShouldHaveDatapointsOrdererdByTime.html" title="View device log" class="pull-right icon">
+                            <img src="../../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../../device/emulator-5558.html" title="View only this device" class="pull-right icon">
+                            <img src="../../static/icon-devices.png" alt="View only this device">
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        android-23
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../../logs/emulator-5560/org.linesofcode.alltrack.GraphServiceTest/testGetAllShouldHaveDatapointsOrdererdByTime.html" title="View device log" class="pull-right icon">
+                            <img src="../../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../../device/emulator-5560.html" title="View only this device" class="pull-right icon">
+                            <img src="../../static/icon-devices.png" alt="View only this device">
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        android-21
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../../logs/emulator-5556/org.linesofcode.alltrack.GraphServiceTest/testGetAllShouldHaveDatapointsOrdererdByTime.html" title="View device log" class="pull-right icon">
+                            <img src="../../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../../device/emulator-5556.html" title="View only this device" class="pull-right icon">
+                            <img src="../../static/icon-devices.png" alt="View only this device">
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <h2 class="test-result fail">
+                        android-19
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../../logs/emulator-5554/org.linesofcode.alltrack.GraphServiceTest/testGetAllShouldHaveDatapointsOrdererdByTime.html" title="View device log" class="pull-right icon">
+                            <img src="../../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../../device/emulator-5554.html" title="View only this device" class="pull-right icon">
+                            <img src="../../static/icon-devices.png" alt="View only this device">
+                        </a>
+                    </h2>
+                    <div class="alert alert-error stacktrace fail">
+                        <h4 data-toggle="collapse" data-target="#stacktrace-emulator-5554">java.lang.RuntimeException: java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph@b58ce632: INSERT INTO `graph` (`name` ) VALUES (?)</h4>
+                        <div class="stacktrace-body collapse" id="stacktrace-emulator-5554">
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at com.j256.ormlite.dao.RuntimeExceptionDao.createOrUpdate(RuntimeExceptionDao.java:251)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.linesofcode.alltrack.graph.GraphService.createNewGraph(GraphService.java:85)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.linesofcode.alltrack.GraphGenerationUtil.generateGraph(GraphGenerationUtil.java:54)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.linesofcode.alltrack.GraphServiceTest.testGetAllShouldHaveDatapointsOrdererdByTime(GraphServiceTest.java:155)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invokeNative(Native Method)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invoke(Method.java:515)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at junit.framework.TestCase.runTest(TestCase.java:168)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at junit.framework.TestCase.runBare(TestCase.java:134)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at junit.framework.TestResult$1.protect(TestResult.java:115)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at junit.framework.TestResult.run(TestResult.java:118)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at junit.framework.TestCase.run(TestCase.java:124)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at junit.framework.TestSuite.runTest(TestSuite.java:243)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at junit.framework.TestSuite.run(TestSuite.java:238)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.Suite.runChild(Suite.java:128)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.Suite.runChild(Suite.java:27)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner.run(ParentRunner.java:363)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runner.JUnitCore.run(JUnitCore.java:137)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runner.JUnitCore.run(JUnitCore.java:115)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1701)</div>
+                            <div class="stacktrace-line">Caused by: java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph@b58ce632: INSERT INTO `graph` (`name` ) VALUES (?)</div>
+                            <div class="stacktrace-line">Caused by: java.sql.SQLException: inserting to database failed: INSERT INTO `graph` (`name` ) VALUES (?)</div>
+                            <div class="stacktrace-line">Caused by: android.database.sqlite.SQLiteConstraintException: column name is not unique (code 19)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $('.icon, .thumbnail img').tooltip({
+                container: 'body'
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.linesofcode.alltrack.test" tests="25" failures="0" errors="0" skipped="0" time="75.376" timestamp="2016-01-23T21:39:57" hostname="localhost">
+  <properties />
+  <testcase name="clickOnCancelShouldNotCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="4.028" />
+  <testcase name="hittingEnterInGraphNameFieldShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="6.432" />
+  <testcase name="showSimpleGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="0.578" />
+  <testcase name="newlyAddedGraphShouldBeDisplayedImmediately" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="7.746" />
+  <testcase name="addNewGraphShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="5.629" />
+  <testcase name="swipeDownShouldMaximizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="2.941" />
+  <testcase name="toolBarShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.477" />
+  <testcase name="mainActivityShouldBeStarted" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="1.184" />
+  <testcase name="recyclerViewShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.704" />
+  <testcase name="swipeUpShouldMinimizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="1.509" />
+  <testcase name="floatingActionButtonShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.478" />
+  <testcase name="testCreateGraphShouldPersistGraph" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.226" />
+  <testcase name="testDeleteGraphShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.0" />
+  <testcase name="testDeleteGraphShouldWork" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.0" />
+  <testcase name="testGetAllShouldHaveDatapointsOrdererdByTime" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.0" />
+  <testcase name="testSaveShouldCreateNewDatapoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.0" />
+  <testcase name="testSaveShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.0" />
+  <testcase name="testAndroidTestCaseSetupProperly" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.0" />
+  <testcase name="navigationViewShouldBeClosable" classname="org.linesofcode.alltrack.NavigationUITest" time="3.319" />
+  <testcase name="clickOnDataSeriesShouldCloseNavigation" classname="org.linesofcode.alltrack.NavigationUITest" time="5.611" />
+  <testcase name="openNavFromSettingsShouldHaveSettingsChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="7.309" />
+  <testcase name="navigatingBackToGraphActivityShouldHaveNavigationClosed" classname="org.linesofcode.alltrack.NavigationUITest" time="8.661" />
+  <testcase name="clickOnSettingsShouldSwitchActivity" classname="org.linesofcode.alltrack.NavigationUITest" time="9.565" />
+  <testcase name="navigationViewShouldBeRendered" classname="org.linesofcode.alltrack.NavigationUITest" time="5.696" />
+  <testcase name="openNavFromMainShouldHaveMainChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="3.087" />
+</testsuite>

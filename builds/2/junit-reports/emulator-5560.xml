@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.linesofcode.alltrack.test" tests="25" failures="1" errors="0" skipped="0" time="48.028" timestamp="2016-01-23T21:39:28" hostname="localhost">
+  <properties />
+  <testcase name="clickOnCancelShouldNotCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="4.359" />
+  <testcase name="hittingEnterInGraphNameFieldShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="4.156" />
+  <testcase name="showSimpleGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="0.528" />
+  <testcase name="newlyAddedGraphShouldBeDisplayedImmediately" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="4.499" />
+  <testcase name="addNewGraphShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="4.023" />
+  <testcase name="swipeDownShouldMaximizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="2.21" />
+  <testcase name="toolBarShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.427" />
+  <testcase name="mainActivityShouldBeStarted" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.327" />
+  <testcase name="recyclerViewShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.377" />
+  <testcase name="swipeUpShouldMinimizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="1.03" />
+  <testcase name="floatingActionButtonShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.404" />
+  <testcase name="testCreateGraphShouldPersistGraph" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.1" />
+  <testcase name="testDeleteGraphShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.125" />
+  <testcase name="testDeleteGraphShouldWork" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.101" />
+  <testcase name="testGetAllShouldHaveDatapointsOrdererdByTime" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.025" />
+  <testcase name="testSaveShouldCreateNewDatapoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.026" />
+  <testcase name="testSaveShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.025" />
+  <testcase name="testAndroidTestCaseSetupProperly" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.025" />
+  <testcase name="navigationViewShouldBeClosable" classname="org.linesofcode.alltrack.NavigationUITest" time="4.327" />
+  <testcase name="clickOnDataSeriesShouldCloseNavigation" classname="org.linesofcode.alltrack.NavigationUITest" time="2.763" />
+  <testcase name="openNavFromSettingsShouldHaveSettingsChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="4.907">
+    <failure>android.support.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError:
+Expected: is &lt;true&gt;
+Got: &lt;false&gt;
+
+at dalvik.system.VMStack.getThreadStackTrace(Native Method)
+at java.lang.Thread.getStackTrace(Thread.java:580)
+at android.support.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:82)
+at android.support.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:53)
+at android.support.test.espresso.ViewInteraction.runSynchronouslyOnUiThread(ViewInteraction.java:184)
+at android.support.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:115)
+at android.support.test.espresso.ViewInteraction.perform(ViewInteraction.java:87)
+at org.linesofcode.alltrack.NavigationUITest.openNavFromSettingsShouldHaveSettingsChecked(NavigationUITest.java:104)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+Caused by: junit.framework.AssertionFailedError:
+Expected: is &lt;true&gt;
+Got: &lt;false&gt;
+
+at android.support.test.espresso.matcher.ViewMatchers.assertThat(ViewMatchers.java:1014)
+at android.support.test.espresso.matcher.ViewMatchers.assertThat(ViewMatchers.java:991)
+at org.linesofcode.alltrack.NavigationUITest$2.perform(NavigationUITest.java:118)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:144)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+</failure>
+  </testcase>
+  <testcase name="navigatingBackToGraphActivityShouldHaveNavigationClosed" classname="org.linesofcode.alltrack.NavigationUITest" time="5.729" />
+  <testcase name="clickOnSettingsShouldSwitchActivity" classname="org.linesofcode.alltrack.NavigationUITest" time="4.149" />
+  <testcase name="navigationViewShouldBeRendered" classname="org.linesofcode.alltrack.NavigationUITest" time="1.885" />
+  <testcase name="openNavFromMainShouldHaveMainChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="2.335" />
+</testsuite>
