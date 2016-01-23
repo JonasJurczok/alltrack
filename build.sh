@@ -148,6 +148,7 @@ processTestReport() {
 
   # commit and push test report
   git add "builds/$buildcount"
+  git add index.html
   git commit -m"Added builreport for build $buildcount"
   git push
 
