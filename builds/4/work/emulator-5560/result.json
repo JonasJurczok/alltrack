@@ -1,0 +1,389 @@
+{
+  "installFailed": false,
+  "deviceDetails": {
+    "model": "Android SDK built for x86",
+    "manufacturer": "unknown",
+    "version": "6.0",
+    "apiLevel": 23,
+    "isEmulator": true,
+    "avdName": "android-23"
+  },
+  "testResults": [
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "addNewGraphShouldCreateNewGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 3,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454190864538_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454190866906_CreateGraph_addNewGraphShouldCreateNewGraph_after_confirm.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "clickOnCancelShouldNotCreateNewGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 5,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190848179_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190850458_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190851007_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190852019_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "hittingEnterInGraphNameFieldShouldCreateNewGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 5,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454190853558_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454190857782_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "newlyAddedGraphShouldBeDisplayedImmediately"
+      },
+      {
+        "status": "PASS",
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454190860350_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454190863204_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "showSimpleGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/showSimpleGraph/1454190858360_showSimpleGraph_before_asserts.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "floatingActionButtonShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1454190878579_floatingActionButtonShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "mainActivityShouldBeStarted"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1454190874223_mainActivityShouldBeStarted.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "recyclerViewShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 1,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1454190875787_recyclerViewShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "swipeDownShouldMaximizeAppBar"
+      },
+      {
+        "status": "PASS",
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1454190871611_swipeDownShouldMaximizeAppBar.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "swipeUpShouldMinimizeAppBar"
+      },
+      {
+        "status": "PASS",
+        "duration": 1,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1454190877280_swipeUpShouldMinimizeAppBar.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "toolBarShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 1,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1454190873369_toolBarShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testAndroidTestCaseSetupProperly"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testCreateGraphShouldPersistGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 1,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testDeleteGraphShouldDeleteDataPoints"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testDeleteGraphShouldWork"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testGetAllShouldHaveDatapointsOrdererdByTime"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testSaveShouldCreateNewDatapoints"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testSaveShouldDeleteDataPoints"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "clickOnDataSeriesShouldCloseNavigation"
+      },
+      {
+        "status": "PASS",
+        "duration": 11,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1454190896014_clickOnDataSeriesShouldCloseNavigation.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "clickOnSettingsShouldSwitchActivity"
+      },
+      {
+        "status": "PASS",
+        "duration": 8,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity/1454190918195_clickOnSettingsShouldSwitchActivity.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "navigatingBackToGraphActivityShouldHaveNavigationClosed"
+      },
+      {
+        "status": "PASS",
+        "duration": 9,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454190906437_navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454190910495_navigatingBackToGraphActivityShouldHaveNavigationClosed_final_click.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "navigationViewShouldBeClosable"
+      },
+      {
+        "status": "PASS",
+        "duration": 5,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1454190885184_navigationViewShouldBeClosable.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "navigationViewShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 6,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered/1454190922247_navigationViewShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "openNavFromMainShouldHaveMainChecked"
+      },
+      {
+        "status": "PASS",
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked/1454190926873_openNavFromMainShouldHaveMainChecked.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "openNavFromSettingsShouldHaveSettingsChecked"
+      },
+      {
+        "status": "PASS",
+        "duration": 6,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked/1454190902218_openNavFromSettingsShouldHaveSettingsChecked.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ]
+  ],
+  "started": 1454190836567,
+  "duration": 88,
+  "exceptions": []
+}

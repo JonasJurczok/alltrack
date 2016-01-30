@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.linesofcode.alltrack.test" tests="25" failures="2" errors="0" skipped="0" time="146.573" timestamp="2016-01-30T21:56:37" hostname="localhost">
+  <properties />
+  <testcase name="clickOnCancelShouldNotCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="7.498" />
+  <testcase name="hittingEnterInGraphNameFieldShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="5.174">
+    <failure>java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+at android.support.test.espresso.core.deps.guava.base.Throwables.propagate(Throwables.java:160)
+at android.support.test.espresso.base.QueueInterrogator.getNextMessage(QueueInterrogator.java:105)
+at android.support.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:466)
+at android.support.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:408)
+at android.support.test.espresso.base.UiControllerImpl.injectKeyEvent(UiControllerImpl.java:192)
+at android.support.test.espresso.base.UiControllerImpl.injectString(UiControllerImpl.java:287)
+at android.support.test.espresso.action.TypeTextAction.perform(TypeTextAction.java:105)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:144)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:422)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:733)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:136)
+at android.app.ActivityThread.main(ActivityThread.java:5001)
+at java.lang.reflect.Method.invokeNative(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:515)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+at dalvik.system.NativeStart.main(Native Method)
+Caused by: java.lang.reflect.InvocationTargetException
+at java.lang.reflect.Method.invokeNative(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:515)
+at android.support.test.espresso.base.QueueInterrogator.getNextMessage(QueueInterrogator.java:99)
+... 17 more
+Caused by: java.lang.RuntimeException: java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph&#64;d998555a: INSERT INTO `graph` (`name` ) VALUES (?)
+at com.j256.ormlite.dao.RuntimeExceptionDao.createOrUpdate(RuntimeExceptionDao.java:251)
+at org.linesofcode.alltrack.graph.GraphService.createNewGraph(GraphService.java:85)
+at org.linesofcode.alltrack.graph.CreateGraphActivity.createGraph(CreateGraphActivity.java:97)
+at org.linesofcode.alltrack.graph.CreateGraphActivity.access$000(CreateGraphActivity.java:36)
+at org.linesofcode.alltrack.graph.CreateGraphActivity$3.onKey(CreateGraphActivity.java:79)
+at android.view.View.dispatchKeyEvent(View.java:7660)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at com.android.internal.policy.impl.PhoneWindow$DecorView.superDispatchKeyEvent(PhoneWindow.java:2035)
+at com.android.internal.policy.impl.PhoneWindow.superDispatchKeyEvent(PhoneWindow.java:1505)
+at android.app.Activity.dispatchKeyEvent(Activity.java:2418)
+at android.support.v7.internal.view.WindowCallbackWrapper.dispatchKeyEvent(WindowCallbackWrapper.java:50)
+at android.support.v7.app.AppCompatDelegateImplBase$AppCompatWindowCallbackBase.dispatchKeyEvent(AppCompatDelegateImplBase.java:224)
+at android.support.v7.internal.view.WindowCallbackWrapper.dispatchKeyEvent(WindowCallbackWrapper.java:50)
+at com.android.internal.policy.impl.PhoneWindow$DecorView.dispatchKeyEvent(PhoneWindow.java:1962)
+at android.view.ViewRootImpl$ViewPostImeInputStage.processKeyEvent(ViewRootImpl.java:3845)
+at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:3819)
+at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3392)
+at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3442)
+at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3411)
+at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:3518)
+at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:3419)
+at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:3575)
+at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3392)
+at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3442)
+at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3411)
+at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:3419)
+at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3392)
+at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3442)
+at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3411)
+at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:3551)
+at android.view.ViewRootImpl$ImeInputStage.onFinishedInputEvent(ViewRootImpl.java:3711)
+at android.view.inputmethod.InputMethodManager$PendingEvent.run(InputMethodManager.java:2010)
+at android.view.inputmethod.InputMethodManager.invokeFinishedInputEventCallback(InputMethodManager.java:1704)
+at android.view.inputmethod.InputMethodManager.finishedInputEvent(InputMethodManager.java:1695)
+at android.view.inputmethod.InputMethodManager$ImeInputEventSender.onInputEventFinished(InputMethodManager.java:1987)
+at android.view.InputEventSender.dispatchInputEventFinished(InputEventSender.java:141)
+at android.os.MessageQueue.nativePollOnce(Native Method)
+at android.os.MessageQueue.next(MessageQueue.java:138)
+... 20 more
+Caused by: java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph&#64;d998555a: INSERT INTO `graph` (`name` ) VALUES (?)
+at com.j256.ormlite.misc.SqlExceptionUtil.create(SqlExceptionUtil.java:22)
+at com.j256.ormlite.stmt.mapped.MappedCreate.insert(MappedCreate.java:124)
+at com.j256.ormlite.stmt.StatementExecutor.create(StatementExecutor.java:363)
+at com.j256.ormlite.dao.BaseDaoImpl.create(BaseDaoImpl.java:306)
+at com.j256.ormlite.dao.BaseDaoImpl.createOrUpdate(BaseDaoImpl.java:332)
+at com.j256.ormlite.dao.RuntimeExceptionDao.createOrUpdate(RuntimeExceptionDao.java:248)
+... 65 more
+Caused by: java.sql.SQLException: inserting to database failed: INSERT INTO `graph` (`name` ) VALUES (?)
+at com.j256.ormlite.misc.SqlExceptionUtil.create(SqlExceptionUtil.java:22)
+at com.j256.ormlite.android.AndroidDatabaseConnection.insert(AndroidDatabaseConnection.java:134)
+at com.j256.ormlite.stmt.mapped.MappedCreate.insert(MappedCreate.java:89)
+... 69 more
+Caused by: android.database.sqlite.SQLiteConstraintException: column name is not unique (code 19)
+at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:782)
+at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:788)
+at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:86)
+at com.j256.ormlite.android.AndroidDatabaseConnection.insert(AndroidDatabaseConnection.java:122)
+... 70 more
+</failure>
+  </testcase>
+  <testcase name="showSimpleGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="1.758" />
+  <testcase name="newlyAddedGraphShouldBeDisplayedImmediately" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="6.005">
+    <failure>java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+at android.support.test.espresso.core.deps.guava.base.Throwables.propagate(Throwables.java:160)
+at android.support.test.espresso.base.QueueInterrogator.getNextMessage(QueueInterrogator.java:105)
+at android.support.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:466)
+at android.support.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:408)
+at android.support.test.espresso.base.UiControllerImpl.injectKeyEvent(UiControllerImpl.java:192)
+at android.support.test.espresso.base.UiControllerImpl.injectString(UiControllerImpl.java:287)
+at android.support.test.espresso.action.TypeTextAction.perform(TypeTextAction.java:105)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:144)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:422)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:733)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:136)
+at android.app.ActivityThread.main(ActivityThread.java:5001)
+at java.lang.reflect.Method.invokeNative(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:515)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+at dalvik.system.NativeStart.main(Native Method)
+Caused by: java.lang.reflect.InvocationTargetException
+at java.lang.reflect.Method.invokeNative(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:515)
+at android.support.test.espresso.base.QueueInterrogator.getNextMessage(QueueInterrogator.java:99)
+... 17 more
+Caused by: java.lang.RuntimeException: java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph&#64;658ef0ae: INSERT INTO `graph` (`name` ) VALUES (?)
+at com.j256.ormlite.dao.RuntimeExceptionDao.createOrUpdate(RuntimeExceptionDao.java:251)
+at org.linesofcode.alltrack.graph.GraphService.createNewGraph(GraphService.java:85)
+at org.linesofcode.alltrack.graph.CreateGraphActivity.createGraph(CreateGraphActivity.java:97)
+at org.linesofcode.alltrack.graph.CreateGraphActivity.access$000(CreateGraphActivity.java:36)
+at org.linesofcode.alltrack.graph.CreateGraphActivity$3.onKey(CreateGraphActivity.java:79)
+at android.view.View.dispatchKeyEvent(View.java:7660)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1408)
+at com.android.internal.policy.impl.PhoneWindow$DecorView.superDispatchKeyEvent(PhoneWindow.java:2035)
+at com.android.internal.policy.impl.PhoneWindow.superDispatchKeyEvent(PhoneWindow.java:1505)
+at android.app.Activity.dispatchKeyEvent(Activity.java:2418)
+at android.support.v7.internal.view.WindowCallbackWrapper.dispatchKeyEvent(WindowCallbackWrapper.java:50)
+at android.support.v7.app.AppCompatDelegateImplBase$AppCompatWindowCallbackBase.dispatchKeyEvent(AppCompatDelegateImplBase.java:224)
+at android.support.v7.internal.view.WindowCallbackWrapper.dispatchKeyEvent(WindowCallbackWrapper.java:50)
+at com.android.internal.policy.impl.PhoneWindow$DecorView.dispatchKeyEvent(PhoneWindow.java:1962)
+at android.view.ViewRootImpl$ViewPostImeInputStage.processKeyEvent(ViewRootImpl.java:3845)
+at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:3819)
+at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3392)
+at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3442)
+at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3411)
+at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:3518)
+at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:3419)
+at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:3575)
+at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3392)
+at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3442)
+at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3411)
+at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:3419)
+at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3392)
+at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3442)
+at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3411)
+at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:3551)
+at android.view.ViewRootImpl$ImeInputStage.onFinishedInputEvent(ViewRootImpl.java:3711)
+at android.view.inputmethod.InputMethodManager$PendingEvent.run(InputMethodManager.java:2010)
+at android.view.inputmethod.InputMethodManager.invokeFinishedInputEventCallback(InputMethodManager.java:1704)
+at android.view.inputmethod.InputMethodManager.finishedInputEvent(InputMethodManager.java:1695)
+at android.view.inputmethod.InputMethodManager$ImeInputEventSender.onInputEventFinished(InputMethodManager.java:1987)
+at android.view.InputEventSender.dispatchInputEventFinished(InputEventSender.java:141)
+at android.os.MessageQueue.nativePollOnce(Native Method)
+at android.os.MessageQueue.next(MessageQueue.java:138)
+... 20 more
+Caused by: java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph&#64;658ef0ae: INSERT INTO `graph` (`name` ) VALUES (?)
+at com.j256.ormlite.misc.SqlExceptionUtil.create(SqlExceptionUtil.java:22)
+at com.j256.ormlite.stmt.mapped.MappedCreate.insert(MappedCreate.java:124)
+at com.j256.ormlite.stmt.StatementExecutor.create(StatementExecutor.java:363)
+at com.j256.ormlite.dao.BaseDaoImpl.create(BaseDaoImpl.java:306)
+at com.j256.ormlite.dao.BaseDaoImpl.createOrUpdate(BaseDaoImpl.java:332)
+at com.j256.ormlite.dao.RuntimeExceptionDao.createOrUpdate(RuntimeExceptionDao.java:248)
+... 65 more
+Caused by: java.sql.SQLException: inserting to database failed: INSERT INTO `graph` (`name` ) VALUES (?)
+at com.j256.ormlite.misc.SqlExceptionUtil.create(SqlExceptionUtil.java:22)
+at com.j256.ormlite.android.AndroidDatabaseConnection.insert(AndroidDatabaseConnection.java:134)
+at com.j256.ormlite.stmt.mapped.MappedCreate.insert(MappedCreate.java:89)
+... 69 more
+Caused by: android.database.sqlite.SQLiteConstraintException: column name is not unique (code 19)
+at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:782)
+at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:788)
+at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:86)
+at com.j256.ormlite.android.AndroidDatabaseConnection.insert(AndroidDatabaseConnection.java:122)
+... 70 more
+</failure>
+  </testcase>
+  <testcase name="addNewGraphShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="4.798" />
+  <testcase name="swipeDownShouldMaximizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="3.594" />
+  <testcase name="toolBarShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="4.577" />
+  <testcase name="mainActivityShouldBeStarted" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="8.001" />
+  <testcase name="recyclerViewShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.83" />
+  <testcase name="swipeUpShouldMinimizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="2.289" />
+  <testcase name="floatingActionButtonShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.805" />
+  <testcase name="testCreateGraphShouldPersistGraph" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.152" />
+  <testcase name="testDeleteGraphShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.102" />
+  <testcase name="testDeleteGraphShouldWork" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.076" />
+  <testcase name="testGetAllShouldHaveDatapointsOrdererdByTime" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.126" />
+  <testcase name="testSaveShouldCreateNewDatapoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.303" />
+  <testcase name="testSaveShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.126" />
+  <testcase name="testAndroidTestCaseSetupProperly" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.0" />
+  <testcase name="navigationViewShouldBeClosable" classname="org.linesofcode.alltrack.NavigationUITest" time="26.533" />
+  <testcase name="clickOnDataSeriesShouldCloseNavigation" classname="org.linesofcode.alltrack.NavigationUITest" time="17.213" />
+  <testcase name="openNavFromSettingsShouldHaveSettingsChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="10.597" />
+  <testcase name="navigatingBackToGraphActivityShouldHaveNavigationClosed" classname="org.linesofcode.alltrack.NavigationUITest" time="23.121" />
+  <testcase name="clickOnSettingsShouldSwitchActivity" classname="org.linesofcode.alltrack.NavigationUITest" time="14.777" />
+  <testcase name="navigationViewShouldBeRendered" classname="org.linesofcode.alltrack.NavigationUITest" time="11.238" />
+  <testcase name="openNavFromMainShouldHaveMainChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="4.765" />
+</testsuite>

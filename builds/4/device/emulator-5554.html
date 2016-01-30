@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>android-21</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet">
+        <link href="../static/bootstrap.min.css" rel="stylesheet">
+        <link href="../static/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="../static/spoon.css" rel="stylesheet">
+        <script src="../static/jquery.min.js"></script>
+        <script src="../static/bootstrap.min.js"></script>
+        <meta name="description" content="">
+    </head>
+    <body>
+        <div class="container">
+            <div class="hero-unit">
+                <h1>android-21</h1>
+                <p>25 tests run with 24 passing and 1 failing in 1 minute, 6 seconds at 2016-01-30 10:53 PM</p>
+                <p>Running Android 5.0.2 (API 21) with locale en-US</p>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphActivitiyInteractionUITest-addNewGraphShouldCreateNewGraph">
+                <div class="span12">
+                    <h2 class="test-result fail">
+                        Add New Graph Should Create New Graph <small>GraphActivitiyInteractionUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <div class="alert alert-error stacktrace fail">
+                        <h4 data-toggle="collapse" data-target="#stacktrace-6">java.lang.RuntimeException: java.lang.reflect.InvocationTargetException</h4>
+                        <div class="stacktrace-body collapse" id="stacktrace-6">
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.core.deps.guava.base.Throwables.propagate(Throwables.java:160)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.base.QueueInterrogator.getNextMessage(QueueInterrogator.java:105)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:466)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:408)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.base.UiControllerImpl.injectKeyEvent(UiControllerImpl.java:192)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.base.UiControllerImpl.injectString(UiControllerImpl.java:287)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.action.TypeTextAction.perform(TypeTextAction.java:105)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:144)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:422)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.util.concurrent.FutureTask.run(FutureTask.java:237)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.os.Handler.handleCallback(Handler.java:739)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.os.Handler.dispatchMessage(Handler.java:95)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.os.Looper.loop(Looper.java:135)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.app.ActivityThread.main(ActivityThread.java:5221)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invoke(Native Method)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invoke(Method.java:372)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)</div>
+                            <div class="stacktrace-line">Caused by: java.lang.reflect.InvocationTargetException</div>
+                            <div class="stacktrace-line">Caused by: java.lang.RuntimeException: java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph@71f12f2c: INSERT INTO `graph` (`name` ) VALUES (?)</div>
+                            <div class="stacktrace-line">Caused by: java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph@71f12f2c: INSERT INTO `graph` (`name` ) VALUES (?)</div>
+                            <div class="stacktrace-line">Caused by: java.sql.SQLException: inserting to database failed: INSERT INTO `graph` (`name` ) VALUES (?)</div>
+                            <div class="stacktrace-line">Caused by: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: graph.name (code 2067)</div>
+                        </div>
+                    </div>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454190861626_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454190861626_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png" title="CreateGraph AddNewGraphShouldCreateNewGraph Before Graph Name">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphActivitiyInteractionUITest-clickOnCancelShouldNotCreateNewGraph">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Click On Cancel Should Not Create New Graph <small>GraphActivitiyInteractionUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                        <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph.gif" title="View as animated GIF" class="pull-right icon">
+                            <img src="../static/icon-animated.png" alt="View as animated GIF">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190846666_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190846666_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png" title="ClickOnCancelShouldNotCreateNewGraph Before Graph Name">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190848855_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190848855_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png" title="ClickOnCancelShouldNotCreateNewGraph After Graph Name">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190849447_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190849447_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png" title="ClickOnCancelShouldNotCreateNewGraph After Close Keyboard">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190850150_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190850150_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png" title="ClickOnCancelShouldNotCreateNewGraph After Cancel Clicked">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphActivitiyInteractionUITest-hittingEnterInGraphNameFieldShouldCreateNewGraph">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Hitting Enter In Graph Name Field Should Create New Graph <small>GraphActivitiyInteractionUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                        <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph.gif" title="View as animated GIF" class="pull-right icon">
+                            <img src="../static/icon-animated.png" alt="View as animated GIF">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454190852457_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454190852457_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png" title="HittingEnterInGraphNameFieldShouldCreateNewGraph Before Graph Name">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454190855539_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454190855539_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png" title="HittingEnterInGraphNameFieldShouldCreateNewGraph After Graph Name">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphActivitiyInteractionUITest-newlyAddedGraphShouldBeDisplayedImmediately">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Newly Added Graph Should Be Displayed Immediately <small>GraphActivitiyInteractionUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                        <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately.gif" title="View as animated GIF" class="pull-right icon">
+                            <img src="../static/icon-animated.png" alt="View as animated GIF">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454190857737_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454190857737_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png" title="CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately Before Graph Name">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454190860280_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454190860280_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png" title="CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately After Confirm">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphActivitiyInteractionUITest-showSimpleGraph">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Show Simple Graph <small>GraphActivitiyInteractionUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/showSimpleGraph.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/showSimpleGraph.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/showSimpleGraph/1454190856293_showSimpleGraph_before_asserts.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/showSimpleGraph/1454190856293_showSimpleGraph_before_asserts.png" title="ShowSimpleGraph Before Asserts">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphActivitySetupUITest-floatingActionButtonShouldBeRendered">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Floating Action Button Should Be Rendered <small>GraphActivitySetupUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1454190872539_floatingActionButtonShouldBeRendered.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1454190872539_floatingActionButtonShouldBeRendered.png" title="FloatingActionButtonShouldBeRendered">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphActivitySetupUITest-mainActivityShouldBeStarted">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Main Activity Should Be Started <small>GraphActivitySetupUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1454190868795_mainActivityShouldBeStarted.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1454190868795_mainActivityShouldBeStarted.png" title="MainActivityShouldBeStarted">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphActivitySetupUITest-recyclerViewShouldBeRendered">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Recycler View Should Be Rendered <small>GraphActivitySetupUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1454190869554_recyclerViewShouldBeRendered.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1454190869554_recyclerViewShouldBeRendered.png" title="RecyclerViewShouldBeRendered">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphActivitySetupUITest-swipeDownShouldMaximizeAppBar">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Swipe Down Should Maximize App Bar <small>GraphActivitySetupUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1454190867188_swipeDownShouldMaximizeAppBar.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1454190867188_swipeDownShouldMaximizeAppBar.png" title="SwipeDownShouldMaximizeAppBar">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphActivitySetupUITest-swipeUpShouldMinimizeAppBar">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Swipe Up Should Minimize App Bar <small>GraphActivitySetupUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1454190871573_swipeUpShouldMinimizeAppBar.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1454190871573_swipeUpShouldMinimizeAppBar.png" title="SwipeUpShouldMinimizeAppBar">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphActivitySetupUITest-toolBarShouldBeRendered">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Tool Bar Should Be Rendered <small>GraphActivitySetupUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1454190868082_toolBarShouldBeRendered.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1454190868082_toolBarShouldBeRendered.png" title="ToolBarShouldBeRendered">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphServiceTest-testAndroidTestCaseSetupProperly">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Android Test Case Setup Properly <small>GraphServiceTest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphServiceTest/testAndroidTestCaseSetupProperly.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphServiceTest/testAndroidTestCaseSetupProperly.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphServiceTest-testCreateGraphShouldPersistGraph">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Create Graph Should Persist Graph <small>GraphServiceTest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphServiceTest/testCreateGraphShouldPersistGraph.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphServiceTest/testCreateGraphShouldPersistGraph.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphServiceTest-testDeleteGraphShouldDeleteDataPoints">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Delete Graph Should Delete Data Points <small>GraphServiceTest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphServiceTest/testDeleteGraphShouldDeleteDataPoints.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphServiceTest/testDeleteGraphShouldDeleteDataPoints.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphServiceTest-testDeleteGraphShouldWork">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Delete Graph Should Work <small>GraphServiceTest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphServiceTest/testDeleteGraphShouldWork.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphServiceTest/testDeleteGraphShouldWork.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphServiceTest-testGetAllShouldHaveDatapointsOrdererdByTime">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Get All Should Have Datapoints Ordererd By Time <small>GraphServiceTest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphServiceTest/testGetAllShouldHaveDatapointsOrdererdByTime.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphServiceTest/testGetAllShouldHaveDatapointsOrdererdByTime.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphServiceTest-testSaveShouldCreateNewDatapoints">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Save Should Create New Datapoints <small>GraphServiceTest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphServiceTest/testSaveShouldCreateNewDatapoints.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphServiceTest/testSaveShouldCreateNewDatapoints.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-GraphServiceTest-testSaveShouldDeleteDataPoints">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Save Should Delete Data Points <small>GraphServiceTest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.GraphServiceTest/testSaveShouldDeleteDataPoints.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.GraphServiceTest/testSaveShouldDeleteDataPoints.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-NavigationUITest-clickOnDataSeriesShouldCloseNavigation">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Click On Data Series Should Close Navigation <small>NavigationUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1454190882824_clickOnDataSeriesShouldCloseNavigation.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1454190882824_clickOnDataSeriesShouldCloseNavigation.png" title="ClickOnDataSeriesShouldCloseNavigation">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-NavigationUITest-clickOnSettingsShouldSwitchActivity">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Click On Settings Should Switch Activity <small>NavigationUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity/1454190898888_clickOnSettingsShouldSwitchActivity.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity/1454190898888_clickOnSettingsShouldSwitchActivity.png" title="ClickOnSettingsShouldSwitchActivity">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-NavigationUITest-navigatingBackToGraphActivityShouldHaveNavigationClosed">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Navigating Back To Graph Activity Should Have Navigation Closed <small>NavigationUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                        <a href="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed.gif" title="View as animated GIF" class="pull-right icon">
+                            <img src="../static/icon-animated.png" alt="View as animated GIF">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454190892852_navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454190892852_navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click.png" title="NavigatingBackToGraphActivityShouldHaveNavigationClosed First Click">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454190894874_navigatingBackToGraphActivityShouldHaveNavigationClosed_final_click.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454190894874_navigatingBackToGraphActivityShouldHaveNavigationClosed_final_click.png" title="NavigatingBackToGraphActivityShouldHaveNavigationClosed Final Click">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-NavigationUITest-navigationViewShouldBeClosable">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Navigation View Should Be Closable <small>NavigationUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1454190877792_navigationViewShouldBeClosable.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1454190877792_navigationViewShouldBeClosable.png" title="NavigationViewShouldBeClosable">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-NavigationUITest-navigationViewShouldBeRendered">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Navigation View Should Be Rendered <small>NavigationUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered/1454190902514_navigationViewShouldBeRendered.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered/1454190902514_navigationViewShouldBeRendered.png" title="NavigationViewShouldBeRendered">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-NavigationUITest-openNavFromMainShouldHaveMainChecked">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Open Nav From Main Should Have Main Checked <small>NavigationUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked/1454190906004_openNavFromMainShouldHaveMainChecked.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked/1454190906004_openNavFromMainShouldHaveMainChecked.png" title="OpenNavFromMainShouldHaveMainChecked">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="org-linesofcode-alltrack-NavigationUITest-openNavFromSettingsShouldHaveSettingsChecked">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        Open Nav From Settings Should Have Settings Checked <small>NavigationUITest</small>
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../logs/emulator-5554/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked.html" title="View device log" class="pull-right icon">
+                            <img src="../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../test/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked.html" title="View on all devices" class="pull-right icon">
+                            <img src="../static/icon-devices.png" alt="View on all devices">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked/1454190888773_openNavFromSettingsShouldHaveSettingsChecked.png" class="thumbnail">
+                                <img src="../image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked/1454190888773_openNavFromSettingsShouldHaveSettingsChecked.png" title="OpenNavFromSettingsShouldHaveSettingsChecked">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $('.icon, .thumbnail img').tooltip({
+                container: 'body'
+            });
+        </script>
+    </body>
+</html>

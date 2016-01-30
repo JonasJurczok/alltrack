@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.linesofcode.alltrack.test" tests="25" failures="1" errors="0" skipped="0" time="61.083" timestamp="2016-01-30T21:55:15" hostname="localhost">
+  <properties />
+  <testcase name="clickOnCancelShouldNotCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="5.224" />
+  <testcase name="hittingEnterInGraphNameFieldShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="5.313" />
+  <testcase name="showSimpleGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="0.755" />
+  <testcase name="newlyAddedGraphShouldBeDisplayedImmediately" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="4.02" />
+  <testcase name="addNewGraphShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="4.972">
+    <failure>java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+at android.support.test.espresso.core.deps.guava.base.Throwables.propagate(Throwables.java:160)
+at android.support.test.espresso.base.QueueInterrogator.getNextMessage(QueueInterrogator.java:105)
+at android.support.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:466)
+at android.support.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:408)
+at android.support.test.espresso.base.UiControllerImpl.injectKeyEvent(UiControllerImpl.java:192)
+at android.support.test.espresso.base.UiControllerImpl.injectString(UiControllerImpl.java:287)
+at android.support.test.espresso.action.TypeTextAction.perform(TypeTextAction.java:105)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:144)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:422)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:135)
+at android.app.ActivityThread.main(ActivityThread.java:5221)
+at java.lang.reflect.Method.invoke(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:372)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+Caused by: java.lang.reflect.InvocationTargetException
+at java.lang.reflect.Method.invoke(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:372)
+at android.support.test.espresso.base.QueueInterrogator.getNextMessage(QueueInterrogator.java:99)
+... 16 more
+Caused by: java.lang.RuntimeException: java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph&#64;71f12f2c: INSERT INTO `graph` (`name` ) VALUES (?)
+at com.j256.ormlite.dao.RuntimeExceptionDao.createOrUpdate(RuntimeExceptionDao.java:251)
+at org.linesofcode.alltrack.graph.GraphService.createNewGraph(GraphService.java:85)
+at org.linesofcode.alltrack.graph.CreateGraphActivity.createGraph(CreateGraphActivity.java:97)
+at org.linesofcode.alltrack.graph.CreateGraphActivity.access$000(CreateGraphActivity.java:36)
+at org.linesofcode.alltrack.graph.CreateGraphActivity$3.onKey(CreateGraphActivity.java:79)
+at android.view.View.dispatchKeyEvent(View.java:8333)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+at com.android.internal.policy.impl.PhoneWindow$DecorView.superDispatchKeyEvent(PhoneWindow.java:2306)
+at com.android.internal.policy.impl.PhoneWindow.superDispatchKeyEvent(PhoneWindow.java:1682)
+at android.app.Activity.dispatchKeyEvent(Activity.java:2699)
+at android.support.v7.internal.view.WindowCallbackWrapper.dispatchKeyEvent(WindowCallbackWrapper.java:50)
+at android.support.v7.app.AppCompatDelegateImplBase$AppCompatWindowCallbackBase.dispatchKeyEvent(AppCompatDelegateImplBase.java:224)
+at android.support.v7.internal.view.WindowCallbackWrapper.dispatchKeyEvent(WindowCallbackWrapper.java:50)
+at com.android.internal.policy.impl.PhoneWindow$DecorView.dispatchKeyEvent(PhoneWindow.java:2221)
+at android.view.ViewRootImpl$ViewPostImeInputStage.processKeyEvent(ViewRootImpl.java:3918)
+at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:3880)
+at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3449)
+at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3502)
+at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3468)
+at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:3578)
+at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:3476)
+at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:3635)
+at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3449)
+at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3502)
+at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3468)
+at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:3476)
+at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3449)
+at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3502)
+at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3468)
+at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:3611)
+at android.view.ViewRootImpl$ImeInputStage.onFinishedInputEvent(ViewRootImpl.java:3772)
+at android.view.inputmethod.InputMethodManager$PendingEvent.run(InputMethodManager.java:2208)
+at android.view.inputmethod.InputMethodManager.invokeFinishedInputEventCallback(InputMethodManager.java:1849)
+at android.view.inputmethod.InputMethodManager.finishedInputEvent(InputMethodManager.java:1840)
+at android.view.inputmethod.InputMethodManager$ImeInputEventSender.onInputEventFinished(InputMethodManager.java:2185)
+at android.view.InputEventSender.dispatchInputEventFinished(InputEventSender.java:141)
+at android.os.MessageQueue.nativePollOnce(Native Method)
+at android.os.MessageQueue.next(MessageQueue.java:143)
+... 19 more
+Caused by: java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph&#64;71f12f2c: INSERT INTO `graph` (`name` ) VALUES (?)
+at com.j256.ormlite.misc.SqlExceptionUtil.create(SqlExceptionUtil.java:22)
+at com.j256.ormlite.stmt.mapped.MappedCreate.insert(MappedCreate.java:124)
+at com.j256.ormlite.stmt.StatementExecutor.create(StatementExecutor.java:363)
+at com.j256.ormlite.dao.BaseDaoImpl.create(BaseDaoImpl.java:306)
+at com.j256.ormlite.dao.BaseDaoImpl.createOrUpdate(BaseDaoImpl.java:332)
+at com.j256.ormlite.dao.RuntimeExceptionDao.createOrUpdate(RuntimeExceptionDao.java:248)
+... 64 more
+Caused by: java.sql.SQLException: inserting to database failed: INSERT INTO `graph` (`name` ) VALUES (?)
+at com.j256.ormlite.misc.SqlExceptionUtil.create(SqlExceptionUtil.java:22)
+at com.j256.ormlite.android.AndroidDatabaseConnection.insert(AndroidDatabaseConnection.java:134)
+at com.j256.ormlite.stmt.mapped.MappedCreate.insert(MappedCreate.java:89)
+... 68 more
+Caused by: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: graph.name (code 2067)
+at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:782)
+at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:788)
+at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:86)
+at com.j256.ormlite.android.AndroidDatabaseConnection.insert(AndroidDatabaseConnection.java:122)
+... 69 more
+</failure>
+  </testcase>
+  <testcase name="swipeDownShouldMaximizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="2.315" />
+  <testcase name="toolBarShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.779" />
+  <testcase name="mainActivityShouldBeStarted" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.679" />
+  <testcase name="recyclerViewShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.731" />
+  <testcase name="swipeUpShouldMinimizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="2.338" />
+  <testcase name="floatingActionButtonShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.756" />
+  <testcase name="testCreateGraphShouldPersistGraph" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.151" />
+  <testcase name="testDeleteGraphShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.076" />
+  <testcase name="testDeleteGraphShouldWork" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.101" />
+  <testcase name="testGetAllShouldHaveDatapointsOrdererdByTime" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.051" />
+  <testcase name="testSaveShouldCreateNewDatapoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.026" />
+  <testcase name="testSaveShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="1.384" />
+  <testcase name="testAndroidTestCaseSetupProperly" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.001" />
+  <testcase name="navigationViewShouldBeClosable" classname="org.linesofcode.alltrack.NavigationUITest" time="3.247" />
+  <testcase name="clickOnDataSeriesShouldCloseNavigation" classname="org.linesofcode.alltrack.NavigationUITest" time="5.656" />
+  <testcase name="openNavFromSettingsShouldHaveSettingsChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="5.934" />
+  <testcase name="navigatingBackToGraphActivityShouldHaveNavigationClosed" classname="org.linesofcode.alltrack.NavigationUITest" time="6.735" />
+  <testcase name="clickOnSettingsShouldSwitchActivity" classname="org.linesofcode.alltrack.NavigationUITest" time="4.174" />
+  <testcase name="navigationViewShouldBeRendered" classname="org.linesofcode.alltrack.NavigationUITest" time="4.02" />
+  <testcase name="openNavFromMainShouldHaveMainChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="4.02" />
+</testsuite>

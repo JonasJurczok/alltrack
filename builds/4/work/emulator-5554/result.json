@@ -1,0 +1,987 @@
+{
+  "installFailed": false,
+  "deviceDetails": {
+    "model": "Android SDK built for x86",
+    "manufacturer": "unknown",
+    "version": "5.0.2",
+    "apiLevel": 21,
+    "language": "en",
+    "region": "US",
+    "isEmulator": true,
+    "avdName": "android-21"
+  },
+  "testResults": [
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "addNewGraphShouldCreateNewGraph"
+      },
+      {
+        "status": "FAIL",
+        "exception": {
+          "className": "java.lang.RuntimeException",
+          "message": "java.lang.reflect.InvocationTargetException",
+          "elements": [
+            {
+              "className": "android.support.test.espresso.core.deps.guava.base.Throwables",
+              "fileName": "Throwables.java",
+              "line": 160,
+              "methodName": "propagate",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.base.QueueInterrogator",
+              "fileName": "QueueInterrogator.java",
+              "line": 105,
+              "methodName": "getNextMessage",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.base.UiControllerImpl",
+              "fileName": "UiControllerImpl.java",
+              "line": 466,
+              "methodName": "loopUntil",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.base.UiControllerImpl",
+              "fileName": "UiControllerImpl.java",
+              "line": 408,
+              "methodName": "loopUntil",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.base.UiControllerImpl",
+              "fileName": "UiControllerImpl.java",
+              "line": 192,
+              "methodName": "injectKeyEvent",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.base.UiControllerImpl",
+              "fileName": "UiControllerImpl.java",
+              "line": 287,
+              "methodName": "injectString",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.action.TypeTextAction",
+              "fileName": "TypeTextAction.java",
+              "line": 105,
+              "methodName": "perform",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.ViewInteraction$1",
+              "fileName": "ViewInteraction.java",
+              "line": 144,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "java.util.concurrent.Executors$RunnableAdapter",
+              "fileName": "Executors.java",
+              "line": 422,
+              "methodName": "call",
+              "isNative": false
+            },
+            {
+              "className": "java.util.concurrent.FutureTask",
+              "fileName": "FutureTask.java",
+              "line": 237,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "android.os.Handler",
+              "fileName": "Handler.java",
+              "line": 739,
+              "methodName": "handleCallback",
+              "isNative": false
+            },
+            {
+              "className": "android.os.Handler",
+              "fileName": "Handler.java",
+              "line": 95,
+              "methodName": "dispatchMessage",
+              "isNative": false
+            },
+            {
+              "className": "android.os.Looper",
+              "fileName": "Looper.java",
+              "line": 135,
+              "methodName": "loop",
+              "isNative": false
+            },
+            {
+              "className": "android.app.ActivityThread",
+              "fileName": "ActivityThread.java",
+              "line": 5221,
+              "methodName": "main",
+              "isNative": false
+            },
+            {
+              "className": "java.lang.reflect.Method",
+              "line": 0,
+              "methodName": "invoke",
+              "isNative": true
+            },
+            {
+              "className": "java.lang.reflect.Method",
+              "fileName": "Method.java",
+              "line": 372,
+              "methodName": "invoke",
+              "isNative": false
+            },
+            {
+              "className": "com.android.internal.os.ZygoteInit$MethodAndArgsCaller",
+              "fileName": "ZygoteInit.java",
+              "line": 899,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "com.android.internal.os.ZygoteInit",
+              "fileName": "ZygoteInit.java",
+              "line": 694,
+              "methodName": "main",
+              "isNative": false
+            }
+          ],
+          "cause": {
+            "className": "java.lang.reflect.InvocationTargetException",
+            "elements": [
+              {
+                "className": "java.lang.reflect.Method",
+                "line": 0,
+                "methodName": "invoke",
+                "isNative": true
+              },
+              {
+                "className": "java.lang.reflect.Method",
+                "fileName": "Method.java",
+                "line": 372,
+                "methodName": "invoke",
+                "isNative": false
+              },
+              {
+                "className": "android.support.test.espresso.base.QueueInterrogator",
+                "fileName": "QueueInterrogator.java",
+                "line": 99,
+                "methodName": "getNextMessage",
+                "isNative": false
+              }
+            ],
+            "cause": {
+              "className": "java.lang.RuntimeException",
+              "message": "java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph@71f12f2c: INSERT INTO `graph` (`name` ) VALUES (?)",
+              "elements": [
+                {
+                  "className": "com.j256.ormlite.dao.RuntimeExceptionDao",
+                  "fileName": "RuntimeExceptionDao.java",
+                  "line": 251,
+                  "methodName": "createOrUpdate",
+                  "isNative": false
+                },
+                {
+                  "className": "org.linesofcode.alltrack.graph.GraphService",
+                  "fileName": "GraphService.java",
+                  "line": 85,
+                  "methodName": "createNewGraph",
+                  "isNative": false
+                },
+                {
+                  "className": "org.linesofcode.alltrack.graph.CreateGraphActivity",
+                  "fileName": "CreateGraphActivity.java",
+                  "line": 97,
+                  "methodName": "createGraph",
+                  "isNative": false
+                },
+                {
+                  "className": "org.linesofcode.alltrack.graph.CreateGraphActivity",
+                  "fileName": "CreateGraphActivity.java",
+                  "line": 36,
+                  "methodName": "access$000",
+                  "isNative": false
+                },
+                {
+                  "className": "org.linesofcode.alltrack.graph.CreateGraphActivity$3",
+                  "fileName": "CreateGraphActivity.java",
+                  "line": 79,
+                  "methodName": "onKey",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.View",
+                  "fileName": "View.java",
+                  "line": 8333,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1600,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1600,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1600,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1600,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1600,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1600,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1600,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1600,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1600,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "com.android.internal.policy.impl.PhoneWindow$DecorView",
+                  "fileName": "PhoneWindow.java",
+                  "line": 2306,
+                  "methodName": "superDispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "com.android.internal.policy.impl.PhoneWindow",
+                  "fileName": "PhoneWindow.java",
+                  "line": 1682,
+                  "methodName": "superDispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.app.Activity",
+                  "fileName": "Activity.java",
+                  "line": 2699,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.support.v7.internal.view.WindowCallbackWrapper",
+                  "fileName": "WindowCallbackWrapper.java",
+                  "line": 50,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.support.v7.app.AppCompatDelegateImplBase$AppCompatWindowCallbackBase",
+                  "fileName": "AppCompatDelegateImplBase.java",
+                  "line": 224,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.support.v7.internal.view.WindowCallbackWrapper",
+                  "fileName": "WindowCallbackWrapper.java",
+                  "line": 50,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "com.android.internal.policy.impl.PhoneWindow$DecorView",
+                  "fileName": "PhoneWindow.java",
+                  "line": 2221,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$ViewPostImeInputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3918,
+                  "methodName": "processKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$ViewPostImeInputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3880,
+                  "methodName": "onProcess",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3449,
+                  "methodName": "deliver",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3502,
+                  "methodName": "onDeliverToNext",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3468,
+                  "methodName": "forward",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$AsyncInputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3578,
+                  "methodName": "forward",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3476,
+                  "methodName": "apply",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$AsyncInputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3635,
+                  "methodName": "apply",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3449,
+                  "methodName": "deliver",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3502,
+                  "methodName": "onDeliverToNext",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3468,
+                  "methodName": "forward",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3476,
+                  "methodName": "apply",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3449,
+                  "methodName": "deliver",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3502,
+                  "methodName": "onDeliverToNext",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3468,
+                  "methodName": "forward",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$AsyncInputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3611,
+                  "methodName": "forward",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$ImeInputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3772,
+                  "methodName": "onFinishedInputEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.inputmethod.InputMethodManager$PendingEvent",
+                  "fileName": "InputMethodManager.java",
+                  "line": 2208,
+                  "methodName": "run",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.inputmethod.InputMethodManager",
+                  "fileName": "InputMethodManager.java",
+                  "line": 1849,
+                  "methodName": "invokeFinishedInputEventCallback",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.inputmethod.InputMethodManager",
+                  "fileName": "InputMethodManager.java",
+                  "line": 1840,
+                  "methodName": "finishedInputEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.inputmethod.InputMethodManager$ImeInputEventSender",
+                  "fileName": "InputMethodManager.java",
+                  "line": 2185,
+                  "methodName": "onInputEventFinished",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.InputEventSender",
+                  "fileName": "InputEventSender.java",
+                  "line": 141,
+                  "methodName": "dispatchInputEventFinished",
+                  "isNative": false
+                },
+                {
+                  "className": "android.os.MessageQueue",
+                  "line": 0,
+                  "methodName": "nativePollOnce",
+                  "isNative": true
+                },
+                {
+                  "className": "android.os.MessageQueue",
+                  "fileName": "MessageQueue.java",
+                  "line": 143,
+                  "methodName": "next",
+                  "isNative": false
+                }
+              ],
+              "cause": {
+                "className": "java.sql.SQLException",
+                "message": "Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph@71f12f2c: INSERT INTO `graph` (`name` ) VALUES (?)",
+                "elements": [
+                  {
+                    "className": "com.j256.ormlite.misc.SqlExceptionUtil",
+                    "fileName": "SqlExceptionUtil.java",
+                    "line": 22,
+                    "methodName": "create",
+                    "isNative": false
+                  },
+                  {
+                    "className": "com.j256.ormlite.stmt.mapped.MappedCreate",
+                    "fileName": "MappedCreate.java",
+                    "line": 124,
+                    "methodName": "insert",
+                    "isNative": false
+                  },
+                  {
+                    "className": "com.j256.ormlite.stmt.StatementExecutor",
+                    "fileName": "StatementExecutor.java",
+                    "line": 363,
+                    "methodName": "create",
+                    "isNative": false
+                  },
+                  {
+                    "className": "com.j256.ormlite.dao.BaseDaoImpl",
+                    "fileName": "BaseDaoImpl.java",
+                    "line": 306,
+                    "methodName": "create",
+                    "isNative": false
+                  },
+                  {
+                    "className": "com.j256.ormlite.dao.BaseDaoImpl",
+                    "fileName": "BaseDaoImpl.java",
+                    "line": 332,
+                    "methodName": "createOrUpdate",
+                    "isNative": false
+                  },
+                  {
+                    "className": "com.j256.ormlite.dao.RuntimeExceptionDao",
+                    "fileName": "RuntimeExceptionDao.java",
+                    "line": 248,
+                    "methodName": "createOrUpdate",
+                    "isNative": false
+                  }
+                ],
+                "cause": {
+                  "className": "java.sql.SQLException",
+                  "message": "inserting to database failed: INSERT INTO `graph` (`name` ) VALUES (?)",
+                  "elements": [
+                    {
+                      "className": "com.j256.ormlite.misc.SqlExceptionUtil",
+                      "fileName": "SqlExceptionUtil.java",
+                      "line": 22,
+                      "methodName": "create",
+                      "isNative": false
+                    },
+                    {
+                      "className": "com.j256.ormlite.android.AndroidDatabaseConnection",
+                      "fileName": "AndroidDatabaseConnection.java",
+                      "line": 134,
+                      "methodName": "insert",
+                      "isNative": false
+                    },
+                    {
+                      "className": "com.j256.ormlite.stmt.mapped.MappedCreate",
+                      "fileName": "MappedCreate.java",
+                      "line": 89,
+                      "methodName": "insert",
+                      "isNative": false
+                    }
+                  ],
+                  "cause": {
+                    "className": "android.database.sqlite.SQLiteConstraintException",
+                    "message": "UNIQUE constraint failed: graph.name (code 2067)",
+                    "elements": [
+                      {
+                        "className": "android.database.sqlite.SQLiteConnection",
+                        "line": 0,
+                        "methodName": "nativeExecuteForLastInsertedRowId",
+                        "isNative": true
+                      },
+                      {
+                        "className": "android.database.sqlite.SQLiteConnection",
+                        "fileName": "SQLiteConnection.java",
+                        "line": 782,
+                        "methodName": "executeForLastInsertedRowId",
+                        "isNative": false
+                      },
+                      {
+                        "className": "android.database.sqlite.SQLiteSession",
+                        "fileName": "SQLiteSession.java",
+                        "line": 788,
+                        "methodName": "executeForLastInsertedRowId",
+                        "isNative": false
+                      },
+                      {
+                        "className": "android.database.sqlite.SQLiteStatement",
+                        "fileName": "SQLiteStatement.java",
+                        "line": 86,
+                        "methodName": "executeInsert",
+                        "isNative": false
+                      },
+                      {
+                        "className": "com.j256.ormlite.android.AndroidDatabaseConnection",
+                        "fileName": "AndroidDatabaseConnection.java",
+                        "line": 122,
+                        "methodName": "insert",
+                        "isNative": false
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454190861626_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "clickOnCancelShouldNotCreateNewGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 5,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190846666_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190848855_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190849447_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190850150_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "hittingEnterInGraphNameFieldShouldCreateNewGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 5,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454190852457_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454190855539_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "newlyAddedGraphShouldBeDisplayedImmediately"
+      },
+      {
+        "status": "PASS",
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454190857737_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454190860280_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "showSimpleGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/showSimpleGraph/1454190856293_showSimpleGraph_before_asserts.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "floatingActionButtonShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1454190872539_floatingActionButtonShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "mainActivityShouldBeStarted"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1454190868795_mainActivityShouldBeStarted.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "recyclerViewShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1454190869554_recyclerViewShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "swipeDownShouldMaximizeAppBar"
+      },
+      {
+        "status": "PASS",
+        "duration": 2,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1454190867188_swipeDownShouldMaximizeAppBar.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "swipeUpShouldMinimizeAppBar"
+      },
+      {
+        "status": "PASS",
+        "duration": 2,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1454190871573_swipeUpShouldMinimizeAppBar.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "toolBarShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1454190868082_toolBarShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testAndroidTestCaseSetupProperly"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testCreateGraphShouldPersistGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testDeleteGraphShouldDeleteDataPoints"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testDeleteGraphShouldWork"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testGetAllShouldHaveDatapointsOrdererdByTime"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testSaveShouldCreateNewDatapoints"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testSaveShouldDeleteDataPoints"
+      },
+      {
+        "status": "PASS",
+        "duration": 1,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "clickOnDataSeriesShouldCloseNavigation"
+      },
+      {
+        "status": "PASS",
+        "duration": 5,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1454190882824_clickOnDataSeriesShouldCloseNavigation.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "clickOnSettingsShouldSwitchActivity"
+      },
+      {
+        "status": "PASS",
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity/1454190898888_clickOnSettingsShouldSwitchActivity.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "navigatingBackToGraphActivityShouldHaveNavigationClosed"
+      },
+      {
+        "status": "PASS",
+        "duration": 6,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454190892852_navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454190894874_navigatingBackToGraphActivityShouldHaveNavigationClosed_final_click.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "navigationViewShouldBeClosable"
+      },
+      {
+        "status": "PASS",
+        "duration": 3,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1454190877792_navigationViewShouldBeClosable.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "navigationViewShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered/1454190902514_navigationViewShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "openNavFromMainShouldHaveMainChecked"
+      },
+      {
+        "status": "PASS",
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked/1454190906004_openNavFromMainShouldHaveMainChecked.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "openNavFromSettingsShouldHaveSettingsChecked"
+      },
+      {
+        "status": "PASS",
+        "duration": 5,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked/1454190888773_openNavFromSettingsShouldHaveSettingsChecked.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ]
+  ],
+  "started": 1454190836917,
+  "duration": 66,
+  "exceptions": []
+}

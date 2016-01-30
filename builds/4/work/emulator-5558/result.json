@@ -1,0 +1,1668 @@
+{
+  "installFailed": false,
+  "deviceDetails": {
+    "model": "Android SDK built for x86",
+    "manufacturer": "unknown",
+    "version": "5.1.1",
+    "apiLevel": 22,
+    "language": "en",
+    "region": "US",
+    "isEmulator": true,
+    "avdName": "android-22"
+  },
+  "testResults": [
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "addNewGraphShouldCreateNewGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 6,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454190863568_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454190867275_CreateGraph_addNewGraphShouldCreateNewGraph_after_confirm.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "clickOnCancelShouldNotCreateNewGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 5,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190845874_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190847931_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190848518_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454190849231_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "hittingEnterInGraphNameFieldShouldCreateNewGraph"
+      },
+      {
+        "status": "FAIL",
+        "exception": {
+          "className": "java.lang.RuntimeException",
+          "message": "java.lang.reflect.InvocationTargetException",
+          "elements": [
+            {
+              "className": "android.support.test.espresso.core.deps.guava.base.Throwables",
+              "fileName": "Throwables.java",
+              "line": 160,
+              "methodName": "propagate",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.base.QueueInterrogator",
+              "fileName": "QueueInterrogator.java",
+              "line": 105,
+              "methodName": "getNextMessage",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.base.UiControllerImpl",
+              "fileName": "UiControllerImpl.java",
+              "line": 466,
+              "methodName": "loopUntil",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.base.UiControllerImpl",
+              "fileName": "UiControllerImpl.java",
+              "line": 408,
+              "methodName": "loopUntil",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.base.UiControllerImpl",
+              "fileName": "UiControllerImpl.java",
+              "line": 192,
+              "methodName": "injectKeyEvent",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.base.UiControllerImpl",
+              "fileName": "UiControllerImpl.java",
+              "line": 287,
+              "methodName": "injectString",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.action.TypeTextAction",
+              "fileName": "TypeTextAction.java",
+              "line": 105,
+              "methodName": "perform",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.ViewInteraction$1",
+              "fileName": "ViewInteraction.java",
+              "line": 144,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "java.util.concurrent.Executors$RunnableAdapter",
+              "fileName": "Executors.java",
+              "line": 422,
+              "methodName": "call",
+              "isNative": false
+            },
+            {
+              "className": "java.util.concurrent.FutureTask",
+              "fileName": "FutureTask.java",
+              "line": 237,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "android.os.Handler",
+              "fileName": "Handler.java",
+              "line": 739,
+              "methodName": "handleCallback",
+              "isNative": false
+            },
+            {
+              "className": "android.os.Handler",
+              "fileName": "Handler.java",
+              "line": 95,
+              "methodName": "dispatchMessage",
+              "isNative": false
+            },
+            {
+              "className": "android.os.Looper",
+              "fileName": "Looper.java",
+              "line": 135,
+              "methodName": "loop",
+              "isNative": false
+            },
+            {
+              "className": "android.app.ActivityThread",
+              "fileName": "ActivityThread.java",
+              "line": 5254,
+              "methodName": "main",
+              "isNative": false
+            },
+            {
+              "className": "java.lang.reflect.Method",
+              "line": 0,
+              "methodName": "invoke",
+              "isNative": true
+            },
+            {
+              "className": "java.lang.reflect.Method",
+              "fileName": "Method.java",
+              "line": 372,
+              "methodName": "invoke",
+              "isNative": false
+            },
+            {
+              "className": "com.android.internal.os.ZygoteInit$MethodAndArgsCaller",
+              "fileName": "ZygoteInit.java",
+              "line": 903,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "com.android.internal.os.ZygoteInit",
+              "fileName": "ZygoteInit.java",
+              "line": 698,
+              "methodName": "main",
+              "isNative": false
+            }
+          ],
+          "cause": {
+            "className": "java.lang.reflect.InvocationTargetException",
+            "elements": [
+              {
+                "className": "java.lang.reflect.Method",
+                "line": 0,
+                "methodName": "invoke",
+                "isNative": true
+              },
+              {
+                "className": "java.lang.reflect.Method",
+                "fileName": "Method.java",
+                "line": 372,
+                "methodName": "invoke",
+                "isNative": false
+              },
+              {
+                "className": "android.support.test.espresso.base.QueueInterrogator",
+                "fileName": "QueueInterrogator.java",
+                "line": 99,
+                "methodName": "getNextMessage",
+                "isNative": false
+              }
+            ],
+            "cause": {
+              "className": "java.lang.RuntimeException",
+              "message": "java.sql.SQLException: Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph@d998555a: INSERT INTO `graph` (`name` ) VALUES (?)",
+              "elements": [
+                {
+                  "className": "com.j256.ormlite.dao.RuntimeExceptionDao",
+                  "fileName": "RuntimeExceptionDao.java",
+                  "line": 251,
+                  "methodName": "createOrUpdate",
+                  "isNative": false
+                },
+                {
+                  "className": "org.linesofcode.alltrack.graph.GraphService",
+                  "fileName": "GraphService.java",
+                  "line": 85,
+                  "methodName": "createNewGraph",
+                  "isNative": false
+                },
+                {
+                  "className": "org.linesofcode.alltrack.graph.CreateGraphActivity",
+                  "fileName": "CreateGraphActivity.java",
+                  "line": 97,
+                  "methodName": "createGraph",
+                  "isNative": false
+                },
+                {
+                  "className": "org.linesofcode.alltrack.graph.CreateGraphActivity",
+                  "fileName": "CreateGraphActivity.java",
+                  "line": 36,
+                  "methodName": "access$000",
+                  "isNative": false
+                },
+                {
+                  "className": "org.linesofcode.alltrack.graph.CreateGraphActivity$3",
+                  "fileName": "CreateGraphActivity.java",
+                  "line": 79,
+                  "methodName": "onKey",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.View",
+                  "fileName": "View.java",
+                  "line": 8406,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1495,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1495,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1495,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1495,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1495,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1495,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1495,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1495,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewGroup",
+                  "fileName": "ViewGroup.java",
+                  "line": 1495,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "com.android.internal.policy.impl.PhoneWindow$DecorView",
+                  "fileName": "PhoneWindow.java",
+                  "line": 2361,
+                  "methodName": "superDispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "com.android.internal.policy.impl.PhoneWindow",
+                  "fileName": "PhoneWindow.java",
+                  "line": 1709,
+                  "methodName": "superDispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.app.Activity",
+                  "fileName": "Activity.java",
+                  "line": 2702,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.support.v7.internal.view.WindowCallbackWrapper",
+                  "fileName": "WindowCallbackWrapper.java",
+                  "line": 50,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.support.v7.app.AppCompatDelegateImplBase$AppCompatWindowCallbackBase",
+                  "fileName": "AppCompatDelegateImplBase.java",
+                  "line": 224,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.support.v7.internal.view.WindowCallbackWrapper",
+                  "fileName": "WindowCallbackWrapper.java",
+                  "line": 50,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "com.android.internal.policy.impl.PhoneWindow$DecorView",
+                  "fileName": "PhoneWindow.java",
+                  "line": 2276,
+                  "methodName": "dispatchKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$ViewPostImeInputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 4020,
+                  "methodName": "processKeyEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$ViewPostImeInputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3982,
+                  "methodName": "onProcess",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3544,
+                  "methodName": "deliver",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3597,
+                  "methodName": "onDeliverToNext",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3563,
+                  "methodName": "forward",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$AsyncInputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3680,
+                  "methodName": "forward",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3571,
+                  "methodName": "apply",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$AsyncInputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3737,
+                  "methodName": "apply",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3544,
+                  "methodName": "deliver",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3597,
+                  "methodName": "onDeliverToNext",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3563,
+                  "methodName": "forward",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3571,
+                  "methodName": "apply",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3544,
+                  "methodName": "deliver",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3597,
+                  "methodName": "onDeliverToNext",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$InputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3563,
+                  "methodName": "forward",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$AsyncInputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3713,
+                  "methodName": "forward",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.ViewRootImpl$ImeInputStage",
+                  "fileName": "ViewRootImpl.java",
+                  "line": 3874,
+                  "methodName": "onFinishedInputEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.inputmethod.InputMethodManager$PendingEvent",
+                  "fileName": "InputMethodManager.java",
+                  "line": 2208,
+                  "methodName": "run",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.inputmethod.InputMethodManager",
+                  "fileName": "InputMethodManager.java",
+                  "line": 1849,
+                  "methodName": "invokeFinishedInputEventCallback",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.inputmethod.InputMethodManager",
+                  "fileName": "InputMethodManager.java",
+                  "line": 1840,
+                  "methodName": "finishedInputEvent",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.inputmethod.InputMethodManager$ImeInputEventSender",
+                  "fileName": "InputMethodManager.java",
+                  "line": 2185,
+                  "methodName": "onInputEventFinished",
+                  "isNative": false
+                },
+                {
+                  "className": "android.view.InputEventSender",
+                  "fileName": "InputEventSender.java",
+                  "line": 141,
+                  "methodName": "dispatchInputEventFinished",
+                  "isNative": false
+                },
+                {
+                  "className": "android.os.MessageQueue",
+                  "line": 0,
+                  "methodName": "nativePollOnce",
+                  "isNative": true
+                },
+                {
+                  "className": "android.os.MessageQueue",
+                  "fileName": "MessageQueue.java",
+                  "line": 143,
+                  "methodName": "next",
+                  "isNative": false
+                }
+              ],
+              "cause": {
+                "className": "java.sql.SQLException",
+                "message": "Unable to run insert stmt on object org.linesofcode.alltrack.graph.Graph@d998555a: INSERT INTO `graph` (`name` ) VALUES (?)",
+                "elements": [
+                  {
+                    "className": "com.j256.ormlite.misc.SqlExceptionUtil",
+                    "fileName": "SqlExceptionUtil.java",
+                    "line": 22,
+                    "methodName": "create",
+                    "isNative": false
+                  },
+                  {
+                    "className": "com.j256.ormlite.stmt.mapped.MappedCreate",
+                    "fileName": "MappedCreate.java",
+                    "line": 124,
+                    "methodName": "insert",
+                    "isNative": false
+                  },
+                  {
+                    "className": "com.j256.ormlite.stmt.StatementExecutor",
+                    "fileName": "StatementExecutor.java",
+                    "line": 363,
+                    "methodName": "create",
+                    "isNative": false
+                  },
+                  {
+                    "className": "com.j256.ormlite.dao.BaseDaoImpl",
+                    "fileName": "BaseDaoImpl.java",
+                    "line": 306,
+                    "methodName": "create",
+                    "isNative": false
+                  },
+                  {
+                    "className": "com.j256.ormlite.dao.BaseDaoImpl",
+                    "fileName": "BaseDaoImpl.java",
+                    "line": 332,
+                    "methodName": "createOrUpdate",
+                    "isNative": false
+                  },
+                  {
+                    "className": "com.j256.ormlite.dao.RuntimeExceptionDao",
+                    "fileName": "RuntimeExceptionDao.java",
+                    "line": 248,
+                    "methodName": "createOrUpdate",
+                    "isNative": false
+                  }
+                ],
+                "cause": {
+                  "className": "java.sql.SQLException",
+                  "message": "inserting to database failed: INSERT INTO `graph` (`name` ) VALUES (?)",
+                  "elements": [
+                    {
+                      "className": "com.j256.ormlite.misc.SqlExceptionUtil",
+                      "fileName": "SqlExceptionUtil.java",
+                      "line": 22,
+                      "methodName": "create",
+                      "isNative": false
+                    },
+                    {
+                      "className": "com.j256.ormlite.android.AndroidDatabaseConnection",
+                      "fileName": "AndroidDatabaseConnection.java",
+                      "line": 134,
+                      "methodName": "insert",
+                      "isNative": false
+                    },
+                    {
+                      "className": "com.j256.ormlite.stmt.mapped.MappedCreate",
+                      "fileName": "MappedCreate.java",
+                      "line": 89,
+                      "methodName": "insert",
+                      "isNative": false
+                    }
+                  ],
+                  "cause": {
+                    "className": "android.database.sqlite.SQLiteConstraintException",
+                    "message": "UNIQUE constraint failed: graph.name (code 2067)",
+                    "elements": [
+                      {
+                        "className": "android.database.sqlite.SQLiteConnection",
+                        "line": 0,
+                        "methodName": "nativeExecuteForLastInsertedRowId",
+                        "isNative": true
+                      },
+                      {
+                        "className": "android.database.sqlite.SQLiteConnection",
+                        "fileName": "SQLiteConnection.java",
+                        "line": 782,
+                        "methodName": "executeForLastInsertedRowId",
+                        "isNative": false
+                      },
+                      {
+                        "className": "android.database.sqlite.SQLiteSession",
+                        "fileName": "SQLiteSession.java",
+                        "line": 788,
+                        "methodName": "executeForLastInsertedRowId",
+                        "isNative": false
+                      },
+                      {
+                        "className": "android.database.sqlite.SQLiteStatement",
+                        "fileName": "SQLiteStatement.java",
+                        "line": 86,
+                        "methodName": "executeInsert",
+                        "isNative": false
+                      },
+                      {
+                        "className": "com.j256.ormlite.android.AndroidDatabaseConnection",
+                        "fileName": "AndroidDatabaseConnection.java",
+                        "line": 122,
+                        "methodName": "insert",
+                        "isNative": false
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "duration": 3,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454190850789_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "newlyAddedGraphShouldBeDisplayedImmediately"
+      },
+      {
+        "status": "PASS",
+        "duration": 6,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454190855680_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454190860729_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "showSimpleGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 1,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/showSimpleGraph/1454190854058_showSimpleGraph_before_asserts.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "floatingActionButtonShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 2,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1454190879519_floatingActionButtonShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "mainActivityShouldBeStarted"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1454190873540_mainActivityShouldBeStarted.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "recyclerViewShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1454190874383_recyclerViewShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "swipeDownShouldMaximizeAppBar"
+      },
+      {
+        "status": "PASS",
+        "duration": 3,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1454190870549_swipeDownShouldMaximizeAppBar.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "swipeUpShouldMinimizeAppBar"
+      },
+      {
+        "status": "PASS",
+        "duration": 2,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1454190876765_swipeUpShouldMinimizeAppBar.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "toolBarShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 2,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1454190872565_toolBarShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testAndroidTestCaseSetupProperly"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testCreateGraphShouldPersistGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testDeleteGraphShouldDeleteDataPoints"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testDeleteGraphShouldWork"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testGetAllShouldHaveDatapointsOrdererdByTime"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testSaveShouldCreateNewDatapoints"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testSaveShouldDeleteDataPoints"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "clickOnDataSeriesShouldCloseNavigation"
+      },
+      {
+        "status": "PASS",
+        "duration": 6,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1454190892008_clickOnDataSeriesShouldCloseNavigation.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "navigatingBackToGraphActivityShouldHaveNavigationClosed"
+      },
+      {
+        "status": "FAIL",
+        "exception": {
+          "className": "java.lang.OutOfMemoryError",
+          "message": "Failed to allocate a 1440012 byte allocation with 1432008 free bytes and 1398KB until OOM",
+          "elements": [
+            {
+              "className": "dalvik.system.VMRuntime",
+              "line": 0,
+              "methodName": "newNonMovableArray",
+              "isNative": true
+            },
+            {
+              "className": "android.graphics.Bitmap",
+              "line": 0,
+              "methodName": "nativeCreate",
+              "isNative": true
+            },
+            {
+              "className": "android.graphics.Bitmap",
+              "fileName": "Bitmap.java",
+              "line": 812,
+              "methodName": "createBitmap",
+              "isNative": false
+            },
+            {
+              "className": "android.graphics.Bitmap",
+              "fileName": "Bitmap.java",
+              "line": 789,
+              "methodName": "createBitmap",
+              "isNative": false
+            },
+            {
+              "className": "android.graphics.Bitmap",
+              "fileName": "Bitmap.java",
+              "line": 756,
+              "methodName": "createBitmap",
+              "isNative": false
+            },
+            {
+              "className": "com.github.mikephil.charting.renderer.LineChartRenderer",
+              "fileName": "LineChartRenderer.java",
+              "line": 88,
+              "methodName": "drawData",
+              "isNative": false
+            },
+            {
+              "className": "com.github.mikephil.charting.charts.BarLineChartBase",
+              "fileName": "BarLineChartBase.java",
+              "line": 247,
+              "methodName": "onDraw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15231,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15140,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3405,
+              "methodName": "drawChild",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3198,
+              "methodName": "dispatchDraw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15138,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3405,
+              "methodName": "drawChild",
+              "isNative": false
+            },
+            {
+              "className": "android.support.v7.widget.RecyclerView",
+              "fileName": "RecyclerView.java",
+              "line": 3693,
+              "methodName": "drawChild",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3198,
+              "methodName": "dispatchDraw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15234,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.support.v7.widget.RecyclerView",
+              "fileName": "RecyclerView.java",
+              "line": 3171,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15140,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3405,
+              "methodName": "drawChild",
+              "isNative": false
+            },
+            {
+              "className": "android.support.design.widget.CoordinatorLayout",
+              "fileName": "CoordinatorLayout.java",
+              "line": 1074,
+              "methodName": "drawChild",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3198,
+              "methodName": "dispatchDraw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15138,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3405,
+              "methodName": "drawChild",
+              "isNative": false
+            },
+            {
+              "className": "android.support.v4.widget.DrawerLayout",
+              "fileName": "DrawerLayout.java",
+              "line": 1229,
+              "methodName": "drawChild",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3198,
+              "methodName": "dispatchDraw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15234,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15140,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3405,
+              "methodName": "drawChild",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3198,
+              "methodName": "dispatchDraw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15138,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3405,
+              "methodName": "drawChild",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3198,
+              "methodName": "dispatchDraw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15138,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3405,
+              "methodName": "drawChild",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3198,
+              "methodName": "dispatchDraw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15138,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3405,
+              "methodName": "drawChild",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3198,
+              "methodName": "dispatchDraw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15138,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3405,
+              "methodName": "drawChild",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewGroup",
+              "fileName": "ViewGroup.java",
+              "line": 3198,
+              "methodName": "dispatchDraw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.View",
+              "fileName": "View.java",
+              "line": 15234,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.widget.FrameLayout",
+              "fileName": "FrameLayout.java",
+              "line": 598,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "com.android.internal.policy.impl.PhoneWindow$DecorView",
+              "fileName": "PhoneWindow.java",
+              "line": 2650,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewRootImpl",
+              "fileName": "ViewRootImpl.java",
+              "line": 2644,
+              "methodName": "drawSoftware",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewRootImpl",
+              "fileName": "ViewRootImpl.java",
+              "line": 2557,
+              "methodName": "draw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewRootImpl",
+              "fileName": "ViewRootImpl.java",
+              "line": 2352,
+              "methodName": "performDraw",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewRootImpl",
+              "fileName": "ViewRootImpl.java",
+              "line": 1982,
+              "methodName": "performTraversals",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewRootImpl",
+              "fileName": "ViewRootImpl.java",
+              "line": 1061,
+              "methodName": "doTraversal",
+              "isNative": false
+            },
+            {
+              "className": "android.view.ViewRootImpl$TraversalRunnable",
+              "fileName": "ViewRootImpl.java",
+              "line": 5885,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "android.view.Choreographer$CallbackRecord",
+              "fileName": "Choreographer.java",
+              "line": 767,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "android.view.Choreographer",
+              "fileName": "Choreographer.java",
+              "line": 580,
+              "methodName": "doCallbacks",
+              "isNative": false
+            },
+            {
+              "className": "android.view.Choreographer",
+              "fileName": "Choreographer.java",
+              "line": 550,
+              "methodName": "doFrame",
+              "isNative": false
+            },
+            {
+              "className": "android.view.Choreographer$FrameDisplayEventReceiver",
+              "fileName": "Choreographer.java",
+              "line": 753,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "android.os.Handler",
+              "fileName": "Handler.java",
+              "line": 739,
+              "methodName": "handleCallback",
+              "isNative": false
+            },
+            {
+              "className": "android.os.Handler",
+              "fileName": "Handler.java",
+              "line": 95,
+              "methodName": "dispatchMessage",
+              "isNative": false
+            },
+            {
+              "className": "android.os.Looper",
+              "fileName": "Looper.java",
+              "line": 135,
+              "methodName": "loop",
+              "isNative": false
+            },
+            {
+              "className": "android.app.ActivityThread",
+              "fileName": "ActivityThread.java",
+              "line": 5254,
+              "methodName": "main",
+              "isNative": false
+            },
+            {
+              "className": "java.lang.reflect.Method",
+              "line": 0,
+              "methodName": "invoke",
+              "isNative": true
+            },
+            {
+              "className": "java.lang.reflect.Method",
+              "fileName": "Method.java",
+              "line": 372,
+              "methodName": "invoke",
+              "isNative": false
+            },
+            {
+              "className": "com.android.internal.os.ZygoteInit$MethodAndArgsCaller",
+              "fileName": "ZygoteInit.java",
+              "line": 903,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "com.android.internal.os.ZygoteInit",
+              "fileName": "ZygoteInit.java",
+              "line": 698,
+              "methodName": "main",
+              "isNative": false
+            }
+          ]
+        },
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "navigationViewShouldBeClosable"
+      },
+      {
+        "status": "PASS",
+        "duration": 6,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1454190885986_navigationViewShouldBeClosable.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "openNavFromSettingsShouldHaveSettingsChecked"
+      },
+      {
+        "status": "FAIL",
+        "exception": {
+          "className": "java.lang.OutOfMemoryError",
+          "message": "Failed to allocate a 3686412 byte allocation with 3032980 free bytes and 2MB until OOM",
+          "elements": [
+            {
+              "className": "dalvik.system.VMRuntime",
+              "line": 0,
+              "methodName": "newNonMovableArray",
+              "isNative": true
+            },
+            {
+              "className": "android.graphics.Bitmap",
+              "line": 0,
+              "methodName": "nativeCreate",
+              "isNative": true
+            },
+            {
+              "className": "android.graphics.Bitmap",
+              "fileName": "Bitmap.java",
+              "line": 812,
+              "methodName": "createBitmap",
+              "isNative": false
+            },
+            {
+              "className": "android.graphics.Bitmap",
+              "fileName": "Bitmap.java",
+              "line": 789,
+              "methodName": "createBitmap",
+              "isNative": false
+            },
+            {
+              "className": "android.graphics.Bitmap",
+              "fileName": "Bitmap.java",
+              "line": 756,
+              "methodName": "createBitmap",
+              "isNative": false
+            },
+            {
+              "className": "com.squareup.spoon.Spoon",
+              "fileName": "Spoon.java",
+              "line": 93,
+              "methodName": "takeScreenshot",
+              "isNative": false
+            },
+            {
+              "className": "com.squareup.spoon.Spoon",
+              "fileName": "Spoon.java",
+              "line": 83,
+              "methodName": "screenshot",
+              "isNative": false
+            },
+            {
+              "className": "com.squareup.spoon.Spoon",
+              "fileName": "Spoon.java",
+              "line": 60,
+              "methodName": "screenshot",
+              "isNative": false
+            },
+            {
+              "className": "org.linesofcode.alltrack.NavigationUITest",
+              "fileName": "NavigationUITest.java",
+              "line": 109,
+              "methodName": "openNavFromSettingsShouldHaveSettingsChecked",
+              "isNative": false
+            },
+            {
+              "className": "java.lang.reflect.Method",
+              "line": 0,
+              "methodName": "invoke",
+              "isNative": true
+            },
+            {
+              "className": "java.lang.reflect.Method",
+              "fileName": "Method.java",
+              "line": 372,
+              "methodName": "invoke",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.model.FrameworkMethod$1",
+              "fileName": "FrameworkMethod.java",
+              "line": 50,
+              "methodName": "runReflectiveCall",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.internal.runners.model.ReflectiveCallable",
+              "fileName": "ReflectiveCallable.java",
+              "line": 12,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.model.FrameworkMethod",
+              "fileName": "FrameworkMethod.java",
+              "line": 47,
+              "methodName": "invokeExplosively",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.internal.runners.statements.InvokeMethod",
+              "fileName": "InvokeMethod.java",
+              "line": 17,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.internal.runners.statements.RunBefores",
+              "fileName": "RunBefores.java",
+              "line": 26,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.internal.statement.UiThreadStatement",
+              "fileName": "UiThreadStatement.java",
+              "line": 55,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.rule.ActivityTestRule$ActivityStatement",
+              "fileName": "ActivityTestRule.java",
+              "line": 257,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.rules.RunRules",
+              "fileName": "RunRules.java",
+              "line": 20,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 325,
+              "methodName": "runLeaf",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.BlockJUnit4ClassRunner",
+              "fileName": "BlockJUnit4ClassRunner.java",
+              "line": 78,
+              "methodName": "runChild",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.BlockJUnit4ClassRunner",
+              "fileName": "BlockJUnit4ClassRunner.java",
+              "line": 57,
+              "methodName": "runChild",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner$3",
+              "fileName": "ParentRunner.java",
+              "line": 290,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner$1",
+              "fileName": "ParentRunner.java",
+              "line": 71,
+              "methodName": "schedule",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 288,
+              "methodName": "runChildren",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 58,
+              "methodName": "access$000",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner$2",
+              "fileName": "ParentRunner.java",
+              "line": 268,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 363,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.Suite",
+              "fileName": "Suite.java",
+              "line": 128,
+              "methodName": "runChild",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.Suite",
+              "fileName": "Suite.java",
+              "line": 27,
+              "methodName": "runChild",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner$3",
+              "fileName": "ParentRunner.java",
+              "line": 290,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner$1",
+              "fileName": "ParentRunner.java",
+              "line": 71,
+              "methodName": "schedule",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 288,
+              "methodName": "runChildren",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 58,
+              "methodName": "access$000",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner$2",
+              "fileName": "ParentRunner.java",
+              "line": 268,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 363,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runner.JUnitCore",
+              "fileName": "JUnitCore.java",
+              "line": 137,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runner.JUnitCore",
+              "fileName": "JUnitCore.java",
+              "line": 115,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.internal.runner.TestExecutor",
+              "fileName": "TestExecutor.java",
+              "line": 54,
+              "methodName": "execute",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.runner.AndroidJUnitRunner",
+              "fileName": "AndroidJUnitRunner.java",
+              "line": 240,
+              "methodName": "onStart",
+              "isNative": false
+            },
+            {
+              "className": "android.app.Instrumentation$InstrumentationThread",
+              "fileName": "Instrumentation.java",
+              "line": 1853,
+              "methodName": "run",
+              "isNative": false
+            }
+          ]
+        },
+        "duration": 8,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ]
+  ],
+  "started": 1454190836965,
+  "duration": 59,
+  "exceptions": [
+    {
+      "className": "Instrumentation run failed due to \u0027java.lang.OutOfMemoryError\u0027",
+      "elements": []
+    }
+  ]
+}
