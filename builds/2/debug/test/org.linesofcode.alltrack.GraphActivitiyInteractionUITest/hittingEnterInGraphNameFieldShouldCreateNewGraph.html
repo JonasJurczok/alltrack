@@ -10,18 +10,18 @@
         <link href="../../static/spoon.css" rel="stylesheet">
         <script src="../../static/jquery.min.js"></script>
         <script src="../../static/bootstrap.min.js"></script>
-        <meta name="description" content="Ran on 4 devices with 1 passing and 3 failing in an average of 5 seconds">
+        <meta name="description" content="Ran on 4 devices with 3 passing and 1 failing in an average of 6 seconds">
     </head>
     <body>
         <div class="container">
             <div class="hero-unit">
                 <h1>Hitting Enter In Graph Name Field Should Create New Graph</h1>
-                <p>Ran on 4 devices with 1 passing and 3 failing in an average of 5 seconds</p>
+                <p>Ran on 4 devices with 3 passing and 1 failing in an average of 6 seconds</p>
             </div>
             <div class="row">
                 <div class="span12">
-                    <h2 class="test-result fail">
-                        android-21
+                    <h2 class="test-result pass">
+                        android-22
                         <!-- Icons modified from Glyphish Free. http://glyphish.com -->
                         <a href="../../logs/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph.html" title="View device log" class="pull-right icon">
                             <img src="../../static/icon-log.png" alt="View device log">
@@ -29,52 +29,22 @@
                         <a href="../../device/emulator-5558.html" title="View only this device" class="pull-right icon">
                             <img src="../../static/icon-devices.png" alt="View only this device">
                         </a>
+                        <a href="../../image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph.gif" title="View as animated GIF" class="pull-right icon">
+                            <img src="../../static/icon-animated.png" alt="View as animated GIF">
+                        </a>
                     </h2>
-                    <div class="alert alert-error stacktrace fail">
-                        <h4 data-toggle="collapse" data-target="#stacktrace-emulator-5558">java.lang.RuntimeException: Unable to capture screenshot.</h4>
-                        <div class="stacktrace-body collapse" id="stacktrace-emulator-5558">
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at com.squareup.spoon.Spoon.screenshot(Spoon.java:87)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.takeScreenshot(GraphActivitiyInteractionUITest.java:221)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.hittingEnterInGraphNameFieldShouldCreateNewGraph(GraphActivitiyInteractionUITest.java:180)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invoke(Native Method)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invoke(Method.java:372)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.rules.RunRules.evaluate(RunRules.java:20)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.linesofcode.alltrack.framework.DisableAnimationsRule$1.evaluate(DisableAnimationsRule.java:64)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.rules.RunRules.evaluate(RunRules.java:20)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner.run(ParentRunner.java:363)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.Suite.runChild(Suite.java:128)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.Suite.runChild(Suite.java:27)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.ParentRunner.run(ParentRunner.java:363)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runner.JUnitCore.run(JUnitCore.java:137)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runner.JUnitCore.run(JUnitCore.java:115)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1837)</div>
-                            <div class="stacktrace-line">Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/sdcard/app_spoon-screenshots</div>
-                        </div>
-                    </div>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../../image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454184513857_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png" class="thumbnail">
+                                <img src="../../image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454184513857_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png" title="HittingEnterInGraphNameFieldShouldCreateNewGraph Before Graph Name">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../../image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454184517073_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png" class="thumbnail">
+                                <img src="../../image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454184517073_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png" title="HittingEnterInGraphNameFieldShouldCreateNewGraph After Graph Name">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="row">
@@ -90,48 +60,13 @@
                         </a>
                     </h2>
                     <div class="alert alert-error stacktrace fail">
-                        <h4 data-toggle="collapse" data-target="#stacktrace-emulator-5560">java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:<br/>Root{application-window-token=android.view.ViewRootImpl$W@7534a0a, window-token=android.view.ViewRootImpl$W@7534a0a, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}<br/>. All Roots:<br/>Root{application-window-token=android.view.ViewRootImpl$W@7534a0a, window-token=android.view.ViewRootImpl$W@7534a0a, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}</h4>
+                        <h4 data-toggle="collapse" data-target="#stacktrace-emulator-5560">java.lang.RuntimeException: Unable to capture screenshot.</h4>
                         <div class="stacktrace-body collapse" id="stacktrace-emulator-5560">
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.util.concurrent.FutureTask.run(FutureTask.java:237)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.os.Handler.handleCallback(Handler.java:739)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.os.Handler.dispatchMessage(Handler.java:95)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.os.Looper.loop(Looper.java:148)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.app.ActivityThread.main(ActivityThread.java:5417)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invoke(Native Method)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="span12">
-                    <h2 class="test-result fail">
-                        android-22
-                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
-                        <a href="../../logs/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph.html" title="View device log" class="pull-right icon">
-                            <img src="../../static/icon-log.png" alt="View device log">
-                        </a>
-                        <a href="../../device/emulator-5556.html" title="View only this device" class="pull-right icon">
-                            <img src="../../static/icon-devices.png" alt="View only this device">
-                        </a>
-                    </h2>
-                    <div class="alert alert-error stacktrace fail">
-                        <h4 data-toggle="collapse" data-target="#stacktrace-emulator-5556">java.lang.RuntimeException: Unable to capture screenshot.</h4>
-                        <div class="stacktrace-body collapse" id="stacktrace-emulator-5556">
                             <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at com.squareup.spoon.Spoon.screenshot(Spoon.java:87)</div>
                             <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)</div>
                             <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.takeScreenshot(GraphActivitiyInteractionUITest.java:221)</div>
                             <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.hittingEnterInGraphNameFieldShouldCreateNewGraph(GraphActivitiyInteractionUITest.java:180)</div>
                             <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invoke(Native Method)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at java.lang.reflect.Method.invoke(Method.java:372)</div>
                             <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)</div>
                             <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)</div>
                             <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)</div>
@@ -164,8 +99,8 @@
                             <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at org.junit.runner.JUnitCore.run(JUnitCore.java:115)</div>
                             <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)</div>
                             <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)</div>
-                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)</div>
-                            <div class="stacktrace-line">Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/sdcard/app_spoon-screenshots</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)</div>
+                            <div class="stacktrace-line">Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/emulated/0/app_spoon-screenshots</div>
                         </div>
                     </div>
                 </div>
@@ -174,6 +109,35 @@
                 <div class="span12">
                     <h2 class="test-result pass">
                         android-19
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../../logs/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph.html" title="View device log" class="pull-right icon">
+                            <img src="../../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../../device/emulator-5556.html" title="View only this device" class="pull-right icon">
+                            <img src="../../static/icon-devices.png" alt="View only this device">
+                        </a>
+                        <a href="../../image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph.gif" title="View as animated GIF" class="pull-right icon">
+                            <img src="../../static/icon-animated.png" alt="View as animated GIF">
+                        </a>
+                    </h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../../image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454184503083_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png" class="thumbnail">
+                                <img src="../../image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454184503083_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png" title="HittingEnterInGraphNameFieldShouldCreateNewGraph Before Graph Name">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../../image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454184507891_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png" class="thumbnail">
+                                <img src="../../image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454184507891_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png" title="HittingEnterInGraphNameFieldShouldCreateNewGraph After Graph Name">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <h2 class="test-result pass">
+                        android-21
                         <!-- Icons modified from Glyphish Free. http://glyphish.com -->
                         <a href="../../logs/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph.html" title="View device log" class="pull-right icon">
                             <img src="../../static/icon-log.png" alt="View device log">
@@ -187,13 +151,13 @@
                     </h2>
                     <ul class="thumbnails">
                         <li class="span2">
-                            <a href="../../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454180825081_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png" class="thumbnail">
-                                <img src="../../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454180825081_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png" title="HittingEnterInGraphNameFieldShouldCreateNewGraph Before Graph Name">
+                            <a href="../../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454184508587_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png" class="thumbnail">
+                                <img src="../../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454184508587_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png" title="HittingEnterInGraphNameFieldShouldCreateNewGraph Before Graph Name">
                             </a>
                         </li>
                         <li class="span2">
-                            <a href="../../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454180828766_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png" class="thumbnail">
-                                <img src="../../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454180828766_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png" title="HittingEnterInGraphNameFieldShouldCreateNewGraph After Graph Name">
+                            <a href="../../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454184511644_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png" class="thumbnail">
+                                <img src="../../image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454184511644_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png" title="HittingEnterInGraphNameFieldShouldCreateNewGraph After Graph Name">
                             </a>
                         </li>
                     </ul>
