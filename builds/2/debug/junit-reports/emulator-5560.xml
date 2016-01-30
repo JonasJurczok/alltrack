@@ -1,100 +1,57 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<testsuite name="org.linesofcode.alltrack.test" tests="25" failures="12" errors="0" skipped="0" time="38.385" timestamp="2016-01-30T18:55:57" hostname="localhost">
+<testsuite name="org.linesofcode.alltrack.test" tests="25" failures="18" errors="0" skipped="0" time="249.35" timestamp="2016-01-30T19:11:20" hostname="localhost">
   <properties />
-  <testcase name="clickOnCancelShouldNotCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="1.042">
-    <failure>java.lang.IllegalArgumentException: Tag must match [a-zA-Z0-9_-]+.
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:75)
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
-at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.takeScreenshot(GraphActivitiyInteractionUITest.java:221)
-at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.clickOnCancelShouldNotCreateNewGraph(GraphActivitiyInteractionUITest.java:162)
+  <testcase name="clickOnCancelShouldNotCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="21.391">
+    <failure>java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;896fe11, window-token=android.view.ViewRootImpl$W&#64;896fe11, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+. All Roots:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;896fe11, window-token=android.view.ViewRootImpl$W&#64;896fe11, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)
+at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)
+at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
 at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
-at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.linesofcode.alltrack.framework.DisableAnimationsRule$1.evaluate(DisableAnimationsRule.java:64)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
 </failure>
   </testcase>
-  <testcase name="hittingEnterInGraphNameFieldShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="0.759">
-    <failure>java.lang.IllegalArgumentException: Tag must match [a-zA-Z0-9_-]+.
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:75)
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
-at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.takeScreenshot(GraphActivitiyInteractionUITest.java:221)
-at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.hittingEnterInGraphNameFieldShouldCreateNewGraph(GraphActivitiyInteractionUITest.java:180)
+  <testcase name="hittingEnterInGraphNameFieldShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="21.211">
+    <failure>java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;7534a0a, window-token=android.view.ViewRootImpl$W&#64;7534a0a, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+. All Roots:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;7534a0a, window-token=android.view.ViewRootImpl$W&#64;7534a0a, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)
+at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)
+at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
 at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
-at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.linesofcode.alltrack.framework.DisableAnimationsRule$1.evaluate(DisableAnimationsRule.java:64)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
 </failure>
   </testcase>
-  <testcase name="showSimpleGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="0.229">
+  <testcase name="showSimpleGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="0.816">
     <failure>java.lang.IllegalArgumentException: Tag must match [a-zA-Z0-9_-]+.
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:75)
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
 at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.takeScreenshot(GraphActivitiyInteractionUITest.java:221)
 at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.showSimpleGraph(GraphActivitiyInteractionUITest.java:110)
 at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
 at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
@@ -127,153 +84,81 @@ at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
 at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
 at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
 at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
 </failure>
   </testcase>
-  <testcase name="newlyAddedGraphShouldBeDisplayedImmediately" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="0.983">
-    <failure>java.lang.IllegalArgumentException: Tag must match [a-zA-Z0-9_-]+.
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:75)
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
-at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.takeScreenshot(GraphActivitiyInteractionUITest.java:221)
-at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.createGraph(GraphActivitiyInteractionUITest.java:192)
-at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.newlyAddedGraphShouldBeDisplayedImmediately(GraphActivitiyInteractionUITest.java:151)
+  <testcase name="newlyAddedGraphShouldBeDisplayedImmediately" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="22.008">
+    <failure>java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;f7c6717, window-token=android.view.ViewRootImpl$W&#64;f7c6717, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+. All Roots:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;f7c6717, window-token=android.view.ViewRootImpl$W&#64;f7c6717, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)
+at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)
+at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
 at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
-at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.linesofcode.alltrack.framework.DisableAnimationsRule$1.evaluate(DisableAnimationsRule.java:64)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
 </failure>
   </testcase>
-  <testcase name="addNewGraphShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="2.037">
-    <failure>java.lang.IllegalArgumentException: Tag must match [a-zA-Z0-9_-]+.
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:75)
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
-at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.takeScreenshot(GraphActivitiyInteractionUITest.java:221)
-at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.createGraph(GraphActivitiyInteractionUITest.java:192)
-at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.addNewGraphShouldCreateNewGraph(GraphActivitiyInteractionUITest.java:142)
+  <testcase name="addNewGraphShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivitiyInteractionUITest" time="21.658">
+    <failure>java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;272adcd, window-token=android.view.ViewRootImpl$W&#64;272adcd, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+. All Roots:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;272adcd, window-token=android.view.ViewRootImpl$W&#64;272adcd, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)
+at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)
+at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
 at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
-at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.linesofcode.alltrack.framework.DisableAnimationsRule$1.evaluate(DisableAnimationsRule.java:64)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
 </failure>
   </testcase>
-  <testcase name="swipeDownShouldMaximizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="1.108">
-    <failure>java.lang.RuntimeException: Unable to capture screenshot.
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:87)
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
-at org.linesofcode.alltrack.GraphActivitySetupUITest.swipeDownShouldMaximizeAppBar(GraphActivitySetupUITest.java:87)
+  <testcase name="swipeDownShouldMaximizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="21.167">
+    <failure>java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;b338de2, window-token=android.view.ViewRootImpl$W&#64;b338de2, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+. All Roots:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;b338de2, window-token=android.view.ViewRootImpl$W&#64;b338de2, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)
+at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)
+at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
 at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
-at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.linesofcode.alltrack.framework.DisableAnimationsRule$1.evaluate(DisableAnimationsRule.java:64)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
-Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/sdcard/app_spoon-screenshots
-at com.squareup.spoon.Spoon.createDir(Spoon.java:262)
-at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
-at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
-at com.squareup.spoon.Spoon.filesDirectory(Spoon.java:224)
-at com.squareup.spoon.Spoon.obtainScreenshotDirectory(Spoon.java:140)
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:78)
-... 36 more
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
 </failure>
   </testcase>
-  <testcase name="toolBarShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.228">
+  <testcase name="toolBarShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="1.055">
     <failure>java.lang.RuntimeException: Unable to capture screenshot.
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:87)
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
 at org.linesofcode.alltrack.GraphActivitySetupUITest.toolBarShouldBeRendered(GraphActivitySetupUITest.java:71)
 at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
 at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
@@ -305,24 +190,23 @@ at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
 at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
 at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
 at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
-Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/sdcard/app_spoon-screenshots
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/emulated/0/app_spoon-screenshots
 at com.squareup.spoon.Spoon.createDir(Spoon.java:262)
 at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
 at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
 at com.squareup.spoon.Spoon.filesDirectory(Spoon.java:224)
 at com.squareup.spoon.Spoon.obtainScreenshotDirectory(Spoon.java:140)
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:78)
-... 36 more
+... 35 more
 </failure>
   </testcase>
-  <testcase name="mainActivityShouldBeStarted" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.355">
+  <testcase name="mainActivityShouldBeStarted" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.829">
     <failure>java.lang.RuntimeException: Unable to capture screenshot.
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:87)
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
 at org.linesofcode.alltrack.GraphActivitySetupUITest.mainActivityShouldBeStarted(GraphActivitySetupUITest.java:53)
 at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
 at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
@@ -354,24 +238,23 @@ at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
 at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
 at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
 at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
-Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/sdcard/app_spoon-screenshots
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/emulated/0/app_spoon-screenshots
 at com.squareup.spoon.Spoon.createDir(Spoon.java:262)
 at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
 at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
 at com.squareup.spoon.Spoon.filesDirectory(Spoon.java:224)
 at com.squareup.spoon.Spoon.obtainScreenshotDirectory(Spoon.java:140)
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:78)
-... 36 more
+... 35 more
 </failure>
   </testcase>
-  <testcase name="recyclerViewShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.404">
+  <testcase name="recyclerViewShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.779">
     <failure>java.lang.RuntimeException: Unable to capture screenshot.
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:87)
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
 at org.linesofcode.alltrack.GraphActivitySetupUITest.recyclerViewShouldBeRendered(GraphActivitySetupUITest.java:65)
 at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
 at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
@@ -403,73 +286,45 @@ at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
 at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
 at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
 at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
-Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/sdcard/app_spoon-screenshots
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/emulated/0/app_spoon-screenshots
 at com.squareup.spoon.Spoon.createDir(Spoon.java:262)
 at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
 at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
 at com.squareup.spoon.Spoon.filesDirectory(Spoon.java:224)
 at com.squareup.spoon.Spoon.obtainScreenshotDirectory(Spoon.java:140)
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:78)
-... 36 more
+... 35 more
 </failure>
   </testcase>
-  <testcase name="swipeUpShouldMinimizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.735">
-    <failure>java.lang.RuntimeException: Unable to capture screenshot.
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:87)
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
-at org.linesofcode.alltrack.GraphActivitySetupUITest.swipeUpShouldMinimizeAppBar(GraphActivitySetupUITest.java:78)
+  <testcase name="swipeUpShouldMinimizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="20.961">
+    <failure>java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;3729e5f, window-token=android.view.ViewRootImpl$W&#64;3729e5f, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+. All Roots:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;3729e5f, window-token=android.view.ViewRootImpl$W&#64;3729e5f, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)
+at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)
+at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
 at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
-at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
-at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.linesofcode.alltrack.framework.DisableAnimationsRule$1.evaluate(DisableAnimationsRule.java:64)
-at org.junit.rules.RunRules.evaluate(RunRules.java:20)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runners.Suite.runChild(Suite.java:128)
-at org.junit.runners.Suite.runChild(Suite.java:27)
-at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
-at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
-Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/sdcard/app_spoon-screenshots
-at com.squareup.spoon.Spoon.createDir(Spoon.java:262)
-at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
-at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
-at com.squareup.spoon.Spoon.filesDirectory(Spoon.java:224)
-at com.squareup.spoon.Spoon.obtainScreenshotDirectory(Spoon.java:140)
-at com.squareup.spoon.Spoon.screenshot(Spoon.java:78)
-... 36 more
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
 </failure>
   </testcase>
-  <testcase name="floatingActionButtonShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.43">
+  <testcase name="floatingActionButtonShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.906">
     <failure>java.lang.RuntimeException: Unable to capture screenshot.
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:87)
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
 at org.linesofcode.alltrack.GraphActivitySetupUITest.floatingActionButtonShouldBeRendered(GraphActivitySetupUITest.java:59)
 at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
 at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
@@ -501,36 +356,118 @@ at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
 at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
 at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
 at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
-Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/sdcard/app_spoon-screenshots
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/emulated/0/app_spoon-screenshots
 at com.squareup.spoon.Spoon.createDir(Spoon.java:262)
 at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
 at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
 at com.squareup.spoon.Spoon.filesDirectory(Spoon.java:224)
 at com.squareup.spoon.Spoon.obtainScreenshotDirectory(Spoon.java:140)
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:78)
-... 36 more
+... 35 more
 </failure>
   </testcase>
-  <testcase name="testCreateGraphShouldPersistGraph" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.227" />
-  <testcase name="testDeleteGraphShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.051" />
-  <testcase name="testDeleteGraphShouldWork" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.076" />
-  <testcase name="testGetAllShouldHaveDatapointsOrdererdByTime" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.076" />
-  <testcase name="testSaveShouldCreateNewDatapoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.076" />
-  <testcase name="testSaveShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.051" />
+  <testcase name="testCreateGraphShouldPersistGraph" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.151" />
+  <testcase name="testDeleteGraphShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.1" />
+  <testcase name="testDeleteGraphShouldWork" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.051" />
+  <testcase name="testGetAllShouldHaveDatapointsOrdererdByTime" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.025" />
+  <testcase name="testSaveShouldCreateNewDatapoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.075" />
+  <testcase name="testSaveShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.05" />
   <testcase name="testAndroidTestCaseSetupProperly" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.0" />
-  <testcase name="navigationViewShouldBeClosable" classname="org.linesofcode.alltrack.NavigationUITest" time="3.603" />
-  <testcase name="clickOnDataSeriesShouldCloseNavigation" classname="org.linesofcode.alltrack.NavigationUITest" time="2.465" />
-  <testcase name="openNavFromSettingsShouldHaveSettingsChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="3.846" />
-  <testcase name="navigatingBackToGraphActivityShouldHaveNavigationClosed" classname="org.linesofcode.alltrack.NavigationUITest" time="8.571" />
-  <testcase name="clickOnSettingsShouldSwitchActivity" classname="org.linesofcode.alltrack.NavigationUITest" time="6.782" />
-  <testcase name="navigationViewShouldBeRendered" classname="org.linesofcode.alltrack.NavigationUITest" time="2.877">
+  <testcase name="navigationViewShouldBeClosable" classname="org.linesofcode.alltrack.NavigationUITest" time="22.496">
+    <failure>java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;622fa5d, window-token=android.view.ViewRootImpl$W&#64;622fa5d, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+. All Roots:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;622fa5d, window-token=android.view.ViewRootImpl$W&#64;622fa5d, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)
+at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)
+at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+</failure>
+  </testcase>
+  <testcase name="clickOnDataSeriesShouldCloseNavigation" classname="org.linesofcode.alltrack.NavigationUITest" time="22.396">
+    <failure>java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;40eef32, window-token=android.view.ViewRootImpl$W&#64;40eef32, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+. All Roots:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;40eef32, window-token=android.view.ViewRootImpl$W&#64;40eef32, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)
+at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)
+at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+</failure>
+  </testcase>
+  <testcase name="openNavFromSettingsShouldHaveSettingsChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="22.523">
+    <failure>java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;c9b4063, window-token=android.view.ViewRootImpl$W&#64;c9b4063, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+. All Roots:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;c9b4063, window-token=android.view.ViewRootImpl$W&#64;c9b4063, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)
+at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)
+at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+</failure>
+  </testcase>
+  <testcase name="navigatingBackToGraphActivityShouldHaveNavigationClosed" classname="org.linesofcode.alltrack.NavigationUITest" time="22.446">
+    <failure>java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;56ff2c0, window-token=android.view.ViewRootImpl$W&#64;56ff2c0, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+. All Roots:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;56ff2c0, window-token=android.view.ViewRootImpl$W&#64;56ff2c0, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#100 ty=1 fl=#81810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}}
+at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)
+at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)
+at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+</failure>
+  </testcase>
+  <testcase name="clickOnSettingsShouldSwitchActivity" classname="org.linesofcode.alltrack.NavigationUITest" time="21.42">
     <failure>java.lang.RuntimeException: Unable to capture screenshot.
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:87)
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
-at org.linesofcode.alltrack.NavigationUITest.navigationViewShouldBeRendered(NavigationUITest.java:66)
+at org.linesofcode.alltrack.NavigationUITest.clickOnSettingsShouldSwitchActivity(NavigationUITest.java:144)
 at java.lang.reflect.Method.invoke(Native Method)
-at java.lang.reflect.Method.invoke(Method.java:372)
 at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
@@ -560,16 +497,107 @@ at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
 at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
 at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
 at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
-at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
-Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/sdcard/app_spoon-screenshots
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/emulated/0/app_spoon-screenshots
 at com.squareup.spoon.Spoon.createDir(Spoon.java:262)
 at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
 at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
 at com.squareup.spoon.Spoon.filesDirectory(Spoon.java:224)
 at com.squareup.spoon.Spoon.obtainScreenshotDirectory(Spoon.java:140)
 at com.squareup.spoon.Spoon.screenshot(Spoon.java:78)
-... 34 more
+... 33 more
 </failure>
   </testcase>
-  <testcase name="openNavFromMainShouldHaveMainChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="1.91" />
+  <testcase name="navigationViewShouldBeRendered" classname="org.linesofcode.alltrack.NavigationUITest" time="2.586">
+    <failure>java.lang.RuntimeException: Unable to capture screenshot.
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:87)
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
+at org.linesofcode.alltrack.NavigationUITest.navigationViewShouldBeRendered(NavigationUITest.java:66)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/emulated/0/app_spoon-screenshots
+at com.squareup.spoon.Spoon.createDir(Spoon.java:262)
+at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
+at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
+at com.squareup.spoon.Spoon.filesDirectory(Spoon.java:224)
+at com.squareup.spoon.Spoon.obtainScreenshotDirectory(Spoon.java:140)
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:78)
+... 33 more
+</failure>
+  </testcase>
+  <testcase name="openNavFromMainShouldHaveMainChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="3.462">
+    <failure>java.lang.RuntimeException: Unable to capture screenshot.
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:87)
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
+at org.linesofcode.alltrack.NavigationUITest.openNavFromMainShouldHaveMainChecked(NavigationUITest.java:81)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+Caused by: java.lang.IllegalAccessException: Unable to create output dir: /storage/emulated/0/app_spoon-screenshots
+at com.squareup.spoon.Spoon.createDir(Spoon.java:262)
+at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
+at com.squareup.spoon.Spoon.createDir(Spoon.java:259)
+at com.squareup.spoon.Spoon.filesDirectory(Spoon.java:224)
+at com.squareup.spoon.Spoon.obtainScreenshotDirectory(Spoon.java:140)
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:78)
+... 33 more
+</failure>
+  </testcase>
 </testsuite>

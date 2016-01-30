@@ -10,13 +10,13 @@
         <link href="../../../static/spoon.css" rel="stylesheet">
         <script src="../../../static/jquery.min.js"></script>
         <script src="../../../static/bootstrap.min.js"></script>
-        <meta name="description" content="Test failed in 2 seconds on android-23">
+        <meta name="description" content="Test passed in 5 seconds on android-19">
     </head>
     <body>
         <div class="container">
             <div class="hero-unit">
                 <h1>Click On Cancel Should Not Create New Graph</h1>
-                <p>Test failed in 2 seconds on android-23</p>
+                <p>Test passed in 5 seconds on android-19</p>
             </div>
             <div class="row log">
                 <div class="span12">
@@ -31,457 +31,1117 @@
                         </thead>
                         <tbody>
                             <tr class="level-info info">
-                                <td>01-30 19:55:11.419</td>
+                                <td>01-30 14:06:58.371</td>
                                 <td>info</td>
                                 <td>TestRunner</td>
                                 <td>started: clickOnCancelShouldNotCreateNewGraph(org.linesofcode.alltrack.GraphActivitiyInteractionUITest)</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:11.423</td>
+                                <td>01-30 14:06:58.371</td>
                                 <td>info</td>
                                 <td>MonitoringInstrumentation</td>
                                 <td>Activities that are still in CREATED to STOPPED: 0</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:11.423</td>
+                                <td>01-30 14:06:58.371</td>
                                 <td>debug</td>
                                 <td>ActivityInstrumentationRule</td>
                                 <td>Launching activity org.linesofcode.alltrack.graph.GraphActivity</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:11.429</td>
+                                <td>01-30 14:06:58.371</td>
                                 <td>debug</td>
                                 <td>MonitoringInstrumentation</td>
                                 <td>execStartActivity(context, ibinder, ibinder, activity, intent, int, bundle</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:11.518</td>
+                                <td>01-30 14:06:58.391</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@af061e7 in: PRE_ON_CREATE</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b1f24700 in: PRE_ON_CREATE</td>
+                            </tr>
+                            <tr class="level-warn warning">
+                                <td>01-30 14:06:58.431</td>
+                                <td>warn</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: unable to find class referenced in signature (Landroid/view/SearchEvent;)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:06:58.431</td>
+                                <td>info</td>
+                                <td>dalvikvm</td>
+                                <td>Could not find method android.view.Window$Callback.onSearchRequested, referenced from method android.support.v7.internal.view.WindowCallbackWrapper.onSearchRequested</td>
+                            </tr>
+                            <tr class="level-warn warning">
+                                <td>01-30 14:06:58.431</td>
+                                <td>warn</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: unable to resolve interface method 17386: Landroid/view/Window$Callback;.onSearchRequested (Landroid/view/SearchEvent;)Z</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:11.748</td>
+                                <td>01-30 14:06:58.431</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: replacing opcode 0x72 at 0x0002</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:06:58.431</td>
+                                <td>info</td>
+                                <td>dalvikvm</td>
+                                <td>Could not find method android.view.Window$Callback.onWindowStartingActionMode, referenced from method android.support.v7.internal.view.WindowCallbackWrapper.onWindowStartingActionMode</td>
+                            </tr>
+                            <tr class="level-warn warning">
+                                <td>01-30 14:06:58.431</td>
+                                <td>warn</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: unable to resolve interface method 17390: Landroid/view/Window$Callback;.onWindowStartingActionMode (Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.431</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: replacing opcode 0x72 at 0x0002</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.541</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 121K, 16% free 3410K/4044K, paused 4ms, total 32ms</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:06:58.541</td>
+                                <td>info</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 3.401MB for 9736-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.561</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed &lt;1K, 16% free 3419K/4056K, paused 23ms, total 23ms</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:06:58.591</td>
+                                <td>info</td>
+                                <td>dalvikvm</td>
+                                <td>Could not find method android.content.res.TypedArray.getChangingConfigurations, referenced from method android.support.v7.internal.widget.TintTypedArray.getChangingConfigurations</td>
+                            </tr>
+                            <tr class="level-warn warning">
+                                <td>01-30 14:06:58.591</td>
+                                <td>warn</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: unable to resolve virtual method 440: Landroid/content/res/TypedArray;.getChangingConfigurations ()I</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.591</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: replacing opcode 0x6e at 0x0002</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:06:58.591</td>
+                                <td>info</td>
+                                <td>dalvikvm</td>
+                                <td>Could not find method android.content.res.TypedArray.getType, referenced from method android.support.v7.internal.widget.TintTypedArray.getType</td>
+                            </tr>
+                            <tr class="level-warn warning">
+                                <td>01-30 14:06:58.591</td>
+                                <td>warn</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: unable to resolve virtual method 462: Landroid/content/res/TypedArray;.getType (I)I</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.591</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: replacing opcode 0x6e at 0x0002</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.611</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 28K, 15% free 3449K/4056K, paused 10ms, total 10ms</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:06:58.611</td>
+                                <td>info</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 3.438MB for 9228-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.621</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed &lt;1K, 16% free 3457K/4068K, paused 3ms, total 8ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.641</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 36K, 15% free 3477K/4068K, paused 14ms, total 14ms</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:06:58.641</td>
+                                <td>info</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 3.492MB for 36876-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.641</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed &lt;1K, 15% free 3513K/4108K, paused 2ms, total 2ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.661</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 25K, 14% free 3542K/4108K, paused 3ms, total 13ms</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:06:58.661</td>
+                                <td>info</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 3.616MB for 100236-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.671</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 1K, 14% free 3638K/4208K, paused 3ms, total 4ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.681</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed &lt;1K, 14% free 3639K/4208K, paused 3ms, total 3ms</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:06:58.681</td>
+                                <td>info</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 4.690MB for 1127532-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.711</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_CONCURRENT freed &lt;1K, 11% free 4740K/5312K, paused 18ms+0ms, total 28ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.731</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 162K, 9% free 4976K/5440K, paused 3ms, total 3ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.741</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 237K, 12% free 5042K/5704K, paused 2ms, total 3ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.781</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_CONCURRENT freed 369K, 8% free 5287K/5740K, paused 17ms+0ms, total 21ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.791</td>
                                 <td>debug</td>
                                 <td>org.linesofcode.alltrack.graph.GraphAdapter</td>
                                 <td>Starting async graph update.</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:11.807</td>
+                                <td>01-30 14:06:58.801</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@af061e7 in: CREATED</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b1f24700 in: CREATED</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:11.808</td>
+                                <td>01-30 14:06:58.801</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@af061e7 in: STARTED</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b1f24700 in: STARTED</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:11.808</td>
+                                <td>01-30 14:06:58.801</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@af061e7 in: RESUMED</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b1f24700 in: RESUMED</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:11.835</td>
-                                <td>debug</td>
-                                <td>GraphAdapter</td>
-                                <td>getItemCount</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:11.880</td>
-                                <td>debug</td>
-                                <td>GraphAdapter</td>
-                                <td>getItemCount</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:11.883</td>
-                                <td>debug</td>
-                                <td>GraphAdapter</td>
-                                <td>getItemCount</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:11.883</td>
-                                <td>debug</td>
-                                <td>GraphAdapter</td>
-                                <td>getItemCount</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:11.923</td>
-                                <td>debug</td>
-                                <td>GraphAdapter</td>
-                                <td>getItemCount</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:11.923</td>
-                                <td>debug</td>
-                                <td>GraphAdapter</td>
-                                <td>getItemCount</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:11.925</td>
-                                <td>debug</td>
-                                <td>gralloc_goldfish</td>
-                                <td>Emulator without host-side GPU emulation detected.</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:11.964</td>
-                                <td>debug</td>
-                                <td>GraphAdapter</td>
-                                <td>getItemCount</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:11.964</td>
-                                <td>debug</td>
-                                <td>GraphAdapter</td>
-                                <td>getItemCount</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:11.965</td>
-                                <td>debug</td>
-                                <td>GraphAdapter</td>
-                                <td>getItemCount</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:12.058</td>
-                                <td>debug</td>
-                                <td>InputManagerEventInjectionStrategy</td>
-                                <td>Creating injection strategy with input manager.</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:12.194</td>
+                                <td>01-30 14:06:58.811</td>
                                 <td>debug</td>
                                 <td>org.linesofcode.alltrack.graph.GraphService</td>
                                 <td>Found [0] graphs to return to the caller.</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:12.210</td>
+                                <td>01-30 14:06:58.821</td>
                                 <td>debug</td>
                                 <td>GraphAdapter</td>
                                 <td>getItemCount</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:12.210</td>
+                                <td>01-30 14:06:58.841</td>
                                 <td>debug</td>
                                 <td>GraphAdapter</td>
                                 <td>getItemCount</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:12.210</td>
+                                <td>01-30 14:06:58.841</td>
                                 <td>debug</td>
                                 <td>GraphAdapter</td>
                                 <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.851</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.851</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.851</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.861</td>
+                                <td>debug</td>
+                                <td>gralloc_goldfish</td>
+                                <td>Emulator without GPU emulation detected.</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.861</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.871</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.871</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:58.921</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_CONCURRENT freed 474K, 9% free 5506K/6048K, paused 18ms+1ms, total 32ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:59.111</td>
+                                <td>debug</td>
+                                <td>InputManagerEventInjectionStrategy</td>
+                                <td>Creating injection strategy with input manager.</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:12.218</td>
+                                <td>01-30 14:06:59.131</td>
                                 <td>info</td>
                                 <td>ViewInteraction</td>
                                 <td>Performing &#39;single click&#39; action on view with id: org.linesofcode.alltrack:id/fab</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:12.284</td>
+                                <td>01-30 14:06:59.251</td>
                                 <td>debug</td>
                                 <td>MonitoringInstrumentation</td>
                                 <td>execStartActivity(context, ibinder, ibinder, activity, intent, int, bundle</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:12.298</td>
+                                <td>01-30 14:06:59.261</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@af061e7 in: PAUSED</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b1f24700 in: PAUSED</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:12.312</td>
+                                <td>01-30 14:06:59.281</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@76bbfc6 in: PRE_ON_CREATE</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@b220a858 in: PRE_ON_CREATE</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:06:59.281</td>
+                                <td>info</td>
+                                <td>dalvikvm</td>
+                                <td>Could not find method android.content.res.Resources.getDrawable, referenced from method android.support.v7.internal.widget.ResourcesWrapper.getDrawable</td>
+                            </tr>
+                            <tr class="level-warn warning">
+                                <td>01-30 14:06:59.281</td>
+                                <td>warn</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: unable to resolve virtual method 403: Landroid/content/res/Resources;.getDrawable (ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:12.339</td>
+                                <td>01-30 14:06:59.281</td>
                                 <td>debug</td>
-                                <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@76bbfc6 in: CREATED</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: replacing opcode 0x6e at 0x0002</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:06:59.281</td>
+                                <td>info</td>
+                                <td>dalvikvm</td>
+                                <td>Could not find method android.content.res.Resources.getDrawableForDensity, referenced from method android.support.v7.internal.widget.ResourcesWrapper.getDrawableForDensity</td>
+                            </tr>
+                            <tr class="level-warn warning">
+                                <td>01-30 14:06:59.281</td>
+                                <td>warn</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: unable to resolve virtual method 405: Landroid/content/res/Resources;.getDrawableForDensity (IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:12.345</td>
+                                <td>01-30 14:06:59.281</td>
                                 <td>debug</td>
-                                <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@76bbfc6 in: STARTED</td>
+                                <td>dalvikvm</td>
+                                <td>VFY: replacing opcode 0x6e at 0x0002</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:12.345</td>
+                                <td>01-30 14:06:59.311</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@76bbfc6 in: RESUMED</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:13.839</td>
-                                <td>info</td>
-                                <td>Choreographer</td>
-                                <td>Skipped 154 frames!  The application may be doing too much work on its main thread.</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@b220a858 in: CREATED</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:13.956</td>
+                                <td>01-30 14:06:59.311</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@af061e7 in: STOPPED</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@b220a858 in: STARTED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:59.311</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@b220a858 in: RESUMED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:59.471</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b1f24700 in: STOPPED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:59.851</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 329K, 7% free 5677K/6072K, paused 17ms, total 17ms</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:14.182</td>
+                                <td>01-30 14:06:59.851</td>
                                 <td>info</td>
-                                <td>TestRunner</td>
-                                <td>failed: clickOnCancelShouldNotCreateNewGraph(org.linesofcode.alltrack.GraphActivitiyInteractionUITest)</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 8.857MB for 3409932-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:59.851</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 0K, 5% free 9007K/9404K, paused 5ms, total 5ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:06:59.861</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_CONCURRENT freed &lt;1K, 5% free 9008K/9404K, paused 1ms+0ms, total 4ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:00.011</td>
+                                <td>debug</td>
+                                <td>Spoon</td>
+                                <td>Captured screenshot &#39;clickOnCancelShouldNotCreateNewGraph_before_graph_name&#39;.</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:14.182</td>
+                                <td>01-30 14:07:00.041</td>
                                 <td>info</td>
-                                <td>TestRunner</td>
-                                <td>----- begin exception -----</td>
+                                <td>ViewInteraction</td>
+                                <td>Performing &#39;type text(clickOnCancelShouldNotCreateNewGraph)&#39; action on view with id: org.linesofcode.alltrack:id/edit_graph_name</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:00.541</td>
+                                <td>debug</td>
+                                <td>UiControllerImpl</td>
+                                <td>Injecting string: &quot;clickOnCancelShouldNotCreateNewGraph&quot;</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.541</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (c) with key code (31) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.591</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (c) with key code (31) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.611</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (l) with key code (40) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.631</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (l) with key code (40) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.741</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (i) with key code (37) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.771</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (i) with key code (37) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.771</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (c) with key code (31) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.851</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (c) with key code (31) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.851</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (k) with key code (39) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.901</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (k) with key code (39) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.911</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.931</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (O) with key code (43) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.961</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (O) with key code (43) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.961</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:00.981</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (n) with key code (42) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.041</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (n) with key code (42) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.041</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.061</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (C) with key code (31) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.091</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (C) with key code (31) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.091</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.131</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (a) with key code (29) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.171</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (a) with key code (29) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.181</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (n) with key code (42) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.201</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (n) with key code (42) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.201</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (c) with key code (31) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.241</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.241</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (c) with key code (31) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.261</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.281</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (l) with key code (40) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.321</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (l) with key code (40) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.321</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.351</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (S) with key code (47) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.381</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (S) with key code (47) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.391</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.421</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (h) with key code (36) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.451</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (h) with key code (36) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.451</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (o) with key code (43) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.481</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (o) with key code (43) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.491</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (u) with key code (49) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.521</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (u) with key code (49) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.521</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (l) with key code (40) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.541</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (l) with key code (40) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.541</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (d) with key code (32) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.591</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (d) with key code (32) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.601</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.621</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (N) with key code (42) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.651</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (N) with key code (42) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.651</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.681</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (o) with key code (43) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.711</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (o) with key code (43) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.711</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (t) with key code (48) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.751</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (t) with key code (48) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.761</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.771</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (C) with key code (31) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.801</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (C) with key code (31) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.801</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.841</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (r) with key code (46) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.871</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (r) with key code (46) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.871</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.911</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.931</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (a) with key code (29) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.961</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (a) with key code (29) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:01.971</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (t) with key code (48) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.001</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (t) with key code (48) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.001</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.021</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.021</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.071</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (N) with key code (42) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.101</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (N) with key code (42) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.101</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.141</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.171</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (e) with key code (33) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.181</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (w) with key code (51) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.201</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (w) with key code (51) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.211</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.231</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (G) with key code (35) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.261</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (G) with key code (35) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.261</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (��) with key code (59) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.301</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (r) with key code (46) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.321</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (r) with key code (46) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.321</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (a) with key code (29) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.371</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (a) with key code (29) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.371</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (p) with key code (44) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.401</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (p) with key code (44) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.401</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (h) with key code (36) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-verbose ">
+                                <td>01-30 14:07:02.431</td>
+                                <td>verbose</td>
+                                <td>ESP_TRACE</td>
+                                <td>EventInjector:Injecting event for character (h) with key code (36) downtime: (83555)</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:02.461</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 3689K, 40% free 5693K/9448K, paused 24ms, total 24ms</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
+                                <td>01-30 14:07:02.461</td>
                                 <td>info</td>
-                                <td>TestRunner</td>
-                                <td>java.lang.IllegalArgumentException: Tag must match [a-zA-Z0-9_-]+.</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 8.873MB for 3409932-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:02.461</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 0K, 5% free 9023K/9448K, paused 4ms, total 4ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:02.551</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_CONCURRENT freed 1K, 5% free 9034K/9448K, paused 0ms+1ms, total 82ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:02.661</td>
+                                <td>debug</td>
+                                <td>Spoon</td>
+                                <td>Captured screenshot &#39;clickOnCancelShouldNotCreateNewGraph_after_graph_name&#39;.</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
+                                <td>01-30 14:07:02.661</td>
                                 <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at com.squareup.spoon.Spoon.screenshot(Spoon.java:75)</td>
+                                <td>ViewInteraction</td>
+                                <td>Performing &#39;close keyboard&#39; action on view with id: org.linesofcode.alltrack:id/edit_graph_name</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.001</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 3378K, 40% free 5696K/9448K, paused 13ms, total 13ms</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
+                                <td>01-30 14:07:03.001</td>
                                 <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 8.875MB for 3409932-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.001</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 0K, 5% free 9026K/9448K, paused 5ms, total 5ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.051</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_CONCURRENT freed &lt;1K, 5% free 9038K/9448K, paused 1ms+34ms, total 41ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.161</td>
+                                <td>debug</td>
+                                <td>Spoon</td>
+                                <td>Captured screenshot &#39;clickOnCancelShouldNotCreateNewGraph_after_close_keyboard&#39;.</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
+                                <td>01-30 14:07:03.221</td>
                                 <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.takeScreenshot(GraphActivitiyInteractionUITest.java:221)</td>
+                                <td>ViewInteraction</td>
+                                <td>Performing &#39;single click&#39; action on view with id: org.linesofcode.alltrack:id/cancel</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.331</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@b220a858 in: PAUSED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.331</td>
+                                <td>debug</td>
+                                <td>org.linesofcode.alltrack.graph.GraphActivity</td>
+                                <td>Received onActivityResult for request [1] and result [0]</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.331</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b1f24700 in: RESTARTED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.331</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b1f24700 in: STARTED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.331</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b1f24700 in: RESUMED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.461</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@b220a858 in: STOPPED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.461</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.CreateGraphActivity@b220a858 in: DESTROYED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.831</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 3388K, 40% free 5696K/9448K, paused 13ms, total 13ms</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
+                                <td>01-30 14:07:03.831</td>
                                 <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.linesofcode.alltrack.GraphActivitiyInteractionUITest.clickOnCancelShouldNotCreateNewGraph(GraphActivitiyInteractionUITest.java:162)</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 8.875MB for 3409932-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.831</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 0K, 5% free 9026K/9448K, paused 4ms, total 4ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.841</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_CONCURRENT freed &lt;1K, 5% free 9026K/9448K, paused 1ms+1ms, total 6ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.981</td>
+                                <td>debug</td>
+                                <td>Spoon</td>
+                                <td>Captured screenshot &#39;clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked&#39;.</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:03.991</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b1f24700 in: PAUSED</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at java.lang.reflect.Method.invoke(Native Method)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.rules.RunRules.evaluate(RunRules.java:20)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.linesofcode.alltrack.framework.DisableAnimationsRule$1.evaluate(DisableAnimationsRule.java:64)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.rules.RunRules.evaluate(RunRules.java:20)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner.run(ParentRunner.java:363)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.Suite.runChild(Suite.java:128)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.Suite.runChild(Suite.java:27)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runners.ParentRunner.run(ParentRunner.java:363)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runner.JUnitCore.run(JUnitCore.java:137)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at org.junit.runner.JUnitCore.run(JUnitCore.java:115)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>&#9;at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
-                                <td>info</td>
-                                <td>TestRunner</td>
-                                <td>----- end exception -----</td>
-                            </tr>
-                            <tr class="level-info info">
-                                <td>01-30 19:55:14.183</td>
+                                <td>01-30 14:07:04.001</td>
                                 <td>info</td>
                                 <td>TestRunner</td>
                                 <td>finished: clickOnCancelShouldNotCreateNewGraph(org.linesofcode.alltrack.GraphActivitiyInteractionUITest)</td>

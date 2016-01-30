@@ -10,13 +10,13 @@
         <link href="../../../static/spoon.css" rel="stylesheet">
         <script src="../../../static/jquery.min.js"></script>
         <script src="../../../static/bootstrap.min.js"></script>
-        <meta name="description" content="Test passed in 2 seconds on android-23">
+        <meta name="description" content="Test failed in 3 seconds on android-19">
     </head>
     <body>
         <div class="container">
             <div class="hero-unit">
                 <h1>Click On Settings Should Switch Activity</h1>
-                <p>Test passed in 2 seconds on android-23</p>
+                <p>Test failed in 3 seconds on android-19</p>
             </div>
             <div class="row log">
                 <div class="span12">
@@ -31,181 +31,535 @@
                         </thead>
                         <tbody>
                             <tr class="level-info info">
-                                <td>01-30 19:55:41.677</td>
+                                <td>01-30 14:07:45.611</td>
                                 <td>info</td>
                                 <td>TestRunner</td>
                                 <td>started: clickOnSettingsShouldSwitchActivity(org.linesofcode.alltrack.NavigationUITest)</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:41.683</td>
+                                <td>01-30 14:07:45.611</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@bc77b9c in: PAUSED</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:41.687</td>
-                                <td>debug</td>
-                                <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.SettingsActivity@650a9d4 in: DESTROYED</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b21a1e30 in: PAUSED</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:41.689</td>
+                                <td>01-30 14:07:45.611</td>
                                 <td>info</td>
                                 <td>MonitoringInstrumentation</td>
                                 <td>Activities that are still in CREATED to STOPPED: 1</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:41.689</td>
+                                <td>01-30 14:07:45.611</td>
                                 <td>debug</td>
                                 <td>ActivityInstrumentationRule</td>
                                 <td>Launching activity org.linesofcode.alltrack.graph.GraphActivity</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:41.710</td>
+                                <td>01-30 14:07:45.621</td>
                                 <td>debug</td>
                                 <td>MonitoringInstrumentation</td>
                                 <td>execStartActivity(context, ibinder, ibinder, activity, intent, int, bundle</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.282</td>
+                                <td>01-30 14:07:45.771</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@8980064 in: PRE_ON_CREATE</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b21a1e30 in: STOPPED</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.368</td>
+                                <td>01-30 14:07:45.771</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@8980064 in: CREATED</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b21a1e30 in: DESTROYED</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.374</td>
+                                <td>01-30 14:07:45.791</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@8980064 in: STARTED</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b253e508 in: PRE_ON_CREATE</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.374</td>
+                                <td>01-30 14:07:45.801</td>
                                 <td>debug</td>
                                 <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@8980064 in: RESUMED</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b253e508 in: CREATED</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.396</td>
+                                <td>01-30 14:07:45.811</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b253e508 in: STARTED</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:45.811</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b253e508 in: RESUMED</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:46.721</td>
+                                <td>info</td>
+                                <td>Choreographer</td>
+                                <td>Skipped 96 frames!  The application may be doing too much work on its main thread.</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:46.721</td>
                                 <td>debug</td>
                                 <td>GraphAdapter</td>
                                 <td>getItemCount</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.425</td>
+                                <td>01-30 14:07:46.721</td>
                                 <td>debug</td>
                                 <td>GraphAdapter</td>
                                 <td>getItemCount</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.425</td>
+                                <td>01-30 14:07:46.721</td>
                                 <td>debug</td>
                                 <td>GraphAdapter</td>
                                 <td>getItemCount</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.425</td>
+                                <td>01-30 14:07:46.721</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>onCreateViewHolder with viewType [0].</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:46.721</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>onBindViewHolder for position [0].</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:46.721</td>
                                 <td>debug</td>
                                 <td>GraphAdapter</td>
                                 <td>getItemCount</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.437</td>
+                                <td>01-30 14:07:46.731</td>
+                                <td>debug</td>
+                                <td>ViewHolder</td>
+                                <td>ViewHolder setting line to [SimpleLineGraph].</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:46.731</td>
+                                <td>info</td>
+                                <td>org.linesofcode.alltrack.graph.GraphToLineTransformer</td>
+                                <td>Transforming graph [SimpleLineGraph] with [0] datapoints.</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:46.731</td>
+                                <td>info</td>
+                                <td>org.linesofcode.alltrack.graph.GraphToLineTransformer</td>
+                                <td>Transformation finished.</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:46.751</td>
                                 <td>debug</td>
                                 <td>GraphAdapter</td>
                                 <td>getItemCount</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.437</td>
+                                <td>01-30 14:07:46.751</td>
                                 <td>debug</td>
                                 <td>GraphAdapter</td>
                                 <td>getItemCount</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.485</td>
+                                <td>01-30 14:07:46.751</td>
                                 <td>debug</td>
                                 <td>GraphAdapter</td>
                                 <td>getItemCount</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.486</td>
+                                <td>01-30 14:07:46.751</td>
                                 <td>debug</td>
                                 <td>GraphAdapter</td>
                                 <td>getItemCount</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:42.486</td>
+                                <td>01-30 14:07:46.781</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 6263K, 23% free 7586K/9776K, paused 13ms, total 18ms</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:46.781</td>
+                                <td>info</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 8.842MB for 1440012-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:46.791</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 18K, 20% free 8973K/11184K, paused 7ms, total 8ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:46.791</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:46.801</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:46.801</td>
+                                <td>debug</td>
+                                <td>GraphAdapter</td>
+                                <td>getItemCount</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:46.801</td>
                                 <td>debug</td>
                                 <td>GraphAdapter</td>
                                 <td>getItemCount</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:42.528</td>
+                                <td>01-30 14:07:47.071</td>
                                 <td>info</td>
                                 <td>ViewInteraction</td>
                                 <td>Performing &#39;fast swipe&#39; action on view with id: org.linesofcode.alltrack:id/mainLayout</td>
                             </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:43.056</td>
-                                <td>debug</td>
-                                <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@bc77b9c in: STOPPED</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:43.056</td>
-                                <td>debug</td>
-                                <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@bc77b9c in: DESTROYED</td>
-                            </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:43.597</td>
+                                <td>01-30 14:07:47.821</td>
                                 <td>info</td>
                                 <td>ViewInteraction</td>
                                 <td>Performing &#39;single click&#39; action on view with string from resource id: &lt;2131034142&gt;[navigation_settings] value: Settings</td>
                             </tr>
                             <tr class="level-debug ">
-                                <td>01-30 19:55:43.719</td>
+                                <td>01-30 14:07:48.781</td>
                                 <td>debug</td>
-                                <td>MonitoringInstrumentation</td>
-                                <td>execStartActivity(context, ibinder, ibinder, activity, intent, int, bundle</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:43.777</td>
-                                <td>debug</td>
-                                <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@8980064 in: PAUSED</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:43.807</td>
-                                <td>debug</td>
-                                <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.SettingsActivity@4715fd7 in: PRE_ON_CREATE</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:43.837</td>
-                                <td>debug</td>
-                                <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.SettingsActivity@4715fd7 in: CREATED</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:43.838</td>
-                                <td>debug</td>
-                                <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.SettingsActivity@4715fd7 in: STARTED</td>
-                            </tr>
-                            <tr class="level-debug ">
-                                <td>01-30 19:55:43.839</td>
-                                <td>debug</td>
-                                <td>LifecycleMonitor</td>
-                                <td>Lifecycle status change: org.linesofcode.alltrack.SettingsActivity@4715fd7 in: RESUMED</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 207K, 20% free 9001K/11184K, paused 17ms, total 17ms</td>
                             </tr>
                             <tr class="level-info info">
-                                <td>01-30 19:55:44.350</td>
+                                <td>01-30 14:07:48.781</td>
+                                <td>info</td>
+                                <td>dalvikvm-heap</td>
+                                <td>Grow heap (frag case) to 12.103MB for 3409932-byte allocation</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:48.801</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_FOR_ALLOC freed 0K, 16% free 12331K/14516K, paused 12ms, total 12ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:48.821</td>
+                                <td>debug</td>
+                                <td>dalvikvm</td>
+                                <td>GC_CONCURRENT freed 13K, 16% free 12318K/14516K, paused 18ms+0ms, total 27ms</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:48.971</td>
+                                <td>debug</td>
+                                <td>Spoon</td>
+                                <td>Captured screenshot &#39;clickOnSettingsShouldSwitchActivity&#39;.</td>
+                            </tr>
+                            <tr class="level-debug ">
+                                <td>01-30 14:07:48.971</td>
+                                <td>debug</td>
+                                <td>LifecycleMonitor</td>
+                                <td>Lifecycle status change: org.linesofcode.alltrack.graph.GraphActivity@b253e508 in: PAUSED</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>failed: clickOnSettingsShouldSwitchActivity(org.linesofcode.alltrack.NavigationUITest)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>----- begin exception -----</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>android.support.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError: &#39;not is displayed on the screen to the user&#39; doesn&#39;t match the selected view.</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>Expected: not is displayed on the screen to the user</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>     Got: &quot;NavigationView{id=2131427442, res-name=navigation, visibility=VISIBLE, width=592, height=1134, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}&quot;</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at dalvik.system.VMStack.getThreadStackTrace(Native Method)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at java.lang.Thread.getStackTrace(Thread.java:579)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at android.support.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:82)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at android.support.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:53)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at android.support.test.espresso.ViewInteraction.runSynchronouslyOnUiThread(ViewInteraction.java:184)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at android.support.test.espresso.ViewInteraction.check(ViewInteraction.java:158)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.linesofcode.alltrack.NavigationUITest.clickOnSettingsShouldSwitchActivity(NavigationUITest.java:145)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at java.lang.reflect.Method.invokeNative(Native Method)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at java.lang.reflect.Method.invoke(Method.java:515)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.rules.RunRules.evaluate(RunRules.java:20)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner.run(ParentRunner.java:363)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.Suite.runChild(Suite.java:128)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.Suite.runChild(Suite.java:27)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runners.ParentRunner.run(ParentRunner.java:363)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runner.JUnitCore.run(JUnitCore.java:137)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at org.junit.runner.JUnitCore.run(JUnitCore.java:115)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>&#9;at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1701)</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>Caused by: junit.framework.AssertionFailedError: &#39;not is displayed on the screen to the user&#39; doesn&#39;t match the selected view.</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>Expected: not is displayed on the screen to the user</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>     Got: &quot;NavigationView{id=2131427442, res-name=navigation, visibility=VISIBLE, width=592, height=1134, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0,</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
+                                <td>info</td>
+                                <td>TestRunner</td>
+                                <td>----- end exception -----</td>
+                            </tr>
+                            <tr class="level-info info">
+                                <td>01-30 14:07:48.991</td>
                                 <td>info</td>
                                 <td>TestRunner</td>
                                 <td>finished: clickOnSettingsShouldSwitchActivity(org.linesofcode.alltrack.NavigationUITest)</td>
