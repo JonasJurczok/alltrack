@@ -189,11 +189,7 @@ public class GraphActivitiyInteractionUITest {
         onView(withId(R.id.fab)).perform(click());
 
         takeScreenshot("CreateGraph_" + graphName + "_before_graph_name");
-        onView(withId(R.id.edit_graph_name)).perform(typeText(graphName));
-        takeScreenshot("CreateGraph_" + graphName + "_after_graph_name");
-        onView(withId(R.id.edit_graph_name)).perform(closeSoftKeyboard());
-        takeScreenshot("CreateGraph_" + graphName + "_after_close_keyboard");
-        onView(withId(R.id.ok)).perform(click());
+        onView(withId(R.id.edit_graph_name)).perform(typeText(graphName + "\n"));
         takeScreenshot("CreateGraph_" + graphName + "_after_confirm");
         List<Graph> graphs = graphDao.queryForEq("name", graphName);
 

@@ -71,6 +71,9 @@ bootAndUnlockEmulator() {
 
     echo "Done. Unlocking the emulator"
     adb -s "$emulator" shell input keyevent 82
+
+    echo "Erasing old logs"
+    adb -s "$emulator" logcat -c
   done
 
   echo "Waiting for emulator startup finished."
