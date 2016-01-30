@@ -3,4 +3,5 @@
 	package="org.linesofcode.alltrack">
 
 	<uses-permission android:name="android.permission.SET_ANIMATION_SCALE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 </manifest>

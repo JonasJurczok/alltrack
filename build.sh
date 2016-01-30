@@ -10,7 +10,7 @@ startupEmulatorIfNotRunning () {
   do :
     # TODO: check if emulator is running already
     echo "Starting emulator for [$target]"
-    emulator -avd "$target" &
+    emulator -avd "$target" -sdcard "$target".img &
   done
 
   local running=$(adb devices | grep 'emulator' | grep 'device' | wc -l)
@@ -42,6 +42,8 @@ verifyAVDsExist () {
       echo "AVD [$target] does not exist. Creating it now..."
       echo no | android create avd --force -n "$target" -t "$target" --abi x86 --skin WXGA720
     fi
+    echo "Creating SDCard for $target"
+    mksdcard 512M "$target".img
   done
   echo "Verifying avd existance finished."
   echo ""
@@ -116,7 +118,9 @@ shutdownEmulators() {
     adb -s "$emulator" emu kill
   done
 
-  echo "Waiting for emulator startup finished."
+  echo "Deleting images"
+  rm -f android-*.img
+  echo "Emulators shut down and images deleted."
   echo ""
 }
 

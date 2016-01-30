@@ -7,6 +7,8 @@ import android.support.test.espresso.action.GeneralSwipeAction;
 import android.support.test.rule.ActivityTestRule;
 import android.view.View;
 
+import com.squareup.spoon.Spoon;
+
 import org.hamcrest.Matcher;
 import org.junit.Before;
 import org.junit.Rule;
@@ -61,6 +63,7 @@ public class NavigationUITest {
     @Test
     public void navigationViewShouldBeRendered() {
         onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
+        Spoon.screenshot(rule.getActivity(), "navigationViewShouldBeRendered");
         onView(withId(R.id.navigation)).check(matches(isDisplayed()));
     }
 
@@ -68,12 +71,14 @@ public class NavigationUITest {
     public void navigationViewShouldBeClosable() {
         onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
         onView(withId(R.id.mainLayout)).perform(swipeLeft());
+        Spoon.screenshot(rule.getActivity(), "navigationViewShouldBeClosable");
         onView(withId(R.id.navigation)).check(matches(not(isDisplayed())));
     }
 
     @Test
     public void openNavFromMainShouldHaveMainChecked() {
         onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
+        Spoon.screenshot(rule.getActivity(), "openNavFromMainShouldHaveMainChecked");
 
         onView(withText(R.string.navigation_graphs)).perform(new ViewAction() {
             @Override
@@ -101,6 +106,7 @@ public class NavigationUITest {
         onView(withText(R.string.navigation_settings)).perform(click());
 
         onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
+        Spoon.screenshot(rule.getActivity(), "openNavFromSettingsShouldHaveSettingsChecked");
         onView(allOf(withText(R.string.navigation_settings), withClassName(endsWith("MenuItemView")))).perform(new ViewAction() {
             @Override
             public Matcher<View> getConstraints() {
@@ -125,6 +131,7 @@ public class NavigationUITest {
         onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
         onView(withText(R.string.navigation_graphs)).perform(click());
 
+        Spoon.screenshot(rule.getActivity(), "clickOnDataSeriesShouldCloseNavigation");
         onView(withId(R.id.navigation)).check(matches(not(isDisplayed())));
         onView(withId(R.id.mainLayout)).check(matches(isDisplayed()));
     }
@@ -134,6 +141,7 @@ public class NavigationUITest {
         onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
         onView(withText(R.string.navigation_settings)).perform(click());
 
+        Spoon.screenshot(rule.getActivity(), "clickOnSettingsShouldSwitchActivity");
         onView(withId(R.id.navigation)).check(matches(not(isDisplayed())));
         onView(withText(R.string.settings_temp_label)).check(matches(isDisplayed()));
     }
@@ -143,9 +151,11 @@ public class NavigationUITest {
         onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
         onView(withText(R.string.navigation_settings)).perform(click());
 
+        Spoon.screenshot(rule.getActivity(), "navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click");
         onView(withId(R.id.mainLayout)).perform(SWIPE_OPEN);
         onView(withText(R.string.navigation_graphs)).perform(click());
 
+        Spoon.screenshot(rule.getActivity(), "navigatingBackToGraphActivityShouldHaveNavigationClosed_final_click");
         onView(withId(R.id.navigation)).check(matches(not(isDisplayed())));
     }
 }
