@@ -1,0 +1,19 @@
+{
+  "sdk": "/home/jjurczok/sdk/android-sdk-linux",
+  "apk": "/home/jjurczok/projects/alltrack/app/build/outputs/apk/Alltrack-debug.apk",
+  "testApk": "/home/jjurczok/projects/alltrack/app/build/outputs/apk/Alltrack-debug-androidTest-unaligned.apk",
+  "serial": "emulator-5558",
+  "debug": true,
+  "noAnimations": false,
+  "adbTimeout": 60000,
+  "work": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/work/emulator-5558",
+  "junitReport": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/junit-reports/emulator-5558.xml",
+  "imageDir": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558",
+  "classpath": "/home/jjurczok/.gradle/caches/modules-2/files-2.1/com.github.spullara.mustache.java/compiler/0.8.14/fe44cff1ad36f7f50609574d2970503c355affd6/compiler-0.8.14.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/com.squareup.spoon/spoon-runner/1.1.10/c6dddf66e2af3fcd5b7f6cfb3b00590c21231048/spoon-runner-1.1.10.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/com.madgag/animated-gif-lib/1.2/3194611bf0d4320b048aee70f0862230fd6f0982/animated-gif-lib-1.2.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/com.beust/jcommander/1.35/47592e181b0bdbbeb63029e08c5e74f6803c4edd/jcommander-1.35.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/org.lesscss/lesscss/1.3.3/68466582fd2ebd7e81b37eefef958b07689a6102/lesscss-1.3.3.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/org.mozilla/rhino/1.7R4/e982f2136574b9a423186fbaeaaa98dc3e5a5288/rhino-1.7R4.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/ccbc77a5fd907ef863c29f3596c6f54ffa4e9442/kxml2-2.3.0.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/com.android.tools/common/24.3.1/92f1a60ebb004e2969661315de200232f90e0a80/common-24.3.1.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/com.squareup.spoon/spoon-client/1.1.10/a88d1ecedb936959a3e2039a3132bec171a0a9c4/spoon-client-1.1.10.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.1/6738a2da2202ce360f0af90aba005c1e05a2c4cd/commons-lang3-3.3.1.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/b1b6ea3b7e4aa4f492509a4952029cd8e48019ad/commons-io-2.4.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/24.3.1/3c0f015e74a277e90ca34229458dd767aa39bb30/annotations-24.3.1.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar:/home/jjurczok/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/24.3.1/2018ea863b14fe3aeaf2b49316ee98567e1d9c11/ddmlib-24.3.1.jar",
+  "instrumentationInfo": {
+    "applicationPackage": "org.linesofcode.alltrack",
+    "instrumentationPackage": "org.linesofcode.alltrack.test",
+    "testRunnerClass": "android.support.test.runner.AndroidJUnitRunner"
+  },
+  "testRunListeners": []
+}
