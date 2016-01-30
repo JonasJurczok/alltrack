@@ -1,0 +1,764 @@
+{
+  "installFailed": false,
+  "deviceDetails": {
+    "model": "Android SDK built for x86",
+    "manufacturer": "unknown",
+    "version": "5.0.2",
+    "apiLevel": 21,
+    "language": "en",
+    "region": "US",
+    "isEmulator": true,
+    "avdName": "android-21"
+  },
+  "testResults": [
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "addNewGraphShouldCreateNewGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 3,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454192217949_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454192220366_CreateGraph_addNewGraphShouldCreateNewGraph_after_confirm.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "clickOnCancelShouldNotCreateNewGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192202593_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192204838_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192205425_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192206005_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "hittingEnterInGraphNameFieldShouldCreateNewGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454192206867_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454192209968_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "newlyAddedGraphShouldBeDisplayedImmediately"
+      },
+      {
+        "status": "PASS",
+        "duration": 5,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454192214007_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454192216709_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitiyInteractionUITest",
+        "methodName": "showSimpleGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/showSimpleGraph/1454192210938_showSimpleGraph_before_asserts.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "floatingActionButtonShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1454192228506_floatingActionButtonShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "mainActivityShouldBeStarted"
+      },
+      {
+        "status": "PASS",
+        "duration": 1,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1454192225101_mainActivityShouldBeStarted.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "recyclerViewShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1454192225917_recyclerViewShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "swipeDownShouldMaximizeAppBar"
+      },
+      {
+        "status": "PASS",
+        "duration": 2,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1454192222738_swipeDownShouldMaximizeAppBar.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "swipeUpShouldMinimizeAppBar"
+      },
+      {
+        "status": "PASS",
+        "duration": 1,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1454192227556_swipeUpShouldMinimizeAppBar.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphActivitySetupUITest",
+        "methodName": "toolBarShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1454192223642_toolBarShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testAndroidTestCaseSetupProperly"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testCreateGraphShouldPersistGraph"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testDeleteGraphShouldDeleteDataPoints"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testDeleteGraphShouldWork"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testGetAllShouldHaveDatapointsOrdererdByTime"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testSaveShouldCreateNewDatapoints"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.GraphServiceTest",
+        "methodName": "testSaveShouldDeleteDataPoints"
+      },
+      {
+        "status": "PASS",
+        "duration": 0,
+        "screenshots": [],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "clickOnDataSeriesShouldCloseNavigation"
+      },
+      {
+        "status": "PASS",
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1454192238044_clickOnDataSeriesShouldCloseNavigation.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "clickOnSettingsShouldSwitchActivity"
+      },
+      {
+        "status": "PASS",
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity/1454192253746_clickOnSettingsShouldSwitchActivity.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "navigatingBackToGraphActivityShouldHaveNavigationClosed"
+      },
+      {
+        "status": "FAIL",
+        "exception": {
+          "className": "android.support.test.espresso.base.DefaultFailureHandler$AssertionFailedWithCauseError",
+          "message": "\u0027not is displayed on the screen to the user\u0027 doesn\u0027t match the selected view.\nExpected: not is displayed on the screen to the user\nGot: \"NavigationView{id\u003d2131427442, res-name\u003dnavigation, visibility\u003dVISIBLE, width\u003d592, height\u003d1184, has-focus\u003dtrue, has-focusable\u003dtrue, has-window-focus\u003dtrue, is-clickable\u003dfalse, is-enabled\u003dtrue, is-focused\u003dfalse, is-focusable\u003dfalse, is-layout-requested\u003dfalse, is-selected\u003dfalse, root-is-layout-requested\u003dfalse, has-input-connection\u003dfalse, x\u003d0.0, y\u003d0.0, child-count\u003d1}\"",
+          "elements": [
+            {
+              "className": "dalvik.system.VMStack",
+              "line": 0,
+              "methodName": "getThreadStackTrace",
+              "isNative": true
+            },
+            {
+              "className": "java.lang.Thread",
+              "fileName": "Thread.java",
+              "line": 580,
+              "methodName": "getStackTrace",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.base.DefaultFailureHandler",
+              "fileName": "DefaultFailureHandler.java",
+              "line": 82,
+              "methodName": "getUserFriendlyError",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.base.DefaultFailureHandler",
+              "fileName": "DefaultFailureHandler.java",
+              "line": 53,
+              "methodName": "handle",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.ViewInteraction",
+              "fileName": "ViewInteraction.java",
+              "line": 184,
+              "methodName": "runSynchronouslyOnUiThread",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.espresso.ViewInteraction",
+              "fileName": "ViewInteraction.java",
+              "line": 158,
+              "methodName": "check",
+              "isNative": false
+            },
+            {
+              "className": "org.linesofcode.alltrack.NavigationUITest",
+              "fileName": "NavigationUITest.java",
+              "line": 159,
+              "methodName": "navigatingBackToGraphActivityShouldHaveNavigationClosed",
+              "isNative": false
+            },
+            {
+              "className": "java.lang.reflect.Method",
+              "line": 0,
+              "methodName": "invoke",
+              "isNative": true
+            },
+            {
+              "className": "java.lang.reflect.Method",
+              "fileName": "Method.java",
+              "line": 372,
+              "methodName": "invoke",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.model.FrameworkMethod$1",
+              "fileName": "FrameworkMethod.java",
+              "line": 50,
+              "methodName": "runReflectiveCall",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.internal.runners.model.ReflectiveCallable",
+              "fileName": "ReflectiveCallable.java",
+              "line": 12,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.model.FrameworkMethod",
+              "fileName": "FrameworkMethod.java",
+              "line": 47,
+              "methodName": "invokeExplosively",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.internal.runners.statements.InvokeMethod",
+              "fileName": "InvokeMethod.java",
+              "line": 17,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.internal.runners.statements.RunBefores",
+              "fileName": "RunBefores.java",
+              "line": 26,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.internal.statement.UiThreadStatement",
+              "fileName": "UiThreadStatement.java",
+              "line": 55,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.rule.ActivityTestRule$ActivityStatement",
+              "fileName": "ActivityTestRule.java",
+              "line": 257,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.rules.RunRules",
+              "fileName": "RunRules.java",
+              "line": 20,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 325,
+              "methodName": "runLeaf",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.BlockJUnit4ClassRunner",
+              "fileName": "BlockJUnit4ClassRunner.java",
+              "line": 78,
+              "methodName": "runChild",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.BlockJUnit4ClassRunner",
+              "fileName": "BlockJUnit4ClassRunner.java",
+              "line": 57,
+              "methodName": "runChild",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner$3",
+              "fileName": "ParentRunner.java",
+              "line": 290,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner$1",
+              "fileName": "ParentRunner.java",
+              "line": 71,
+              "methodName": "schedule",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 288,
+              "methodName": "runChildren",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 58,
+              "methodName": "access$000",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner$2",
+              "fileName": "ParentRunner.java",
+              "line": 268,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 363,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.Suite",
+              "fileName": "Suite.java",
+              "line": 128,
+              "methodName": "runChild",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.Suite",
+              "fileName": "Suite.java",
+              "line": 27,
+              "methodName": "runChild",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner$3",
+              "fileName": "ParentRunner.java",
+              "line": 290,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner$1",
+              "fileName": "ParentRunner.java",
+              "line": 71,
+              "methodName": "schedule",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 288,
+              "methodName": "runChildren",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 58,
+              "methodName": "access$000",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner$2",
+              "fileName": "ParentRunner.java",
+              "line": 268,
+              "methodName": "evaluate",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runners.ParentRunner",
+              "fileName": "ParentRunner.java",
+              "line": 363,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runner.JUnitCore",
+              "fileName": "JUnitCore.java",
+              "line": 137,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "org.junit.runner.JUnitCore",
+              "fileName": "JUnitCore.java",
+              "line": 115,
+              "methodName": "run",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.internal.runner.TestExecutor",
+              "fileName": "TestExecutor.java",
+              "line": 54,
+              "methodName": "execute",
+              "isNative": false
+            },
+            {
+              "className": "android.support.test.runner.AndroidJUnitRunner",
+              "fileName": "AndroidJUnitRunner.java",
+              "line": 240,
+              "methodName": "onStart",
+              "isNative": false
+            },
+            {
+              "className": "android.app.Instrumentation$InstrumentationThread",
+              "fileName": "Instrumentation.java",
+              "line": 1837,
+              "methodName": "run",
+              "isNative": false
+            }
+          ],
+          "cause": {
+            "className": "junit.framework.AssertionFailedError",
+            "message": "\u0027not is displayed on the screen to the user\u0027 doesn\u0027t match the selected view.\nExpected: not is displayed on the screen to the user\nGot: \"NavigationView{id\u003d2131427442, res-name\u003dnavigation, visibility\u003dVISIBLE, width\u003d592, height\u003d1184, has-focus\u003dtrue, has-focusable\u003dtrue, has-window-focus\u003dtrue, is-clickable\u003dfalse, is-enabled\u003dtrue, is-focused\u003dfalse, is-focusable\u003dfalse, is-layout-requested\u003dfalse, is-selected\u003dfalse, root-is-layout-requested\u003dfalse, has-input-connection\u003dfalse, x\u003d0.0, y\u003d0.0, child-count\u003d1}\"",
+            "elements": [
+              {
+                "className": "android.support.test.espresso.matcher.ViewMatchers",
+                "fileName": "ViewMatchers.java",
+                "line": 1014,
+                "methodName": "assertThat",
+                "isNative": false
+              },
+              {
+                "className": "android.support.test.espresso.assertion.ViewAssertions$2",
+                "fileName": "ViewAssertions.java",
+                "line": 89,
+                "methodName": "check",
+                "isNative": false
+              },
+              {
+                "className": "android.support.test.espresso.ViewInteraction$2",
+                "fileName": "ViewInteraction.java",
+                "line": 170,
+                "methodName": "run",
+                "isNative": false
+              },
+              {
+                "className": "java.util.concurrent.Executors$RunnableAdapter",
+                "fileName": "Executors.java",
+                "line": 422,
+                "methodName": "call",
+                "isNative": false
+              },
+              {
+                "className": "java.util.concurrent.FutureTask",
+                "fileName": "FutureTask.java",
+                "line": 237,
+                "methodName": "run",
+                "isNative": false
+              },
+              {
+                "className": "android.os.Handler",
+                "fileName": "Handler.java",
+                "line": 739,
+                "methodName": "handleCallback",
+                "isNative": false
+              },
+              {
+                "className": "android.os.Handler",
+                "fileName": "Handler.java",
+                "line": 95,
+                "methodName": "dispatchMessage",
+                "isNative": false
+              },
+              {
+                "className": "android.os.Looper",
+                "fileName": "Looper.java",
+                "line": 135,
+                "methodName": "loop",
+                "isNative": false
+              },
+              {
+                "className": "android.app.ActivityThread",
+                "fileName": "ActivityThread.java",
+                "line": 5221,
+                "methodName": "main",
+                "isNative": false
+              },
+              {
+                "className": "java.lang.reflect.Method",
+                "line": 0,
+                "methodName": "invoke",
+                "isNative": true
+              },
+              {
+                "className": "java.lang.reflect.Method",
+                "fileName": "Method.java",
+                "line": 372,
+                "methodName": "invoke",
+                "isNative": false
+              },
+              {
+                "className": "com.android.internal.os.ZygoteInit$MethodAndArgsCaller",
+                "fileName": "ZygoteInit.java",
+                "line": 899,
+                "methodName": "run",
+                "isNative": false
+              },
+              {
+                "className": "com.android.internal.os.ZygoteInit",
+                "fileName": "ZygoteInit.java",
+                "line": 694,
+                "methodName": "main",
+                "isNative": false
+              }
+            ]
+          }
+        },
+        "duration": 6,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454192248360_navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click.png",
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454192249626_navigatingBackToGraphActivityShouldHaveNavigationClosed_final_click.png"
+        ],
+        "files": [],
+        "animatedGif": "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed.gif",
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "navigationViewShouldBeClosable"
+      },
+      {
+        "status": "PASS",
+        "duration": 4,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1454192233987_navigationViewShouldBeClosable.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "navigationViewShouldBeRendered"
+      },
+      {
+        "status": "PASS",
+        "duration": 2,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered/1454192256241_navigationViewShouldBeRendered.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "openNavFromMainShouldHaveMainChecked"
+      },
+      {
+        "status": "PASS",
+        "duration": 5,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked/1454192261547_openNavFromMainShouldHaveMainChecked.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ],
+    [
+      {
+        "className": "org.linesofcode.alltrack.NavigationUITest",
+        "methodName": "openNavFromSettingsShouldHaveSettingsChecked"
+      },
+      {
+        "status": "PASS",
+        "duration": 5,
+        "screenshots": [
+          "/home/jjurczok/projects/alltrack/app/build/spoon/debug/image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked/1454192243242_openNavFromSettingsShouldHaveSettingsChecked.png"
+        ],
+        "files": [],
+        "log": []
+      }
+    ]
+  ],
+  "started": 1454192205077,
+  "duration": 63,
+  "exceptions": []
+}

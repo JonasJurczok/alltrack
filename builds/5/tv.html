@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alltrack debugAndroidTest</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet">
+        <link href="static/bootstrap.min.css" rel="stylesheet">
+        <link href="static/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="static/spoon.css" rel="stylesheet">
+        <link href="static/nivo-slider.css" rel="stylesheet">
+        <script src="static/jquery.min.js"></script>
+        <script src="static/bootstrap.min.js"></script>
+        <script src="static/jquery.nivo.slider.pack.js"></script>
+        <meta name="description" content="">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="hero-unit">
+                <h1 id="title"></h1>
+                <p id="subtitle"></p>
+            </div>
+
+            <div class="row">
+                <div id="test-info" class="span6">
+                    <!-- Current test information -->
+                    <div id="current-test-info" class="test-result">
+                        <h1 id="test-name"></h1>
+                        <h3 id="test-class-name"></h3>
+                        <h3 id="caption"></h3>
+                    </div>
+
+                    <!-- Overall test information -->
+                    <div id="overall-test-info">
+                        <p>Displaying test <span id="current-test-number">0</span> of <span id="total-test-size">0</span></p>
+                        <p>Tests executed on <span id="test-date">Saturday, January 30, 11:16 PM</span>, in <span id="duration">2 minutes, 34 seconds</span></p>
+                    </div>
+                </div>
+                <div id="slider-wrapper" class="theme-default span6">
+                    <div id="slider" class="nivoSlider"></div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var devices = [
+  {
+    "serial": "emulator-5554",
+    "name": "android-19",
+    "details": "Running Android 4.4.4 (API 19) with locale en-US",
+    "testResults": [
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Add New Graph Should Create New Graph",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 75,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454192217668_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 76,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454192222799_CreateGraph_addNewGraphShouldCreateNewGraph_after_confirm.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Click On Cancel Should Not Create New Graph",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 77,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192197272_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 78,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192200121_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Graph Name"
+          },
+          {
+            "id": 79,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192200687_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Close Keyboard"
+          },
+          {
+            "id": 80,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192201418_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Cancel Clicked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Hitting Enter In Graph Name Field Should Create New Graph",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 81,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454192202748_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 82,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454192210434_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph After Graph Name"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Newly Added Graph Should Be Displayed Immediately",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 83,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454192212898_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately Before Graph Name"
+          },
+          {
+            "id": 84,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454192216208_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Show Simple Graph",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 85,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/showSimpleGraph/1454192211167_showSimpleGraph_before_asserts.png",
+            "caption": "ShowSimpleGraph Before Asserts"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Floating Action Button Should Be Rendered",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 86,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1454192234255_floatingActionButtonShouldBeRendered.png",
+            "caption": "FloatingActionButtonShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Main Activity Should Be Started",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 87,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1454192229066_mainActivityShouldBeStarted.png",
+            "caption": "MainActivityShouldBeStarted"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Recycler View Should Be Rendered",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 88,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1454192229903_recyclerViewShouldBeRendered.png",
+            "caption": "RecyclerViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Down Should Maximize App Bar",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 89,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1454192226726_swipeDownShouldMaximizeAppBar.png",
+            "caption": "SwipeDownShouldMaximizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Up Should Minimize App Bar",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 90,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1454192232959_swipeUpShouldMinimizeAppBar.png",
+            "caption": "SwipeUpShouldMinimizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Tool Bar Should Be Rendered",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 91,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1454192228314_toolBarShouldBeRendered.png",
+            "caption": "ToolBarShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Data Series Should Close Navigation",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 92,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1454192248219_clickOnDataSeriesShouldCloseNavigation.png",
+            "caption": "ClickOnDataSeriesShouldCloseNavigation"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Settings Should Switch Activity",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 93,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity/1454192277430_clickOnSettingsShouldSwitchActivity.png",
+            "caption": "ClickOnSettingsShouldSwitchActivity"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigating Back To Graph Activity Should Have Navigation Closed",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 94,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454192265630_navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed First Click"
+          },
+          {
+            "id": 95,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454192269381_navigatingBackToGraphActivityShouldHaveNavigationClosed_final_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed Final Click"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Closable",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 96,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1454192240706_navigationViewShouldBeClosable.png",
+            "caption": "NavigationViewShouldBeClosable"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Rendered",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 97,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered/1454192281281_navigationViewShouldBeRendered.png",
+            "caption": "NavigationViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Main Should Have Main Checked",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 98,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked/1454192286343_openNavFromMainShouldHaveMainChecked.png",
+            "caption": "OpenNavFromMainShouldHaveMainChecked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Settings Should Have Settings Checked",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 99,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked/1454192258429_openNavFromSettingsShouldHaveSettingsChecked.png",
+            "caption": "OpenNavFromSettingsShouldHaveSettingsChecked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "serial": "emulator-5558",
+    "name": "android-21",
+    "details": "Running Android 5.0.2 (API 21) with locale en-US",
+    "testResults": [
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Add New Graph Should Create New Graph",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 0,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454192217949_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 1,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454192220366_CreateGraph_addNewGraphShouldCreateNewGraph_after_confirm.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Click On Cancel Should Not Create New Graph",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 2,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192202593_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 3,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192204838_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Graph Name"
+          },
+          {
+            "id": 4,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192205425_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Close Keyboard"
+          },
+          {
+            "id": 5,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192206005_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Cancel Clicked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Hitting Enter In Graph Name Field Should Create New Graph",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 6,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454192206867_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 7,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454192209968_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph After Graph Name"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Newly Added Graph Should Be Displayed Immediately",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 8,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454192214007_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately Before Graph Name"
+          },
+          {
+            "id": 9,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454192216709_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Show Simple Graph",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 10,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/showSimpleGraph/1454192210938_showSimpleGraph_before_asserts.png",
+            "caption": "ShowSimpleGraph Before Asserts"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Floating Action Button Should Be Rendered",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 11,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1454192228506_floatingActionButtonShouldBeRendered.png",
+            "caption": "FloatingActionButtonShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Main Activity Should Be Started",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 12,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1454192225101_mainActivityShouldBeStarted.png",
+            "caption": "MainActivityShouldBeStarted"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Recycler View Should Be Rendered",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 13,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1454192225917_recyclerViewShouldBeRendered.png",
+            "caption": "RecyclerViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Down Should Maximize App Bar",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 14,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1454192222738_swipeDownShouldMaximizeAppBar.png",
+            "caption": "SwipeDownShouldMaximizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Up Should Minimize App Bar",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 15,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1454192227556_swipeUpShouldMinimizeAppBar.png",
+            "caption": "SwipeUpShouldMinimizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Tool Bar Should Be Rendered",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 16,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1454192223642_toolBarShouldBeRendered.png",
+            "caption": "ToolBarShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Data Series Should Close Navigation",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 17,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1454192238044_clickOnDataSeriesShouldCloseNavigation.png",
+            "caption": "ClickOnDataSeriesShouldCloseNavigation"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Settings Should Switch Activity",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 18,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity/1454192253746_clickOnSettingsShouldSwitchActivity.png",
+            "caption": "ClickOnSettingsShouldSwitchActivity"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigating Back To Graph Activity Should Have Navigation Closed",
+        "serial": "emulator-5558",
+        "status": "fail",
+        "screenshots": [
+          {
+            "id": 19,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454192248360_navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed First Click"
+          },
+          {
+            "id": 20,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454192249626_navigatingBackToGraphActivityShouldHaveNavigationClosed_final_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed Final Click"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Closable",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 21,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1454192233987_navigationViewShouldBeClosable.png",
+            "caption": "NavigationViewShouldBeClosable"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Rendered",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 22,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered/1454192256241_navigationViewShouldBeRendered.png",
+            "caption": "NavigationViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Main Should Have Main Checked",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 23,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked/1454192261547_openNavFromMainShouldHaveMainChecked.png",
+            "caption": "OpenNavFromMainShouldHaveMainChecked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Settings Should Have Settings Checked",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 24,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked/1454192243242_openNavFromSettingsShouldHaveSettingsChecked.png",
+            "caption": "OpenNavFromSettingsShouldHaveSettingsChecked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "serial": "emulator-5556",
+    "name": "android-22",
+    "details": "Running Android 5.1.1 (API 22) with locale en-US",
+    "testResults": [
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Add New Graph Should Create New Graph",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 50,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454192214997_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 51,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454192217178_CreateGraph_addNewGraphShouldCreateNewGraph_after_confirm.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Click On Cancel Should Not Create New Graph",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 52,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192200642_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 53,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192202771_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Graph Name"
+          },
+          {
+            "id": 54,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192203346_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Close Keyboard"
+          },
+          {
+            "id": 55,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192203946_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Cancel Clicked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Hitting Enter In Graph Name Field Should Create New Graph",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 56,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454192205309_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 57,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454192208343_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph After Graph Name"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Newly Added Graph Should Be Displayed Immediately",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 58,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454192210227_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately Before Graph Name"
+          },
+          {
+            "id": 59,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454192213494_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Show Simple Graph",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 60,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/showSimpleGraph/1454192208904_showSimpleGraph_before_asserts.png",
+            "caption": "ShowSimpleGraph Before Asserts"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Floating Action Button Should Be Rendered",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 61,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1454192228528_floatingActionButtonShouldBeRendered.png",
+            "caption": "FloatingActionButtonShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Main Activity Should Be Started",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 62,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1454192223450_mainActivityShouldBeStarted.png",
+            "caption": "MainActivityShouldBeStarted"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Recycler View Should Be Rendered",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 63,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1454192225668_recyclerViewShouldBeRendered.png",
+            "caption": "RecyclerViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Down Should Maximize App Bar",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 64,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1454192220079_swipeDownShouldMaximizeAppBar.png",
+            "caption": "SwipeDownShouldMaximizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Up Should Minimize App Bar",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 65,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1454192227739_swipeUpShouldMinimizeAppBar.png",
+            "caption": "SwipeUpShouldMinimizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Tool Bar Should Be Rendered",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 66,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1454192222670_toolBarShouldBeRendered.png",
+            "caption": "ToolBarShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Data Series Should Close Navigation",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 67,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1454192238789_clickOnDataSeriesShouldCloseNavigation.png",
+            "caption": "ClickOnDataSeriesShouldCloseNavigation"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Settings Should Switch Activity",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 68,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity/1454192259353_clickOnSettingsShouldSwitchActivity.png",
+            "caption": "ClickOnSettingsShouldSwitchActivity"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigating Back To Graph Activity Should Have Navigation Closed",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 69,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454192253063_navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed First Click"
+          },
+          {
+            "id": 70,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454192254868_navigatingBackToGraphActivityShouldHaveNavigationClosed_final_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed Final Click"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Closable",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 71,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1454192234074_navigationViewShouldBeClosable.png",
+            "caption": "NavigationViewShouldBeClosable"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Rendered",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 72,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered/1454192262555_navigationViewShouldBeRendered.png",
+            "caption": "NavigationViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Main Should Have Main Checked",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 73,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked/1454192266996_openNavFromMainShouldHaveMainChecked.png",
+            "caption": "OpenNavFromMainShouldHaveMainChecked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Settings Should Have Settings Checked",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 74,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked/1454192243723_openNavFromSettingsShouldHaveSettingsChecked.png",
+            "caption": "OpenNavFromSettingsShouldHaveSettingsChecked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "serial": "emulator-5560",
+    "name": "android-23",
+    "details": "Running Android 6.0 (API 23)",
+    "testResults": [
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Add New Graph Should Create New Graph",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 25,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454192214510_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 26,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/addNewGraphShouldCreateNewGraph/1454192217246_CreateGraph_addNewGraphShouldCreateNewGraph_after_confirm.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Click On Cancel Should Not Create New Graph",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 27,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192200281_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 28,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192202639_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Graph Name"
+          },
+          {
+            "id": 29,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192203228_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Close Keyboard"
+          },
+          {
+            "id": 30,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1454192203819_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Cancel Clicked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Hitting Enter In Graph Name Field Should Create New Graph",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 31,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454192204922_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 32,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1454192208076_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph After Graph Name"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Newly Added Graph Should Be Displayed Immediately",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 33,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454192210329_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately Before Graph Name"
+          },
+          {
+            "id": 34,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1454192213132_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitiyInteractionUITest",
+        "methodPrettyName": "Show Simple Graph",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 35,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitiyInteractionUITest/showSimpleGraph/1454192208968_showSimpleGraph_before_asserts.png",
+            "caption": "ShowSimpleGraph Before Asserts"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Floating Action Button Should Be Rendered",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 36,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1454192227796_floatingActionButtonShouldBeRendered.png",
+            "caption": "FloatingActionButtonShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Main Activity Should Be Started",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 37,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1454192222803_mainActivityShouldBeStarted.png",
+            "caption": "MainActivityShouldBeStarted"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Recycler View Should Be Rendered",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 38,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1454192224235_recyclerViewShouldBeRendered.png",
+            "caption": "RecyclerViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Down Should Maximize App Bar",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 39,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1454192219398_swipeDownShouldMaximizeAppBar.png",
+            "caption": "SwipeDownShouldMaximizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Up Should Minimize App Bar",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 40,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1454192226338_swipeUpShouldMinimizeAppBar.png",
+            "caption": "SwipeUpShouldMinimizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Tool Bar Should Be Rendered",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 41,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1454192220636_toolBarShouldBeRendered.png",
+            "caption": "ToolBarShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Data Series Should Close Navigation",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 42,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1454192237530_clickOnDataSeriesShouldCloseNavigation.png",
+            "caption": "ClickOnDataSeriesShouldCloseNavigation"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Settings Should Switch Activity",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 43,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity/1454192254102_clickOnSettingsShouldSwitchActivity.png",
+            "caption": "ClickOnSettingsShouldSwitchActivity"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigating Back To Graph Activity Should Have Navigation Closed",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 44,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454192248261_navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed First Click"
+          },
+          {
+            "id": 45,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1454192250352_navigatingBackToGraphActivityShouldHaveNavigationClosed_final_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed Final Click"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Closable",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 46,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1454192233695_navigationViewShouldBeClosable.png",
+            "caption": "NavigationViewShouldBeClosable"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Rendered",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 47,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered/1454192257929_navigationViewShouldBeRendered.png",
+            "caption": "NavigationViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Main Should Have Main Checked",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 48,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked/1454192262414_openNavFromMainShouldHaveMainChecked.png",
+            "caption": "OpenNavFromMainShouldHaveMainChecked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Settings Should Have Settings Checked",
+        "serial": "emulator-5560",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 49,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked/1454192243948_openNavFromSettingsShouldHaveSettingsChecked.png",
+            "caption": "OpenNavFromSettingsShouldHaveSettingsChecked"
+          }
+        ]
+      }
+    ]
+  }
+];
+
+            function updateDevice(device) {
+                $('#title').text(device.name);
+                $('#subtitle').text(device.details);
+                $('#total-test-size').text(device.testResults.length)
+
+                testResultIndex = 0
+                updateTest(device.testResults[testResultIndex]);
+            }
+
+            function updateTest(testResult) {
+                $('#current-test-info').removeClass('pass fail error')
+                $('#current-test-info').addClass(testResult.status)
+                $('#test-name').text(testResult.methodPrettyName)
+                $('#test-class-name').text(testResult.classSimpleName)
+
+                $("#slider").empty();
+                $.each(testResult.screenshots, function(index, screenshot) {
+                    tag = '<img alt="' + screenshot.caption + '" src="' + screenshot.path + '" />'
+                    $('#slider').append(tag)
+                });
+
+                $('#current-test-number').text(testResultIndex + 1)
+                screenshotIndex = 0
+
+                // Re-initialize the slider with the new slides
+                $('#slider').nivoSlider({
+                    effect: 'boxRainGrow', // Specify sets like: 'fold,fade,sliceDown'
+                    animSpeed: 500, // Slide transition speed
+                    pauseTime: 3000, // How long each slide will show
+                    directionNav: false, // Next & Prev navigation
+                    controlNavThumbs: false, // Use thumbnails for Control Nav
+                    pauseOnHover: false, // Stop animation while hovering
+                    manualAdvance: false, // Force manual transitions
+                    beforeChange: function(){ // Triggers before a slide transition
+                        screenshotIndex++
+                        if(devices[deviceIndex].testResults[testResultIndex].screenshots[screenshotIndex]) {
+                            $('#caption').text(devices[deviceIndex].testResults[testResultIndex].screenshots[screenshotIndex].caption)
+                        }
+                    },
+                    lastSlide: function(){ // Triggers when last slide is shown
+                        $('#caption').text("")
+                    },
+                    afterLoad: function(){ // Triggers when slider has loaded
+                        $('#caption').text(devices[deviceIndex].testResults[testResultIndex].screenshots[screenshotIndex].caption)
+                    },
+                    slideshowEnd: function() { // Triggers after all slides have been shown
+                        nextTestResult()
+                    }
+                });
+
+                // There's a bug in Nivo where it doesn't know what to do w/ only one screenshot.
+                if(testResult.screenshots.length == 1) {
+                    window.setTimeout(nextTestResult, 3000)
+                }
+            }
+
+            function nextTestResult() {
+                $('#slider').data('nivoslider').stop();
+                $('#slider-wrapper').empty()
+                $('#slider-wrapper').append($('<div id="slider" class="nivoSlider"/>'))
+
+                testResultIndex++
+                tests = devices[deviceIndex].testResults
+                if(testResultIndex < tests.length) {
+                    updateTest(tests[testResultIndex])
+                } else {
+                    nextDevice()
+                }
+            }
+
+            function nextDevice() {
+                if(deviceIndex == devices.length - 1) {
+                    location.reload() // Reload at end to load new spoon results.
+                } else {
+                    deviceIndex++
+                    updateDevice(devices[deviceIndex])
+                }
+            }
+
+            // If we start feeling fancy we could create an actual class. Until then, we're global.
+            var deviceIndex = 0;
+            var testResultIndex = 0;
+            var screenshotIndex = 0;
+
+            // Start it off
+            $(function() {
+                updateDevice(devices[deviceIndex]);
+            });
+        </script>
+    </body>
+</html>
