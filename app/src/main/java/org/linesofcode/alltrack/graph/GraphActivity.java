@@ -88,6 +88,14 @@ public class GraphActivity extends NavigatableBaseActivity implements GraphAdapt
                 Log.d(TAG, "updating graphs...");
                 graphAdapter.updateGraphs();
             }
+        } else if (requestCode == ADD_VALUE_INTENT_CODE) {
+            if (resultCode == RESULT_OK) {
+                Bundle extras = data.getExtras();
+                int position = extras.getInt("org.linesofcode.alltrack.position");
+                int graphId = extras.getInt("org.linesofcode.alltrack.graphId");
+                Log.d(TAG, "Value added. Updating graph [" + graphId + "] for position [" + position + "].");
+                graphAdapter.updateGraph(graphId, position);
+            }
         }
     }
 
@@ -95,6 +103,7 @@ public class GraphActivity extends NavigatableBaseActivity implements GraphAdapt
     public void onClick(Graph graph, int position) {
         Intent intent = new Intent(this, AddValueActivitiy.class);
         intent.putExtra("graphId", graph.getId());
+        intent.putExtra("position", position);
         startActivityForResult(intent, ADD_VALUE_INTENT_CODE);
     }
 

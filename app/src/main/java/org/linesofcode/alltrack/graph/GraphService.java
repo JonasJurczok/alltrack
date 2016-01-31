@@ -11,6 +11,7 @@ import com.j256.ormlite.stmt.PreparedQuery;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * Copyright 2015 Jonas Jurczok (jonasjurczok@gmail.com)
@@ -56,6 +57,11 @@ public class GraphService {
 
     public Graph getById(Integer id) {
         Graph graph = graphDao.queryForId(id);
+
+        if (graph == null) {
+            throw new NoSuchElementException("Graph for id [" + id + "] could not be found.");
+        }
+
         Log.d(TAG, "Found graph with name [" + graph.getName() + "] and id [" + graph.getId() + "].");
         return graph;
     }

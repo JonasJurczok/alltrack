@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +24,6 @@ import org.linesofcode.alltrack.framework.navigation.NavigatableBaseActivity;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
 import javax.inject.Inject;
@@ -44,6 +44,7 @@ import javax.inject.Inject;
  * limitations under the License.
  */
 public class AddValueActivitiy extends NavigatableBaseActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
+    private static final String TAG = AddValueActivitiy.class.getName();
     public static final String ADD_VALUE_ACTION_CODE = "org.linesofcode.alltrack.graph.ADD_VALUE";
 
     @Inject
@@ -56,6 +57,8 @@ public class AddValueActivitiy extends NavigatableBaseActivity implements DatePi
     private TextView dateView;
     private TextView timeView;
     private Graph graph;
+    private int position;
+    private int graphId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,7 +127,10 @@ public class AddValueActivitiy extends NavigatableBaseActivity implements DatePi
 
         updateDateTimeFields();
 
-        int graphId = getIntent().getExtras().getInt("graphId");
+        Bundle extras = getIntent().getExtras();
+        graphId = extras.getInt("graphId");
+        position = extras.getInt("position");
+        Log.d(TAG, "Starting addValue Activity for graph [" + graphId + "] in position [" + position + "].");
         graph = graphService.getById(graphId);
     }
 
@@ -139,6 +145,13 @@ public class AddValueActivitiy extends NavigatableBaseActivity implements DatePi
 
         dataPoint.setGraph(graph);
         graph.getDatapoints().add(dataPoint);
+
+        Log.d(TAG, "Finishing adding value for graph [" + graphId + "] and position [" + position + "].");
+        Intent result = new Intent(ADD_VALUE_ACTION_CODE);
+        result.putExtra("org.linesofcode.alltrack.position", position);
+        result.putExtra("org.linesofcode.alltrack.graphId", graphId);
+        setResult(RESULT_OK, result);
+        finish();
     }
 
     private void showDatePicker() {
@@ -163,8 +176,13 @@ public class AddValueActivitiy extends NavigatableBaseActivity implements DatePi
     }
 
     private void updateDateTimeFields() {
-        dateView.setText(dateFormat.format(calendar.getTime()));
-        timeView.setText(timeFormat.format(calendar.getTime()));
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                dateView.setText(dateFormat.format(calendar.getTime()));
+                timeView.setText(timeFormat.format(calendar.getTime()));
+            }
+        });
     }
 
     @Override

@@ -1,6 +1,7 @@
 package org.linesofcode.alltrack;
 
 import android.app.Activity;
+import android.support.annotation.NonNull;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.UiController;
 import android.support.test.espresso.ViewAction;
@@ -18,6 +19,7 @@ import com.j256.ormlite.dao.RuntimeExceptionDao;
 import com.squareup.spoon.Spoon;
 
 import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.ClassRule;
@@ -25,12 +27,14 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.linesofcode.alltrack.framework.DisableAnimationsRule;
 import org.linesofcode.alltrack.framework.persistence.DatabaseHelper;
+import org.linesofcode.alltrack.graph.AddValueActivitiy;
 import org.linesofcode.alltrack.graph.DataPoint;
 import org.linesofcode.alltrack.graph.Graph;
 import org.linesofcode.alltrack.graph.GraphActivity;
 import org.linesofcode.alltrack.graph.GraphAdapter;
 import org.linesofcode.alltrack.graph.GraphService;
 
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -44,6 +48,12 @@ import static android.support.test.espresso.matcher.ViewMatchers.assertThat;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static java.lang.Math.abs;
+import static java.util.Calendar.DAY_OF_MONTH;
+import static java.util.Calendar.HOUR_OF_DAY;
+import static java.util.Calendar.MINUTE;
+import static java.util.Calendar.MONTH;
+import static java.util.Calendar.YEAR;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -223,12 +233,60 @@ public class GraphActivityInteractionUITest {
 
     @Test
     public void addValueWithRandomDateTimeShouldWork() {
-        assertThat("Not implemented", true, is(false));
+        String graphName = "addValueWithRandomDateTimeShouldWork";
+        graphForTest = createGraph(graphName);
+
+        long currentTime = System.currentTimeMillis();
+        Date dateOfGraph = new Date(currentTime - 1000 * 60 * 60);
+        addValue(graphName, 5, dateOfGraph);
+
+        List<DataPoint> dataPoints = dataPointDao.queryForEq("graph_id", graphForTest.getId());
+
+        assertThat(dataPoints.size(), is(1));
+
+        DataPoint datapoint = dataPoints.get(0);
+
+        assertThat(datapoint.getValue(), is(5));
+        assertThat(abs(datapoint.getDatetime().getTime() - dateOfGraph.getTime()), is(Matchers.lessThan(10000l)));
     }
 
     @Test
-    public void addValueShouldRefreshGraphAndMakeValueVisible() {
-        assertThat("Not implemented", true, is(false));
+    public void addValueShouldRefreshGraphAndMakeValueVisible() throws InterruptedException {
+        String graphName = "addValueShouldRefreshGraphAndMakeValueVisible";
+        graphForTest = createGraph(graphName);
+
+        Thread.sleep(5000);
+
+        addValue(graphName, 5);
+
+        onView(withText(graphName)).perform(new ViewAction() {
+            @Override
+            public Matcher<View> getConstraints() {
+                return isDisplayed();
+            }
+
+            @Override
+            public String getDescription() {
+                return "Check for display of graph view.";
+            }
+
+            @Override
+            public void perform(UiController uiController, View view) {
+                assertThat("No view found", view, is(notNullValue()));
+
+                View parent = (View) view.getParent();
+                LineChart graph = (LineChart) parent.findViewById(R.id.graph);
+                LineDataSet lineDataSet = graph.getLineData().getDataSets().get(0);
+
+                List<Entry> yVals = lineDataSet.getYVals();
+
+                assertThat("Wrong number of yVals returned.", yVals.size(), is(1));
+
+                Entry entry = yVals.get(0);
+                assertThat(entry.getVal(), is(5f));
+            }
+        });
+
     }
 
     private Graph createGraph(String graphName) {
@@ -245,12 +303,22 @@ public class GraphActivityInteractionUITest {
     }
 
     private void addValue(String graphName, Integer value) {
+        addValue(graphName, value, new Date());
+    }
+
+    private void addValue(String graphName, Integer value, Date date) {
         takeScreenshot(graphName + "_add_value_before_click");
         onView(withText(graphName)).perform(click());
 
         takeScreenshot(graphName + "_add_value_before_add");
         onView(withId(R.id.add_value_value)).perform(typeText(value.toString()));
         onView(withId(R.id.add_value_value)).perform(closeSoftKeyboard());
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        AddValueActivitiy addValueActivity = (AddValueActivitiy) getCurrentActivity();
+        addValueActivity.onDateSet(null, cal.get(YEAR), cal.get(MONTH), cal.get(DAY_OF_MONTH));
+        addValueActivity.onTimeSet(null, cal.get(HOUR_OF_DAY), cal.get(MINUTE));
 
         takeScreenshot(graphName + "_add_value_before_submit");
         onView(withId(R.id.add_value_ok)).perform(click());
@@ -259,6 +327,12 @@ public class GraphActivityInteractionUITest {
     }
 
     private void takeScreenshot(final String tag) {
+        Activity activity = getCurrentActivity();
+        Spoon.screenshot(activity, tag);
+    }
+
+    @NonNull
+    private Activity getCurrentActivity() {
         final Activity[] activity = new Activity[1];
         InstrumentationRegistry.getInstrumentation().runOnMainSync(new Runnable() {
             @Override
@@ -268,12 +342,10 @@ public class GraphActivityInteractionUITest {
                     Log.e(GraphActivityInteractionUITest.class.getName(), "No currently running activies found.");
                     return;
                 }
-
-
                 activity[0] = Iterables.getOnlyElement(resumedActivities);
             }
         });
-        Spoon.screenshot(activity[0], tag);
+        return activity[0];
     }
 
     public void updateGraphView() {

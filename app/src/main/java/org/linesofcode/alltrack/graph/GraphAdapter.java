@@ -115,6 +115,13 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
         new LoadGraphsTask(graphService, this).execute();
     }
 
+    public void updateGraph(int graphId, int position) {
+        Log.d(TAG, "Updating graph in position [" + position + "]");
+        Graph graph = graphService.getById(graphId);
+        allGraphs.set(position, graph);
+        notifyItemChanged(position);
+    }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Log.d("GraphAdapter", "onCreateViewHolder with viewType [" + viewType + "].");
