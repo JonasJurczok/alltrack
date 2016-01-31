@@ -54,6 +54,12 @@ public class GraphService {
         return results;
     }
 
+    public Graph getById(Integer id) {
+        Graph graph = graphDao.queryForId(id);
+        Log.d(TAG, "Found graph with name [" + graph.getName() + "] and id [" + graph.getId() + "].");
+        return graph;
+    }
+
     public void delete(Graph graph) {
 
         try {

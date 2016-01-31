@@ -7,6 +7,7 @@ import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
 
 import org.linesofcode.alltrack.framework.persistence.DatabaseHelper;
+import org.linesofcode.alltrack.graph.AddValueActivitiy;
 import org.linesofcode.alltrack.graph.DataPoint;
 import org.linesofcode.alltrack.graph.Graph;
 import org.linesofcode.alltrack.graph.GraphActivity;
@@ -39,7 +40,8 @@ import dagger.Provides;
         GraphService.class,
         DatabaseHelper.class,
         SettingsActivity.class,
-        CreateGraphActivity.class})
+        CreateGraphActivity.class,
+        AddValueActivitiy.class})
 public class ApplicationModule {
 
     private final Context context;

@@ -1,5 +1,7 @@
 package org.linesofcode.alltrack.graph;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -40,6 +42,7 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
     private static final String TAG = GraphAdapter.class.getName();
 
     private final GraphService graphService;
+    GraphAdapterClickListener clickListener;
     private List<Graph> allGraphs = new ArrayList<>();
 
     private final class LoadGraphsTask extends AsyncTask<Void, List<Graph>, List<Graph>> {
@@ -63,9 +66,9 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
         }
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private View view;
+        private Graph graph;
 
         public ViewHolder(View view) {
             super(view);
@@ -75,9 +78,12 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
         public void setGraph(final Graph graph) {
             Log.d("ViewHolder", "ViewHolder setting line to [" + graph.getName() + "].");
 
+            this.graph = graph;
+
             TextView title = (TextView) view.findViewById(R.id.title);
             title.setText(graph.getName());
             title.setSelected(true);
+            title.setOnClickListener(this);
 
             LineChart graphView = (LineChart) view.findViewById(R.id.graph);
             graphView.setData(toLineData(graph));
@@ -88,6 +94,13 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
             xAxis.setPosition(BOTTOM);
             xAxis.setLabelRotationAngle(45);
             graphView.invalidate();
+        }
+
+        @Override
+        public void onClick(View v) {
+            if (clickListener != null) {
+                clickListener.onClick(graph, getAdapterPosition());
+            }
         }
     }
 
@@ -121,5 +134,9 @@ public class GraphAdapter extends RecyclerView.Adapter<GraphAdapter.ViewHolder> 
     public int getItemCount() {
         Log.d("GraphAdapter", "getItemCount");
         return allGraphs.size();
+    }
+
+    public void setClickListener(GraphAdapterClickListener clickListener) {
+        this.clickListener = clickListener;
     }
 }

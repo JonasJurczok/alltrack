@@ -42,6 +42,7 @@ dependencies {
     provided 'com.squareup.dagger:dagger-compiler:1.2.2'
 
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
+    compile 'com.github.citux:datetimepicker:0.2.0'
 
     testCompile 'junit:junit:4.12'
     androidTestCompile('com.android.support.test:runner:0.4') {

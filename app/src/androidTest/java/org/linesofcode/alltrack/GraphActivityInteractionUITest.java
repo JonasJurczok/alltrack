@@ -25,12 +25,14 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.linesofcode.alltrack.framework.DisableAnimationsRule;
 import org.linesofcode.alltrack.framework.persistence.DatabaseHelper;
+import org.linesofcode.alltrack.graph.DataPoint;
 import org.linesofcode.alltrack.graph.Graph;
 import org.linesofcode.alltrack.graph.GraphActivity;
 import org.linesofcode.alltrack.graph.GraphAdapter;
 import org.linesofcode.alltrack.graph.GraphService;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -63,10 +65,11 @@ import static org.linesofcode.alltrack.GraphGenerationUtil.generateSimpleTestGra
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class GraphActivitiyInteractionUITest {
+public class GraphActivityInteractionUITest {
 
     private GraphService graphService;
     private RuntimeExceptionDao<Graph, Integer> graphDao;
+    private RuntimeExceptionDao<DataPoint, Integer> dataPointDao;
     private Graph graphForTest = null;
 
     @ClassRule
@@ -83,6 +86,8 @@ public class GraphActivitiyInteractionUITest {
 
         DatabaseHelper openHelper = new DatabaseHelper(app);
         graphDao = openHelper.getRuntimeExceptionDao(Graph.class);
+
+        dataPointDao = openHelper.getRuntimeExceptionDao(DataPoint.class);
     }
 
     @After
@@ -164,7 +169,7 @@ public class GraphActivitiyInteractionUITest {
         onView(withId(R.id.edit_graph_name)).perform(closeSoftKeyboard());
         takeScreenshot("clickOnCancelShouldNotCreateNewGraph_after_close_keyboard");
 
-        onView(withId(R.id.cancel)).perform(click());
+        onView(withId(R.id.graph_detail_cancel)).perform(click());
         takeScreenshot("clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked");
         List<Graph> graphs = graphDao.queryForEq("name", graphName);
 
@@ -185,7 +190,48 @@ public class GraphActivitiyInteractionUITest {
         graphForTest = graphs.get(0);
     }
 
-    public Graph createGraph(String graphName) {
+    @Test
+    public void clickingAGraphShouldOpenAddValueActivity() {
+        String graphName = "clickingAGraphShouldOpenAddValueActivity";
+        graphForTest = createGraph(graphName);
+
+        takeScreenshot(graphName + "_before_click");
+        onView(withText(graphName)).perform(click());
+
+        takeScreenshot(graphName + "_before_assert");
+        onView(withText(R.string.add_value_value_field_title)).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void addValueShouldTakeCurrentTimeAsDefault() {
+        String graphName = "addValueShouldTakeCurrentTimeAsDefault";
+        graphForTest = createGraph(graphName);
+
+        addValue(graphName, 5);
+
+        List<DataPoint> dataPoints = dataPointDao.queryForEq("graph_id", graphForTest.getId());
+
+        assertThat(dataPoints.size(), is(1));
+
+        DataPoint datapoint = dataPoints.get(0);
+
+        assertThat(datapoint.getValue(), is(5));
+        long current = System.currentTimeMillis() - (1000 * 60);
+        Date reference = new Date(current);
+        assertThat(datapoint.getDatetime().after(reference), is(true));
+    }
+
+    @Test
+    public void addValueWithRandomDateTimeShouldWork() {
+        assertThat("Not implemented", true, is(false));
+    }
+
+    @Test
+    public void addValueShouldRefreshGraphAndMakeValueVisible() {
+        assertThat("Not implemented", true, is(false));
+    }
+
+    private Graph createGraph(String graphName) {
         onView(withId(R.id.fab)).perform(click());
 
         takeScreenshot("CreateGraph_" + graphName + "_before_graph_name");
@@ -198,6 +244,20 @@ public class GraphActivitiyInteractionUITest {
         return graphs.get(0);
     }
 
+    private void addValue(String graphName, Integer value) {
+        takeScreenshot(graphName + "_add_value_before_click");
+        onView(withText(graphName)).perform(click());
+
+        takeScreenshot(graphName + "_add_value_before_add");
+        onView(withId(R.id.add_value_value)).perform(typeText(value.toString()));
+        onView(withId(R.id.add_value_value)).perform(closeSoftKeyboard());
+
+        takeScreenshot(graphName + "_add_value_before_submit");
+        onView(withId(R.id.add_value_ok)).perform(click());
+
+        takeScreenshot(graphName + "_add_value_after_submit");
+    }
+
     private void takeScreenshot(final String tag) {
         final Activity[] activity = new Activity[1];
         InstrumentationRegistry.getInstrumentation().runOnMainSync(new Runnable() {
@@ -205,7 +265,7 @@ public class GraphActivitiyInteractionUITest {
             public void run() {
                 Collection<Activity> resumedActivities = ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(Stage.RESUMED);
                 if (resumedActivities.isEmpty()) {
-                    Log.e(GraphActivitiyInteractionUITest.class.getName(), "No currently running activies found.");
+                    Log.e(GraphActivityInteractionUITest.class.getName(), "No currently running activies found.");
                     return;
                 }
 

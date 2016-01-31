@@ -48,11 +48,11 @@ public class CreateGraphActivity extends NavigatableBaseActivity {
 
         initializeToolbar();
 
-        inizializeContent();
+        initializeContent();
     }
 
-    private void inizializeContent() {
-        Button okButton = (Button) findViewById(R.id.ok);
+    private void initializeContent() {
+        Button okButton = (Button) findViewById(R.id.graph_detail_ok);
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +60,7 @@ public class CreateGraphActivity extends NavigatableBaseActivity {
             }
         });
 
-        Button cancelButton = (Button) findViewById(R.id.cancel);
+        Button cancelButton = (Button) findViewById(R.id.graph_detail_cancel);
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

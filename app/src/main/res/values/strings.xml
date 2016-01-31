@@ -20,4 +20,8 @@
     <string name="graph_detail_graph_name">Name of the graph: </string>
     <string name="graph_detail_title_create">Create a graph</string>
     <string name="graph_detail_graph_name_empty">The graph name must not be empty!</string>
+
+    <string name="add_value_title">Add a value</string>
+    <string name="add_value_value_field_title">The value to add</string>
+    <string name="add_value_date_field_title">The date and time for the value</string>
 </resources>

@@ -163,6 +163,20 @@ public class GraphServiceTest extends AndroidTestCase {
         }
     }
 
+    public void testGetByIdShouldHaveDatapointsOrderedByTime() {
+        Graph graph = generateGraph(graphService, "testGetByIdShouldHaveDatapointsOrderedByTime", 5, RANDOM);
+
+        while (!isRandomlyOrdered(graph)) {
+            graphService.delete(graph);
+            graph = generateGraph(graphService, "testGetByIdShouldHaveDatapointsOrderedByTime", 5, RANDOM);
+        }
+
+        Graph dbGraph = graphService.getById(graph.getId());
+
+        verifyOrdering(dbGraph);
+
+    }
+
     private void verifyOrdering(Graph graph) {
         Date current = null;
         for (DataPoint dataPoint : graph.getDatapoints()) {

@@ -32,10 +32,12 @@ import javax.inject.Inject;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class GraphActivity extends NavigatableBaseActivity {
+public class GraphActivity extends NavigatableBaseActivity implements GraphAdapterClickListener {
 
     private static final String TAG = GraphActivity.class.getName();
     public static final Integer CREATE_GRAPH_INTENT_CODE = 1;
+    public static final Integer ADD_VALUE_INTENT_CODE = 2;
+
 
     @Inject
     GraphAdapter graphAdapter;
@@ -62,6 +64,7 @@ public class GraphActivity extends NavigatableBaseActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         recyclerView.setAdapter(graphAdapter);
+        graphAdapter.setClickListener(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -86,6 +89,13 @@ public class GraphActivity extends NavigatableBaseActivity {
                 graphAdapter.updateGraphs();
             }
         }
+    }
+
+    @Override
+    public void onClick(Graph graph, int position) {
+        Intent intent = new Intent(this, AddValueActivitiy.class);
+        intent.putExtra("graphId", graph.getId());
+        startActivityForResult(intent, ADD_VALUE_INTENT_CODE);
     }
 
     private void initializeToolbar() {
