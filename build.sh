@@ -134,6 +134,9 @@ processTestReport() {
 
   echo ""
 
+  # get last commit id
+  local commitId=$(git log -n 1 | grep commit | cut -d" " -f2)
+
   # switch to gh-pages branch
   git checkout gh-pages
   git pull
@@ -147,7 +150,7 @@ processTestReport() {
 
   # link test report from index.html
   local reportContent=$(sed -n "/<body>/,/<\/body>/p" "builds/$buildcount/index.html" | sed '1d;$d')
-  local reportHeader="       <h4>Build $buildcount</h4>"
+  local reportHeader="       <h4>Build $buildcount (<a href='https://github.com/JonasJurczok/alltrack/commit/$commitId'>$commitId</a>)</h4>"
   local placeHolder="<span id='placeholder'/>"
   local index=$(<index.html)
   echo -e "${index/$placeHolder/$placeHolder \\n\\n $reportHeader \\n $reportContent}" > index.html
