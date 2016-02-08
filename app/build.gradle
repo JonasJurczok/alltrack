@@ -19,7 +19,7 @@ android {
 
     signingConfigs{
         release{
-            storeFile file('~/android-release.keystore')
+            storeFile file('android-release.keystore')
             keyAlias 'android'
             //storePassword System.console().readLine("\nKeystore password: ")
             //keyPassword System.console().readLine("\nKey password: ")
@@ -35,7 +35,22 @@ android {
             signingConfig signingConfigs.release
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
         }
+    }
+}
+
+task askForPasswords << {
+    def storePw = new String(System.console().readPassword("\nKeystore password: "))
+    def keyPw = new String(System.console().readPassword("Key password: "))
+
+    android.signingConfigs.release.storePassword = storePw
+    android.signingConfigs.release.keyPassword = keyPw
+}
+
+tasks.whenTaskAdded { theTask ->
+    if (theTask.name.equals("packageRelease")) {
+        theTask.dependsOn "askForPasswords"
     }
 }
 

@@ -16,3 +16,6 @@ gradlew
 gradlew.bat
 local.properties
 build/
+
+#keystore
+app/android-release.keystore
