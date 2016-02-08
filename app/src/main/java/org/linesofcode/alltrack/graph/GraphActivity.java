@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.View;
 
 import org.linesofcode.alltrack.App;
+import org.linesofcode.alltrack.AppComponent;
+import org.linesofcode.alltrack.DaggerAppComponent;
 import org.linesofcode.alltrack.R;
 import org.linesofcode.alltrack.framework.navigation.NavigatableBaseActivity;
 
@@ -49,7 +51,8 @@ public class GraphActivity extends NavigatableBaseActivity implements GraphAdapt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.graph_activity_layout);
-        ((App) getApplication()).getObjectGraph().inject(this);
+
+        ((App) getApplication()).getComponent().inject(this);
 
         initializeToolbar();
 

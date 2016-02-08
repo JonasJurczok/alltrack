@@ -2,8 +2,6 @@ package org.linesofcode.alltrack;
 
 import android.app.Application;
 
-import dagger.ObjectGraph;
-
 /**
  * Copyright 2015 Jonas Jurczok (jonasjurczok@gmail.com)
  *
@@ -21,16 +19,16 @@ import dagger.ObjectGraph;
  */
 public class App extends Application {
 
-    private ObjectGraph objectGraph;
+    private AppComponent component;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-        objectGraph = ObjectGraph.create(new ApplicationModule(this));
+        component = DaggerAppComponent.builder().applicationModule(new ApplicationModule(this)).build();
     }
 
-    public ObjectGraph getObjectGraph() {
-        return objectGraph;
+    public AppComponent getComponent() {
+        return component;
     }
 }

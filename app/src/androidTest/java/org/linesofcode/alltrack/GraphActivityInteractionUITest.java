@@ -92,7 +92,7 @@ public class GraphActivityInteractionUITest {
     @Before
     public void setUp() {
         App app = (App) rule.getActivity().getApplication();
-        graphService = app.getObjectGraph().get(GraphService.class);
+        graphService = app.getComponent().getGraphService();
 
         DatabaseHelper openHelper = new DatabaseHelper(app);
         graphDao = openHelper.getRuntimeExceptionDao(Graph.class);
@@ -350,6 +350,6 @@ public class GraphActivityInteractionUITest {
 
     public void updateGraphView() {
         App app = (App) rule.getActivity().getApplication();
-        app.getObjectGraph().get(GraphAdapter.class).updateGraphs();
+        app.getComponent().getGraphAdapter().updateGraphs();
     }
 }

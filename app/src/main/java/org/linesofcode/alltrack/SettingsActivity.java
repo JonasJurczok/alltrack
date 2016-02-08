@@ -28,7 +28,8 @@ public class SettingsActivity extends NavigatableBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity_layout);
-        ((App) getApplication()).getObjectGraph().inject(this);
+
+        ((App) getApplication()).getComponent().inject(this);
 
         initializeToolbar();
 

@@ -35,13 +35,7 @@ import dagger.Provides;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@Module(injects = {GraphActivity.class,
-        GraphAdapter.class,
-        GraphService.class,
-        DatabaseHelper.class,
-        SettingsActivity.class,
-        CreateGraphActivity.class,
-        AddValueActivitiy.class})
+@Module
 public class ApplicationModule {
 
     private final Context context;

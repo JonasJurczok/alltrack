@@ -18,4 +18,7 @@
     <string name="graph_detail_graph_name">Der Name des Graphen</string>
     <string name="graph_detail_graph_name_empty">Der Name darf nicht leer sein!</string>
     <string name="graph_detail_title_create">Erstelle einen Graphen.</string>
+    <string name="add_value_title">Einen Wert hinzufügen</string>
+    <string name="add_value_date_field_title">Das Datum und die Uhrzeit</string>
+    <string name="add_value_value_field_title">Der Wert </string>
 </resources>
