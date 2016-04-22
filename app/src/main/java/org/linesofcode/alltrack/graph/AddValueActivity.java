@@ -43,8 +43,8 @@ import javax.inject.Inject;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class AddValueActivitiy extends NavigatableBaseActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
-    private static final String TAG = AddValueActivitiy.class.getName();
+public class AddValueActivity extends NavigatableBaseActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
+    private static final String TAG = AddValueActivity.class.getName();
     public static final String ADD_VALUE_ACTION_CODE = "org.linesofcode.alltrack.graph.ADD_VALUE";
 
     @Inject

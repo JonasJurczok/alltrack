@@ -27,11 +27,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.linesofcode.alltrack.framework.DisableAnimationsRule;
 import org.linesofcode.alltrack.framework.persistence.DatabaseHelper;
-import org.linesofcode.alltrack.graph.AddValueActivitiy;
+import org.linesofcode.alltrack.graph.AddValueActivity;
 import org.linesofcode.alltrack.graph.DataPoint;
 import org.linesofcode.alltrack.graph.Graph;
 import org.linesofcode.alltrack.graph.GraphActivity;
-import org.linesofcode.alltrack.graph.GraphAdapter;
 import org.linesofcode.alltrack.graph.GraphService;
 
 import java.util.Calendar;
@@ -316,7 +315,7 @@ public class GraphActivityInteractionUITest {
 
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
-        AddValueActivitiy addValueActivity = (AddValueActivitiy) getCurrentActivity();
+        AddValueActivity addValueActivity = (AddValueActivity) getCurrentActivity();
         addValueActivity.onDateSet(null, cal.get(YEAR), cal.get(MONTH), cal.get(DAY_OF_MONTH));
         addValueActivity.onTimeSet(null, cal.get(HOUR_OF_DAY), cal.get(MINUTE));
 

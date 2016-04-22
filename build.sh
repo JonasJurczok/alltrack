@@ -10,7 +10,7 @@ startupEmulatorIfNotRunning () {
   do :
     # TODO: check if emulator is running already
     echo "Starting emulator for [$target]"
-    emulator -avd "$target" -sdcard "$target".img &
+    emulator -avd "$target" -sdcard "$target".img -memory 2048 &
   done
 
   local running=$(adb devices | grep 'emulator' | grep 'device' | wc -l)

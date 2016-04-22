@@ -7,12 +7,9 @@ import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
 
 import org.linesofcode.alltrack.framework.persistence.DatabaseHelper;
-import org.linesofcode.alltrack.graph.AddValueActivitiy;
 import org.linesofcode.alltrack.graph.DataPoint;
 import org.linesofcode.alltrack.graph.Graph;
-import org.linesofcode.alltrack.graph.GraphActivity;
 import org.linesofcode.alltrack.graph.GraphAdapter;
-import org.linesofcode.alltrack.graph.CreateGraphActivity;
 import org.linesofcode.alltrack.graph.GraphService;
 
 import javax.inject.Singleton;

@@ -1,6 +1,6 @@
 package org.linesofcode.alltrack;
 
-import org.linesofcode.alltrack.graph.AddValueActivitiy;
+import org.linesofcode.alltrack.graph.AddValueActivity;
 import org.linesofcode.alltrack.graph.CreateGraphActivity;
 import org.linesofcode.alltrack.graph.GraphActivity;
 import org.linesofcode.alltrack.graph.GraphAdapter;
@@ -16,7 +16,7 @@ public interface AppComponent {
 
     void inject(GraphActivity graphActivity);
 
-    void inject(AddValueActivitiy addValueActivitiy);
+    void inject(AddValueActivity addValueActivity);
 
     void inject(CreateGraphActivity createGraphActivity);
 

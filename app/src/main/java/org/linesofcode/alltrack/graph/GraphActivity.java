@@ -12,8 +12,6 @@ import android.util.Log;
 import android.view.View;
 
 import org.linesofcode.alltrack.App;
-import org.linesofcode.alltrack.AppComponent;
-import org.linesofcode.alltrack.DaggerAppComponent;
 import org.linesofcode.alltrack.R;
 import org.linesofcode.alltrack.framework.navigation.NavigatableBaseActivity;
 
@@ -104,7 +102,7 @@ public class GraphActivity extends NavigatableBaseActivity implements GraphAdapt
 
     @Override
     public void onClick(Graph graph, int position) {
-        Intent intent = new Intent(this, AddValueActivitiy.class);
+        Intent intent = new Intent(this, AddValueActivity.class);
         intent.putExtra("graphId", graph.getId());
         intent.putExtra("position", position);
         startActivityForResult(intent, ADD_VALUE_INTENT_CODE);

@@ -17,7 +17,7 @@
 		</activity>
 		<activity android:name=".graph.CreateGraphActivity"
 			android:label="@string/graph_detail_title_create"/>
-		<activity android:name=".graph.AddValueActivitiy"
+		<activity android:name=".graph.AddValueActivity"
 			android:label="@string/add_value_title"/>
         <activity android:name=".SettingsActivity"
             android:label="@string/settings_activity_label"/>
