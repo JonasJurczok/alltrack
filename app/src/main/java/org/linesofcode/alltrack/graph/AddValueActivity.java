@@ -74,6 +74,9 @@ public class AddValueActivity extends NavigatableBaseActivity implements DatePic
     }
 
     private void initializeContent() {
+
+        // TODO: depending on graph type load different value fragment
+
         calendar = Calendar.getInstance();
         dateFormat = DateFormat.getDateInstance(DateFormat.LONG, Locale.getDefault());
         timeFormat = new SimpleDateFormat(TIME_PATTERN, Locale.getDefault());

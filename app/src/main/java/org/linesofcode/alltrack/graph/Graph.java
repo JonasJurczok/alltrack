@@ -6,6 +6,8 @@ import com.j256.ormlite.table.DatabaseTable;
 
 import java.util.Collection;
 
+import static org.linesofcode.alltrack.graph.ValueType.NUMBERS;
+
 /**
  * Copyright 2015 Jonas Jurczok (jonasjurczok@gmail.com)
  *
@@ -36,6 +38,9 @@ public class Graph {
     @ForeignCollectionField(orderColumnName = "datetime")
     private Collection<DataPoint> datapoints;
 
+    @DatabaseField(canBeNull = false)
+    private ValueType type = NUMBERS;
+
     public int getId() {
         return id;
     }
@@ -58,6 +63,14 @@ public class Graph {
 
     public void setDatapoints(Collection<DataPoint> datapoints) {
         this.datapoints = datapoints;
+    }
+
+    public ValueType getType() {
+        return type;
+    }
+
+    public void setType(ValueType type) {
+        this.type = type;
     }
 
     @Override

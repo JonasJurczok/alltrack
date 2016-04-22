@@ -24,4 +24,7 @@
     <string name="add_value_title">Add a value</string>
     <string name="add_value_value_field_title">The value to add</string>
     <string name="add_value_date_field_title">The date and time for the value</string>
+    <string name="graph_detail_graph_unit_type">Type of the graph</string>
+    <string name="graph_detail_graph_unit_numbers">Numbers</string>
+    <string name="graph_detail_graph_unit_units">Units</string>
 </resources>

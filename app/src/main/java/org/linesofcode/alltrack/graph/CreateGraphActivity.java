@@ -10,6 +10,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import org.linesofcode.alltrack.App;
@@ -17,6 +18,9 @@ import org.linesofcode.alltrack.R;
 import org.linesofcode.alltrack.framework.navigation.NavigatableBaseActivity;
 
 import javax.inject.Inject;
+
+import static org.linesofcode.alltrack.graph.ValueType.NUMBERS;
+import static org.linesofcode.alltrack.graph.ValueType.UNITS;
 
 /**
  * Copyright 2015 Jonas Jurczok (jonasjurczok@gmail.com)
@@ -94,9 +98,20 @@ public class CreateGraphActivity extends NavigatableBaseActivity {
             return;
         }
 
-        graphService.createNewGraph(graphName);
+        Graph graph = graphService.createNewGraph(graphName);
+        graph.setType(getSelectedType());
         setResult(Activity.RESULT_OK);
         finish();
+    }
+
+    private ValueType getSelectedType() {
+        RadioButton numbers = (RadioButton) findViewById(R.id.unit_numbers);
+
+        if (numbers.isChecked()) {
+            return NUMBERS;
+        } else {
+            return UNITS;
+        }
     }
 
     private void initializeToolbar() {

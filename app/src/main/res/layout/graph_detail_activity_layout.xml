@@ -40,6 +40,42 @@
 					android:hint="@string/graph_detail_graph_name"
 					android:id="@+id/edit_graph_name"/>
 			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+				android:layout_marginLeft="15dp"
+				android:layout_marginStart="15dp"
+				android:layout_marginRight="15dp"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/graph_detail_graph_unit_type"
+					android:textSize="20dp"/>
+
+				<RadioGroup
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+					<RadioButton
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:id="@+id/unit_numbers"
+						android:text="@string/graph_detail_graph_unit_numbers"
+						android:checked="true"/>
+
+					<RadioButton
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:id="@+id/unit_units"
+						android:text="@string/graph_detail_graph_unit_units"/>
+
+				</RadioGroup>
+
+			</LinearLayout>
+
 			<LinearLayout
 				android:id="@+id/buttons"
 				android:layout_width="wrap_content"
