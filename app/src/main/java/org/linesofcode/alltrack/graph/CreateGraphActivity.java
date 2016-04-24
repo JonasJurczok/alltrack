@@ -100,6 +100,7 @@ public class CreateGraphActivity extends NavigatableBaseActivity {
 
         Graph graph = graphService.createNewGraph(graphName);
         graph.setType(getSelectedType());
+        graphService.save(graph);
         setResult(Activity.RESULT_OK);
         finish();
     }

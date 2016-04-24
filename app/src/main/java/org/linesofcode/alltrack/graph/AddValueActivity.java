@@ -75,8 +75,6 @@ public class AddValueActivity extends NavigatableBaseActivity implements DatePic
 
     private void initializeContent() {
 
-        // TODO: depending on graph type load different value fragment
-
         calendar = Calendar.getInstance();
         dateFormat = DateFormat.getDateInstance(DateFormat.LONG, Locale.getDefault());
         timeFormat = new SimpleDateFormat(TIME_PATTERN, Locale.getDefault());
@@ -137,6 +135,63 @@ public class AddValueActivity extends NavigatableBaseActivity implements DatePic
         position = extras.getInt("position");
         Log.d(TAG, "Starting addValue Activity for graph [" + graphId + "] in position [" + position + "].");
         graph = graphService.getById(graphId);
+
+        selectInputMethod(graph.getType());
+    }
+
+    private void selectInputMethod(ValueType type) {
+        Log.d(TAG, "Selecting input method for graph type [" + type + "].");
+        switch (type) {
+
+            case NUMBERS:
+                setValueButtonState(View.GONE);
+                break;
+            case UNITS:
+                setValueButtonState(View.VISIBLE);
+                attachValueButtonHandler();
+                break;
+        }
+    }
+
+    private void attachValueButtonHandler() {
+        View addOne = findViewById(R.id.add_value_add_one);
+        View subOne = findViewById(R.id.add_value_sub_one);
+        final EditText value = (EditText) findViewById(R.id.add_value_value);
+
+        // TODO: improve listener implementation
+        addOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String content = value.getText().toString();
+                if (content.isEmpty()) {
+                    content = "0";
+                }
+                Integer current = Integer.valueOf(content);
+                current++;
+                value.setText(current.toString());
+            }
+        });
+
+        subOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String content = value.getText().toString();
+                if (content.isEmpty()) {
+                    content = "0";
+                }
+                Integer current = Integer.valueOf(content);
+                current--;
+                value.setText(current.toString());
+            }
+        });
+    }
+
+    private void setValueButtonState(int visibility) {
+        View addOne = findViewById(R.id.add_value_add_one);
+        View subOne = findViewById(R.id.add_value_sub_one);
+
+        addOne.setVisibility(visibility);
+        subOne.setVisibility(visibility);
     }
 
     private void addValue() {

@@ -23,4 +23,6 @@
     <string name="add_value_value_field_title">Der Wert </string>
     <string name="graph_detail_graph_unit_type">Type of the graph</string>
     <string name="graph_detail_graph_unit_numbers">Numbers</string>
+    <string name="add_value_sub_one">- 1</string>
+    <string name="add_value_add_one">+ 1</string>
 </resources>

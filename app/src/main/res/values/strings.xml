@@ -27,4 +27,6 @@
     <string name="graph_detail_graph_unit_type">Type of the graph</string>
     <string name="graph_detail_graph_unit_numbers">Numbers</string>
     <string name="graph_detail_graph_unit_units">Units</string>
+    <string name="add_value_sub_one">- 1</string>
+    <string name="add_value_add_one">+ 1</string>
 </resources>

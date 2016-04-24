@@ -35,30 +35,28 @@
 					android:text="@string/add_value_value_field_title"
 					android:textSize="20sp"/>
 				<!-- TODO: extract to fragment -->
-				<EditText
-					android:layout_width="fill_parent"
-					android:layout_height="wrap_content"
-					android:hint="@string/add_value_value_field_title"
-					android:id="@+id/add_value_value"
-					android:visibility="gone"/>
 
 				<LinearLayout
 					android:layout_width="match_parent"
-					android:layout_height="wrap_content">
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
 					<Button
+						android:id="@+id/add_value_sub_one"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
-						android:text="- 1"/>
+						android:text="@string/add_value_sub_one"
+						android:visibility="gone"/>
 					<EditText
-						android:layout_width="50dp"
+						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:hint="@string/add_value_value_field_title"
-						android:text="2"
-						android:id="@+id/add_value_value2"/>
+						android:id="@+id/add_value_value"/>
 					<Button
+						android:id="@+id/add_value_add_one"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
-						android:text="- 1"/>
+						android:text="@string/add_value_add_one"
+						android:visibility="gone"/>
 				</LinearLayout>
 			</LinearLayout>
 
