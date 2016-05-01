@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.support.ConnectionSource;
+import com.j256.ormlite.table.TableUtils;
 
 import org.linesofcode.alltrack.graph.DataPoint;
 import org.linesofcode.alltrack.graph.Graph;
@@ -34,7 +35,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private static final String LOGTAG = DatabaseHelper.class.getName();
 
     private static final String DB_NAME = "alltrack_database.db";
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -57,5 +58,8 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase database, ConnectionSource connectionSource, int oldVersion, int newVersion) {
 
+        if (oldVersion < 2) {
+            database.execSQL("ALTER TABLE graph ADD COLUMN type varchar not null default 'NUMBERS;'");
+        }
     }
 }

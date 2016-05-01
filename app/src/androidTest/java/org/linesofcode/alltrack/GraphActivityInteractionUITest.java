@@ -32,6 +32,7 @@ import org.linesofcode.alltrack.graph.DataPoint;
 import org.linesofcode.alltrack.graph.Graph;
 import org.linesofcode.alltrack.graph.GraphActivity;
 import org.linesofcode.alltrack.graph.GraphService;
+import org.linesofcode.alltrack.graph.ValueType;
 
 import java.util.Calendar;
 import java.util.Collection;
@@ -58,6 +59,8 @@ import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.linesofcode.alltrack.GraphGenerationUtil.generateSimpleTestGraph;
+import static org.linesofcode.alltrack.graph.ValueType.NUMBERS;
+import static org.linesofcode.alltrack.graph.ValueType.UNITS;
 
 /**
  * Copyright 2015 Jonas Jurczok (jonasjurczok@gmail.com)
@@ -159,6 +162,20 @@ public class GraphActivityInteractionUITest {
     }
 
     @Test
+    public void addGraphWithUnitTypeShouldWork() {
+        String graphName = "addGraphWithUnitTypeShouldWork";
+
+        graphForTest = createGraph(graphName, UNITS);
+
+        List<Graph> graphs = graphDao.queryForEq("name", graphName);
+
+        assertThat(graphs.size(), is(1));
+
+        assertThat(graphs.get(0).getType(), is(UNITS));
+
+    }
+
+    @Test
     public void newlyAddedGraphShouldBeDisplayedImmediately() {
         String graphName = "newlyAddedGraphShouldBeDisplayedImmediately";
         graphForTest = createGraph(graphName);
@@ -231,6 +248,25 @@ public class GraphActivityInteractionUITest {
     }
 
     @Test
+    public void addValueForUnitGraphShouldWork() {
+        String graphName = "addValueForUnitGraphShouldWork";
+        graphForTest = createGraph(graphName, UNITS);
+
+        addValue(graphName, 5, UNITS);
+
+        List<DataPoint> dataPoints = dataPointDao.queryForEq("graph_id", graphForTest.getId());
+
+        assertThat(dataPoints.size(), is(1));
+
+        DataPoint datapoint = dataPoints.get(0);
+
+        assertThat(datapoint.getValue(), is(5));
+        long current = System.currentTimeMillis() - (1000 * 60);
+        Date reference = new Date(current);
+        assertThat(datapoint.getDatetime().after(reference), is(true));
+    }
+
+    @Test
     public void addValueWithRandomDateTimeShouldWork() {
         String graphName = "addValueWithRandomDateTimeShouldWork";
         graphForTest = createGraph(graphName);
@@ -288,8 +324,18 @@ public class GraphActivityInteractionUITest {
 
     }
 
-    private Graph createGraph(String graphName) {
+    private Graph createGraph(String graphName, ValueType valueType) {
         onView(withId(R.id.fab)).perform(click());
+
+        switch (valueType) {
+
+            case NUMBERS:
+                onView(withId(R.id.unit_numbers)).perform(click());
+                break;
+            case UNITS:
+                onView(withId(R.id.unit_units)).perform(click());
+                break;
+        }
 
         takeScreenshot("CreateGraph_" + graphName + "_before_graph_name");
         onView(withId(R.id.edit_graph_name)).perform(typeText(graphName + "\n"));
@@ -301,17 +347,38 @@ public class GraphActivityInteractionUITest {
         return graphs.get(0);
     }
 
+    private Graph createGraph(String graphName) {
+        return createGraph(graphName, NUMBERS);
+    }
+
     private void addValue(String graphName, Integer value) {
-        addValue(graphName, value, new Date());
+        addValue(graphName, value, new Date(), NUMBERS);
+    }
+
+    private void addValue(String graphName, Integer value, ValueType type) {
+        addValue(graphName, value, new Date(), type);
     }
 
     private void addValue(String graphName, Integer value, Date date) {
+        addValue(graphName, value, date, NUMBERS);
+    }
+
+    private void addValue(String graphName, Integer value, Date date, ValueType type) {
         takeScreenshot(graphName + "_add_value_before_click");
         onView(withText(graphName)).perform(click());
 
         takeScreenshot(graphName + "_add_value_before_add");
-        onView(withId(R.id.add_value_value)).perform(typeText(value.toString()));
-        onView(withId(R.id.add_value_value)).perform(closeSoftKeyboard());
+        switch (type) {
+            case NUMBERS:
+                onView(withId(R.id.add_value_value)).perform(typeText(value.toString()));
+                onView(withId(R.id.add_value_value)).perform(closeSoftKeyboard());
+                break;
+            case UNITS:
+                for (int i = 0; i < value; i++) {
+                    onView(withId(R.id.add_value_add_one)).perform(click());
+                }
+                break;
+        }
 
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);

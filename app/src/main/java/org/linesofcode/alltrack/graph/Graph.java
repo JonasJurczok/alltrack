@@ -1,11 +1,13 @@
 package org.linesofcode.alltrack.graph;
 
+import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
 
 import java.util.Collection;
 
+import static com.j256.ormlite.field.DataType.ENUM_STRING;
 import static org.linesofcode.alltrack.graph.ValueType.NUMBERS;
 
 /**
@@ -38,7 +40,7 @@ public class Graph {
     @ForeignCollectionField(orderColumnName = "datetime")
     private Collection<DataPoint> datapoints;
 
-    @DatabaseField(canBeNull = false)
+    @DatabaseField(canBeNull = false, dataType = ENUM_STRING, defaultValue = "NUMBERS")
     private ValueType type = NUMBERS;
 
     public int getId() {
