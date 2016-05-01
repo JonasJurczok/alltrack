@@ -134,6 +134,8 @@ processTestReport() {
 
   echo ""
 
+  read -p "Starting to process build report. if you want to continue press [ENTER]. Press [CTRL] + [C] to abort."
+
   # get last commit id
   local commitId=$(git log -n 1 | grep commit | cut -d" " -f2)
 
