@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alltrack debugAndroidTest</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet">
+        <link href="static/bootstrap.min.css" rel="stylesheet">
+        <link href="static/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="static/spoon.css" rel="stylesheet">
+        <link href="static/nivo-slider.css" rel="stylesheet">
+        <script src="static/jquery.min.js"></script>
+        <script src="static/bootstrap.min.js"></script>
+        <script src="static/jquery.nivo.slider.pack.js"></script>
+        <meta name="description" content="">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="hero-unit">
+                <h1 id="title"></h1>
+                <p id="subtitle"></p>
+            </div>
+
+            <div class="row">
+                <div id="test-info" class="span6">
+                    <!-- Current test information -->
+                    <div id="current-test-info" class="test-result">
+                        <h1 id="test-name"></h1>
+                        <h3 id="test-class-name"></h3>
+                        <h3 id="caption"></h3>
+                    </div>
+
+                    <!-- Overall test information -->
+                    <div id="overall-test-info">
+                        <p>Displaying test <span id="current-test-number">0</span> of <span id="total-test-size">0</span></p>
+                        <p>Tests executed on <span id="test-date">Sunday, May 01, 5:36 PM</span>, in <span id="duration">5 minutes, 39 seconds</span></p>
+                    </div>
+                </div>
+                <div id="slider-wrapper" class="theme-default span6">
+                    <div id="slider" class="nivoSlider"></div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var devices = [
+  {
+    "serial": "emulator-5554",
+    "name": "android-19",
+    "details": "Running Android 4.4.4 (API 19) with locale en-US",
+    "testResults": [
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Graph With Unit Type Should Work",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 112,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addGraphWithUnitTypeShouldWork/1462116977835_CreateGraph_addGraphWithUnitTypeShouldWork_before_graph_name.png",
+            "caption": "CreateGraph AddGraphWithUnitTypeShouldWork Before Graph Name"
+          },
+          {
+            "id": 113,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addGraphWithUnitTypeShouldWork/1462116981697_CreateGraph_addGraphWithUnitTypeShouldWork_after_confirm.png",
+            "caption": "CreateGraph AddGraphWithUnitTypeShouldWork After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add New Graph Should Create New Graph",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 114,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addNewGraphShouldCreateNewGraph/1462117082927_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 115,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addNewGraphShouldCreateNewGraph/1462117089801_CreateGraph_addNewGraphShouldCreateNewGraph_after_confirm.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value For Unit Graph Should Work",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 116,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117055268_CreateGraph_addValueForUnitGraphShouldWork_before_graph_name.png",
+            "caption": "CreateGraph AddValueForUnitGraphShouldWork Before Graph Name"
+          },
+          {
+            "id": 117,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117059207_CreateGraph_addValueForUnitGraphShouldWork_after_confirm.png",
+            "caption": "CreateGraph AddValueForUnitGraphShouldWork After Confirm"
+          },
+          {
+            "id": 118,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117059399_addValueForUnitGraphShouldWork_add_value_before_click.png",
+            "caption": "AddValueForUnitGraphShouldWork Add Value Before Click"
+          },
+          {
+            "id": 119,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117060246_addValueForUnitGraphShouldWork_add_value_before_add.png",
+            "caption": "AddValueForUnitGraphShouldWork Add Value Before Add"
+          },
+          {
+            "id": 120,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117063249_addValueForUnitGraphShouldWork_add_value_before_submit.png",
+            "caption": "AddValueForUnitGraphShouldWork Add Value Before Submit"
+          },
+          {
+            "id": 121,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117064108_addValueForUnitGraphShouldWork_add_value_after_submit.png",
+            "caption": "AddValueForUnitGraphShouldWork Add Value After Submit"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value Should Refresh Graph And Make Value Visible",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 122,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117024985_CreateGraph_addValueShouldRefreshGraphAndMakeValueVisible_before_graph_name.png",
+            "caption": "CreateGraph AddValueShouldRefreshGraphAndMakeValueVisible Before Graph Name"
+          },
+          {
+            "id": 123,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117030268_CreateGraph_addValueShouldRefreshGraphAndMakeValueVisible_after_confirm.png",
+            "caption": "CreateGraph AddValueShouldRefreshGraphAndMakeValueVisible After Confirm"
+          },
+          {
+            "id": 124,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117035459_addValueShouldRefreshGraphAndMakeValueVisible_add_value_before_click.png",
+            "caption": "AddValueShouldRefreshGraphAndMakeValueVisible Add Value Before Click"
+          },
+          {
+            "id": 125,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117036476_addValueShouldRefreshGraphAndMakeValueVisible_add_value_before_add.png",
+            "caption": "AddValueShouldRefreshGraphAndMakeValueVisible Add Value Before Add"
+          },
+          {
+            "id": 126,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117038067_addValueShouldRefreshGraphAndMakeValueVisible_add_value_before_submit.png",
+            "caption": "AddValueShouldRefreshGraphAndMakeValueVisible Add Value Before Submit"
+          },
+          {
+            "id": 127,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117041649_addValueShouldRefreshGraphAndMakeValueVisible_add_value_after_submit.png",
+            "caption": "AddValueShouldRefreshGraphAndMakeValueVisible Add Value After Submit"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value Should Take Current Time As Default",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 128,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116969119_CreateGraph_addValueShouldTakeCurrentTimeAsDefault_before_graph_name.png",
+            "caption": "CreateGraph AddValueShouldTakeCurrentTimeAsDefault Before Graph Name"
+          },
+          {
+            "id": 129,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116972299_CreateGraph_addValueShouldTakeCurrentTimeAsDefault_after_confirm.png",
+            "caption": "CreateGraph AddValueShouldTakeCurrentTimeAsDefault After Confirm"
+          },
+          {
+            "id": 130,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116972588_addValueShouldTakeCurrentTimeAsDefault_add_value_before_click.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value Before Click"
+          },
+          {
+            "id": 131,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116973385_addValueShouldTakeCurrentTimeAsDefault_add_value_before_add.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value Before Add"
+          },
+          {
+            "id": 132,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116974486_addValueShouldTakeCurrentTimeAsDefault_add_value_before_submit.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value Before Submit"
+          },
+          {
+            "id": 133,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116975354_addValueShouldTakeCurrentTimeAsDefault_add_value_after_submit.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value After Submit"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value With Random Date Time Should Work",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 134,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116996851_CreateGraph_addValueWithRandomDateTimeShouldWork_before_graph_name.png",
+            "caption": "CreateGraph AddValueWithRandomDateTimeShouldWork Before Graph Name"
+          },
+          {
+            "id": 135,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462117000632_CreateGraph_addValueWithRandomDateTimeShouldWork_after_confirm.png",
+            "caption": "CreateGraph AddValueWithRandomDateTimeShouldWork After Confirm"
+          },
+          {
+            "id": 136,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462117000817_addValueWithRandomDateTimeShouldWork_add_value_before_click.png",
+            "caption": "AddValueWithRandomDateTimeShouldWork Add Value Before Click"
+          },
+          {
+            "id": 137,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462117002015_addValueWithRandomDateTimeShouldWork_add_value_before_add.png",
+            "caption": "AddValueWithRandomDateTimeShouldWork Add Value Before Add"
+          },
+          {
+            "id": 138,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462117003057_addValueWithRandomDateTimeShouldWork_add_value_before_submit.png",
+            "caption": "AddValueWithRandomDateTimeShouldWork Add Value Before Submit"
+          },
+          {
+            "id": 139,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462117003846_addValueWithRandomDateTimeShouldWork_add_value_after_submit.png",
+            "caption": "AddValueWithRandomDateTimeShouldWork Add Value After Submit"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Click On Cancel Should Not Create New Graph",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 140,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1462116985146_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 141,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1462116989195_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Graph Name"
+          },
+          {
+            "id": 142,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1462116989925_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Close Keyboard"
+          },
+          {
+            "id": 143,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1462116990961_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Cancel Clicked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Clicking A Graph Should Open Add Value Activity",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 144,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickingAGraphShouldOpenAddValueActivity/1462117012576_CreateGraph_clickingAGraphShouldOpenAddValueActivity_before_graph_name.png",
+            "caption": "CreateGraph ClickingAGraphShouldOpenAddValueActivity Before Graph Name"
+          },
+          {
+            "id": 145,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickingAGraphShouldOpenAddValueActivity/1462117017642_CreateGraph_clickingAGraphShouldOpenAddValueActivity_after_confirm.png",
+            "caption": "CreateGraph ClickingAGraphShouldOpenAddValueActivity After Confirm"
+          },
+          {
+            "id": 146,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickingAGraphShouldOpenAddValueActivity/1462117017847_clickingAGraphShouldOpenAddValueActivity_before_click.png",
+            "caption": "ClickingAGraphShouldOpenAddValueActivity Before Click"
+          },
+          {
+            "id": 147,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickingAGraphShouldOpenAddValueActivity/1462117022876_clickingAGraphShouldOpenAddValueActivity_before_assert.png",
+            "caption": "ClickingAGraphShouldOpenAddValueActivity Before Assert"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Hitting Enter In Graph Name Field Should Create New Graph",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 148,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1462117044406_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 149,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1462117052282_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph After Graph Name"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Newly Added Graph Should Be Displayed Immediately",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 150,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1462117068817_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately Before Graph Name"
+          },
+          {
+            "id": 151,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1462117078252_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Show Simple Graph",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 152,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivityInteractionUITest/showSimpleGraph/1462117053232_showSimpleGraph_before_asserts.png",
+            "caption": "ShowSimpleGraph Before Asserts"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Floating Action Button Should Be Rendered",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 153,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1462117100409_floatingActionButtonShouldBeRendered.png",
+            "caption": "FloatingActionButtonShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Main Activity Should Be Started",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 154,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1462117095112_mainActivityShouldBeStarted.png",
+            "caption": "MainActivityShouldBeStarted"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Recycler View Should Be Rendered",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 155,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1462117095754_recyclerViewShouldBeRendered.png",
+            "caption": "RecyclerViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Down Should Maximize App Bar",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 156,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1462117092738_swipeDownShouldMaximizeAppBar.png",
+            "caption": "SwipeDownShouldMaximizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Up Should Minimize App Bar",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 157,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1462117098944_swipeUpShouldMinimizeAppBar.png",
+            "caption": "SwipeUpShouldMinimizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Tool Bar Should Be Rendered",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 158,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1462117093573_toolBarShouldBeRendered.png",
+            "caption": "ToolBarShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Data Series Should Close Navigation",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 159,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1462117118387_clickOnDataSeriesShouldCloseNavigation.png",
+            "caption": "ClickOnDataSeriesShouldCloseNavigation"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Settings Should Switch Activity",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 160,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity/1462117153979_clickOnSettingsShouldSwitchActivity.png",
+            "caption": "ClickOnSettingsShouldSwitchActivity"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigating Back To Graph Activity Should Have Navigation Closed",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 161,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1462117138364_navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed First Click"
+          },
+          {
+            "id": 162,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1462117145011_navigatingBackToGraphActivityShouldHaveNavigationClosed_final_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed Final Click"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Closable",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 163,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1462117109188_navigationViewShouldBeClosable.png",
+            "caption": "NavigationViewShouldBeClosable"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Rendered",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 164,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered/1462117159570_navigationViewShouldBeRendered.png",
+            "caption": "NavigationViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Main Should Have Main Checked",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 165,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked/1462117165816_openNavFromMainShouldHaveMainChecked.png",
+            "caption": "OpenNavFromMainShouldHaveMainChecked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Settings Should Have Settings Checked",
+        "serial": "emulator-5554",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 166,
+            "path": "image/emulator-5554/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked/1462117130800_openNavFromSettingsShouldHaveSettingsChecked.png",
+            "caption": "OpenNavFromSettingsShouldHaveSettingsChecked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "serial": "emulator-5556",
+    "name": "android-21",
+    "details": "Running Android 5.0.2 (API 21) with locale en-US",
+    "testResults": [
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Graph With Unit Type Should Work",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 57,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addGraphWithUnitTypeShouldWork/1462116977064_CreateGraph_addGraphWithUnitTypeShouldWork_before_graph_name.png",
+            "caption": "CreateGraph AddGraphWithUnitTypeShouldWork Before Graph Name"
+          },
+          {
+            "id": 58,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addGraphWithUnitTypeShouldWork/1462116980989_CreateGraph_addGraphWithUnitTypeShouldWork_after_confirm.png",
+            "caption": "CreateGraph AddGraphWithUnitTypeShouldWork After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add New Graph Should Create New Graph",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 59,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addNewGraphShouldCreateNewGraph/1462117038641_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 60,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addNewGraphShouldCreateNewGraph/1462117040883_CreateGraph_addNewGraphShouldCreateNewGraph_after_confirm.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value For Unit Graph Should Work",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 61,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117019090_CreateGraph_addValueForUnitGraphShouldWork_before_graph_name.png",
+            "caption": "CreateGraph AddValueForUnitGraphShouldWork Before Graph Name"
+          },
+          {
+            "id": 62,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117023964_CreateGraph_addValueForUnitGraphShouldWork_after_confirm.png",
+            "caption": "CreateGraph AddValueForUnitGraphShouldWork After Confirm"
+          },
+          {
+            "id": 63,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117024272_addValueForUnitGraphShouldWork_add_value_before_click.png",
+            "caption": "AddValueForUnitGraphShouldWork Add Value Before Click"
+          },
+          {
+            "id": 64,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117025038_addValueForUnitGraphShouldWork_add_value_before_add.png",
+            "caption": "AddValueForUnitGraphShouldWork Add Value Before Add"
+          },
+          {
+            "id": 65,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117027028_addValueForUnitGraphShouldWork_add_value_before_submit.png",
+            "caption": "AddValueForUnitGraphShouldWork Add Value Before Submit"
+          },
+          {
+            "id": 66,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117027658_addValueForUnitGraphShouldWork_add_value_after_submit.png",
+            "caption": "AddValueForUnitGraphShouldWork Add Value After Submit"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value Should Refresh Graph And Make Value Visible",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 67,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117001948_CreateGraph_addValueShouldRefreshGraphAndMakeValueVisible_before_graph_name.png",
+            "caption": "CreateGraph AddValueShouldRefreshGraphAndMakeValueVisible Before Graph Name"
+          },
+          {
+            "id": 68,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117004859_CreateGraph_addValueShouldRefreshGraphAndMakeValueVisible_after_confirm.png",
+            "caption": "CreateGraph AddValueShouldRefreshGraphAndMakeValueVisible After Confirm"
+          },
+          {
+            "id": 69,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117010223_addValueShouldRefreshGraphAndMakeValueVisible_add_value_before_click.png",
+            "caption": "AddValueShouldRefreshGraphAndMakeValueVisible Add Value Before Click"
+          },
+          {
+            "id": 70,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117011148_addValueShouldRefreshGraphAndMakeValueVisible_add_value_before_add.png",
+            "caption": "AddValueShouldRefreshGraphAndMakeValueVisible Add Value Before Add"
+          },
+          {
+            "id": 71,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117012091_addValueShouldRefreshGraphAndMakeValueVisible_add_value_before_submit.png",
+            "caption": "AddValueShouldRefreshGraphAndMakeValueVisible Add Value Before Submit"
+          },
+          {
+            "id": 72,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117012675_addValueShouldRefreshGraphAndMakeValueVisible_add_value_after_submit.png",
+            "caption": "AddValueShouldRefreshGraphAndMakeValueVisible Add Value After Submit"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value Should Take Current Time As Default",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 73,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116970021_CreateGraph_addValueShouldTakeCurrentTimeAsDefault_before_graph_name.png",
+            "caption": "CreateGraph AddValueShouldTakeCurrentTimeAsDefault Before Graph Name"
+          },
+          {
+            "id": 74,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116972812_CreateGraph_addValueShouldTakeCurrentTimeAsDefault_after_confirm.png",
+            "caption": "CreateGraph AddValueShouldTakeCurrentTimeAsDefault After Confirm"
+          },
+          {
+            "id": 75,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116973029_addValueShouldTakeCurrentTimeAsDefault_add_value_before_click.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value Before Click"
+          },
+          {
+            "id": 76,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116973579_addValueShouldTakeCurrentTimeAsDefault_add_value_before_add.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value Before Add"
+          },
+          {
+            "id": 77,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116974599_addValueShouldTakeCurrentTimeAsDefault_add_value_before_submit.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value Before Submit"
+          },
+          {
+            "id": 78,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116975260_addValueShouldTakeCurrentTimeAsDefault_add_value_after_submit.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value After Submit"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value With Random Date Time Should Work",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 79,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116989560_CreateGraph_addValueWithRandomDateTimeShouldWork_before_graph_name.png",
+            "caption": "CreateGraph AddValueWithRandomDateTimeShouldWork Before Graph Name"
+          },
+          {
+            "id": 80,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116992455_CreateGraph_addValueWithRandomDateTimeShouldWork_after_confirm.png",
+            "caption": "CreateGraph AddValueWithRandomDateTimeShouldWork After Confirm"
+          },
+          {
+            "id": 81,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116992793_addValueWithRandomDateTimeShouldWork_add_value_before_click.png",
+            "caption": "AddValueWithRandomDateTimeShouldWork Add Value Before Click"
+          },
+          {
+            "id": 82,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116993667_addValueWithRandomDateTimeShouldWork_add_value_before_add.png",
+            "caption": "AddValueWithRandomDateTimeShouldWork Add Value Before Add"
+          },
+          {
+            "id": 83,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116994648_addValueWithRandomDateTimeShouldWork_add_value_before_submit.png",
+            "caption": "AddValueWithRandomDateTimeShouldWork Add Value Before Submit"
+          },
+          {
+            "id": 84,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116995263_addValueWithRandomDateTimeShouldWork_add_value_after_submit.png",
+            "caption": "AddValueWithRandomDateTimeShouldWork Add Value After Submit"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Click On Cancel Should Not Create New Graph",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 85,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1462116983852_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 86,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1462116986643_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Graph Name"
+          },
+          {
+            "id": 87,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1462116987277_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Close Keyboard"
+          },
+          {
+            "id": 88,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1462116987917_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Cancel Clicked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Clicking A Graph Should Open Add Value Activity",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 89,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickingAGraphShouldOpenAddValueActivity/1462116996909_CreateGraph_clickingAGraphShouldOpenAddValueActivity_before_graph_name.png",
+            "caption": "CreateGraph ClickingAGraphShouldOpenAddValueActivity Before Graph Name"
+          },
+          {
+            "id": 90,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickingAGraphShouldOpenAddValueActivity/1462116999471_CreateGraph_clickingAGraphShouldOpenAddValueActivity_after_confirm.png",
+            "caption": "CreateGraph ClickingAGraphShouldOpenAddValueActivity After Confirm"
+          },
+          {
+            "id": 91,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickingAGraphShouldOpenAddValueActivity/1462116999822_clickingAGraphShouldOpenAddValueActivity_before_click.png",
+            "caption": "ClickingAGraphShouldOpenAddValueActivity Before Click"
+          },
+          {
+            "id": 92,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickingAGraphShouldOpenAddValueActivity/1462117000727_clickingAGraphShouldOpenAddValueActivity_before_assert.png",
+            "caption": "ClickingAGraphShouldOpenAddValueActivity Before Assert"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Hitting Enter In Graph Name Field Should Create New Graph",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 93,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1462117013979_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 94,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1462117017022_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph After Graph Name"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Newly Added Graph Should Be Displayed Immediately",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 95,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1462117029220_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately Before Graph Name"
+          },
+          {
+            "id": 96,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1462117037115_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Show Simple Graph",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 97,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivityInteractionUITest/showSimpleGraph/1462117017596_showSimpleGraph_before_asserts.png",
+            "caption": "ShowSimpleGraph Before Asserts"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Floating Action Button Should Be Rendered",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 98,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1462117048103_floatingActionButtonShouldBeRendered.png",
+            "caption": "FloatingActionButtonShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Main Activity Should Be Started",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 99,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1462117045460_mainActivityShouldBeStarted.png",
+            "caption": "MainActivityShouldBeStarted"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Recycler View Should Be Rendered",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 100,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1462117046155_recyclerViewShouldBeRendered.png",
+            "caption": "RecyclerViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Down Should Maximize App Bar",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 101,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1462117043982_swipeDownShouldMaximizeAppBar.png",
+            "caption": "SwipeDownShouldMaximizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Up Should Minimize App Bar",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 102,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1462117047355_swipeUpShouldMinimizeAppBar.png",
+            "caption": "SwipeUpShouldMinimizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Tool Bar Should Be Rendered",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 103,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1462117044863_toolBarShouldBeRendered.png",
+            "caption": "ToolBarShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Data Series Should Close Navigation",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 104,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1462117056838_clickOnDataSeriesShouldCloseNavigation.png",
+            "caption": "ClickOnDataSeriesShouldCloseNavigation"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Settings Should Switch Activity",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 105,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/clickOnSettingsShouldSwitchActivity/1462117070514_clickOnSettingsShouldSwitchActivity.png",
+            "caption": "ClickOnSettingsShouldSwitchActivity"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigating Back To Graph Activity Should Have Navigation Closed",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 106,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1462117065541_navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed First Click"
+          },
+          {
+            "id": 107,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1462117067131_navigatingBackToGraphActivityShouldHaveNavigationClosed_final_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed Final Click"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Closable",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 108,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1462117053069_navigationViewShouldBeClosable.png",
+            "caption": "NavigationViewShouldBeClosable"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Rendered",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 109,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeRendered/1462117073751_navigationViewShouldBeRendered.png",
+            "caption": "NavigationViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Main Should Have Main Checked",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 110,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/openNavFromMainShouldHaveMainChecked/1462117077128_openNavFromMainShouldHaveMainChecked.png",
+            "caption": "OpenNavFromMainShouldHaveMainChecked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Settings Should Have Settings Checked",
+        "serial": "emulator-5556",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 111,
+            "path": "image/emulator-5556/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked/1462117061830_openNavFromSettingsShouldHaveSettingsChecked.png",
+            "caption": "OpenNavFromSettingsShouldHaveSettingsChecked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "serial": "emulator-5558",
+    "name": "android-22",
+    "details": "Running Android 5.1.1 (API 22) with locale en-US",
+    "testResults": [
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Graph With Unit Type Should Work",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 0,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addGraphWithUnitTypeShouldWork/1462116977574_CreateGraph_addGraphWithUnitTypeShouldWork_before_graph_name.png",
+            "caption": "CreateGraph AddGraphWithUnitTypeShouldWork Before Graph Name"
+          },
+          {
+            "id": 1,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addGraphWithUnitTypeShouldWork/1462116980131_CreateGraph_addGraphWithUnitTypeShouldWork_after_confirm.png",
+            "caption": "CreateGraph AddGraphWithUnitTypeShouldWork After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add New Graph Should Create New Graph",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 2,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addNewGraphShouldCreateNewGraph/1462117036435_CreateGraph_addNewGraphShouldCreateNewGraph_before_graph_name.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 3,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addNewGraphShouldCreateNewGraph/1462117038550_CreateGraph_addNewGraphShouldCreateNewGraph_after_confirm.png",
+            "caption": "CreateGraph AddNewGraphShouldCreateNewGraph After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value For Unit Graph Should Work",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 4,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117023565_CreateGraph_addValueForUnitGraphShouldWork_before_graph_name.png",
+            "caption": "CreateGraph AddValueForUnitGraphShouldWork Before Graph Name"
+          },
+          {
+            "id": 5,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117025722_CreateGraph_addValueForUnitGraphShouldWork_after_confirm.png",
+            "caption": "CreateGraph AddValueForUnitGraphShouldWork After Confirm"
+          },
+          {
+            "id": 6,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117026105_addValueForUnitGraphShouldWork_add_value_before_click.png",
+            "caption": "AddValueForUnitGraphShouldWork Add Value Before Click"
+          },
+          {
+            "id": 7,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117027284_addValueForUnitGraphShouldWork_add_value_before_add.png",
+            "caption": "AddValueForUnitGraphShouldWork Add Value Before Add"
+          },
+          {
+            "id": 8,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117029046_addValueForUnitGraphShouldWork_add_value_before_submit.png",
+            "caption": "AddValueForUnitGraphShouldWork Add Value Before Submit"
+          },
+          {
+            "id": 9,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueForUnitGraphShouldWork/1462117029838_addValueForUnitGraphShouldWork_add_value_after_submit.png",
+            "caption": "AddValueForUnitGraphShouldWork Add Value After Submit"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value Should Refresh Graph And Make Value Visible",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 10,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117002177_CreateGraph_addValueShouldRefreshGraphAndMakeValueVisible_before_graph_name.png",
+            "caption": "CreateGraph AddValueShouldRefreshGraphAndMakeValueVisible Before Graph Name"
+          },
+          {
+            "id": 11,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117004992_CreateGraph_addValueShouldRefreshGraphAndMakeValueVisible_after_confirm.png",
+            "caption": "CreateGraph AddValueShouldRefreshGraphAndMakeValueVisible After Confirm"
+          },
+          {
+            "id": 12,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117010435_addValueShouldRefreshGraphAndMakeValueVisible_add_value_before_click.png",
+            "caption": "AddValueShouldRefreshGraphAndMakeValueVisible Add Value Before Click"
+          },
+          {
+            "id": 13,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117011254_addValueShouldRefreshGraphAndMakeValueVisible_add_value_before_add.png",
+            "caption": "AddValueShouldRefreshGraphAndMakeValueVisible Add Value Before Add"
+          },
+          {
+            "id": 14,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117012044_addValueShouldRefreshGraphAndMakeValueVisible_add_value_before_submit.png",
+            "caption": "AddValueShouldRefreshGraphAndMakeValueVisible Add Value Before Submit"
+          },
+          {
+            "id": 15,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldRefreshGraphAndMakeValueVisible/1462117012825_addValueShouldRefreshGraphAndMakeValueVisible_add_value_after_submit.png",
+            "caption": "AddValueShouldRefreshGraphAndMakeValueVisible Add Value After Submit"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value Should Take Current Time As Default",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 16,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116969916_CreateGraph_addValueShouldTakeCurrentTimeAsDefault_before_graph_name.png",
+            "caption": "CreateGraph AddValueShouldTakeCurrentTimeAsDefault Before Graph Name"
+          },
+          {
+            "id": 17,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116972651_CreateGraph_addValueShouldTakeCurrentTimeAsDefault_after_confirm.png",
+            "caption": "CreateGraph AddValueShouldTakeCurrentTimeAsDefault After Confirm"
+          },
+          {
+            "id": 18,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116972995_addValueShouldTakeCurrentTimeAsDefault_add_value_before_click.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value Before Click"
+          },
+          {
+            "id": 19,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116973783_addValueShouldTakeCurrentTimeAsDefault_add_value_before_add.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value Before Add"
+          },
+          {
+            "id": 20,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116974604_addValueShouldTakeCurrentTimeAsDefault_add_value_before_submit.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value Before Submit"
+          },
+          {
+            "id": 21,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1462116975713_addValueShouldTakeCurrentTimeAsDefault_add_value_after_submit.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value After Submit"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value With Random Date Time Should Work",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 22,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116989150_CreateGraph_addValueWithRandomDateTimeShouldWork_before_graph_name.png",
+            "caption": "CreateGraph AddValueWithRandomDateTimeShouldWork Before Graph Name"
+          },
+          {
+            "id": 23,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116992056_CreateGraph_addValueWithRandomDateTimeShouldWork_after_confirm.png",
+            "caption": "CreateGraph AddValueWithRandomDateTimeShouldWork After Confirm"
+          },
+          {
+            "id": 24,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116992406_addValueWithRandomDateTimeShouldWork_add_value_before_click.png",
+            "caption": "AddValueWithRandomDateTimeShouldWork Add Value Before Click"
+          },
+          {
+            "id": 25,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116993964_addValueWithRandomDateTimeShouldWork_add_value_before_add.png",
+            "caption": "AddValueWithRandomDateTimeShouldWork Add Value Before Add"
+          },
+          {
+            "id": 26,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116994774_addValueWithRandomDateTimeShouldWork_add_value_before_submit.png",
+            "caption": "AddValueWithRandomDateTimeShouldWork Add Value Before Submit"
+          },
+          {
+            "id": 27,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueWithRandomDateTimeShouldWork/1462116995795_addValueWithRandomDateTimeShouldWork_add_value_after_submit.png",
+            "caption": "AddValueWithRandomDateTimeShouldWork Add Value After Submit"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Click On Cancel Should Not Create New Graph",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 28,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1462116982254_clickOnCancelShouldNotCreateNewGraph_before_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 29,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1462116984836_clickOnCancelShouldNotCreateNewGraph_after_graph_name.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Graph Name"
+          },
+          {
+            "id": 30,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1462116985407_clickOnCancelShouldNotCreateNewGraph_after_close_keyboard.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Close Keyboard"
+          },
+          {
+            "id": 31,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickOnCancelShouldNotCreateNewGraph/1462116986396_clickOnCancelShouldNotCreateNewGraph_after_cancel_clicked.png",
+            "caption": "ClickOnCancelShouldNotCreateNewGraph After Cancel Clicked"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Clicking A Graph Should Open Add Value Activity",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 32,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickingAGraphShouldOpenAddValueActivity/1462116997405_CreateGraph_clickingAGraphShouldOpenAddValueActivity_before_graph_name.png",
+            "caption": "CreateGraph ClickingAGraphShouldOpenAddValueActivity Before Graph Name"
+          },
+          {
+            "id": 33,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickingAGraphShouldOpenAddValueActivity/1462116999508_CreateGraph_clickingAGraphShouldOpenAddValueActivity_after_confirm.png",
+            "caption": "CreateGraph ClickingAGraphShouldOpenAddValueActivity After Confirm"
+          },
+          {
+            "id": 34,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickingAGraphShouldOpenAddValueActivity/1462116999900_clickingAGraphShouldOpenAddValueActivity_before_click.png",
+            "caption": "ClickingAGraphShouldOpenAddValueActivity Before Click"
+          },
+          {
+            "id": 35,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/clickingAGraphShouldOpenAddValueActivity/1462117000776_clickingAGraphShouldOpenAddValueActivity_before_assert.png",
+            "caption": "ClickingAGraphShouldOpenAddValueActivity Before Assert"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Hitting Enter In Graph Name Field Should Create New Graph",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 36,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1462117018065_hittingEnterInGraphNameFieldShouldCreateNewGraph_before_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph Before Graph Name"
+          },
+          {
+            "id": 37,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/hittingEnterInGraphNameFieldShouldCreateNewGraph/1462117021045_hittingEnterInGraphNameFieldShouldCreateNewGraph_after_graph_name.png",
+            "caption": "HittingEnterInGraphNameFieldShouldCreateNewGraph After Graph Name"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Newly Added Graph Should Be Displayed Immediately",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 38,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1462117031655_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_before_graph_name.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately Before Graph Name"
+          },
+          {
+            "id": 39,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/newlyAddedGraphShouldBeDisplayedImmediately/1462117034016_CreateGraph_newlyAddedGraphShouldBeDisplayedImmediately_after_confirm.png",
+            "caption": "CreateGraph NewlyAddedGraphShouldBeDisplayedImmediately After Confirm"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Show Simple Graph",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 40,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivityInteractionUITest/showSimpleGraph/1462117021756_showSimpleGraph_before_asserts.png",
+            "caption": "ShowSimpleGraph Before Asserts"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Floating Action Button Should Be Rendered",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 41,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/floatingActionButtonShouldBeRendered/1462117047040_floatingActionButtonShouldBeRendered.png",
+            "caption": "FloatingActionButtonShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Main Activity Should Be Started",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 42,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/mainActivityShouldBeStarted/1462117043400_mainActivityShouldBeStarted.png",
+            "caption": "MainActivityShouldBeStarted"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Recycler View Should Be Rendered",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 43,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/recyclerViewShouldBeRendered/1462117044122_recyclerViewShouldBeRendered.png",
+            "caption": "RecyclerViewShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Down Should Maximize App Bar",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 44,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeDownShouldMaximizeAppBar/1462117041846_swipeDownShouldMaximizeAppBar.png",
+            "caption": "SwipeDownShouldMaximizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Swipe Up Should Minimize App Bar",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 45,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/swipeUpShouldMinimizeAppBar/1462117046113_swipeUpShouldMinimizeAppBar.png",
+            "caption": "SwipeUpShouldMinimizeAppBar"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "GraphActivitySetupUITest",
+        "methodPrettyName": "Tool Bar Should Be Rendered",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 46,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.GraphActivitySetupUITest/toolBarShouldBeRendered/1462117042668_toolBarShouldBeRendered.png",
+            "caption": "ToolBarShouldBeRendered"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Click On Data Series Should Close Navigation",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 47,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/clickOnDataSeriesShouldCloseNavigation/1462117057073_clickOnDataSeriesShouldCloseNavigation.png",
+            "caption": "ClickOnDataSeriesShouldCloseNavigation"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigating Back To Graph Activity Should Have Navigation Closed",
+        "serial": "emulator-5558",
+        "status": "fail",
+        "screenshots": [
+          {
+            "id": 48,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/navigatingBackToGraphActivityShouldHaveNavigationClosed/1462117066706_navigatingBackToGraphActivityShouldHaveNavigationClosed_first_click.png",
+            "caption": "NavigatingBackToGraphActivityShouldHaveNavigationClosed First Click"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Navigation View Should Be Closable",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 49,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/navigationViewShouldBeClosable/1462117052176_navigationViewShouldBeClosable.png",
+            "caption": "NavigationViewShouldBeClosable"
+          }
+        ]
+      },
+      {
+        "classSimpleName": "NavigationUITest",
+        "methodPrettyName": "Open Nav From Settings Should Have Settings Checked",
+        "serial": "emulator-5558",
+        "status": "pass",
+        "screenshots": [
+          {
+            "id": 50,
+            "path": "image/emulator-5558/org.linesofcode.alltrack.NavigationUITest/openNavFromSettingsShouldHaveSettingsChecked/1462117062722_openNavFromSettingsShouldHaveSettingsChecked.png",
+            "caption": "OpenNavFromSettingsShouldHaveSettingsChecked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "serial": "emulator-5560",
+    "name": "android-23",
+    "details": "Running Android 6.0 (API 23)",
+    "testResults": [
+      {
+        "classSimpleName": "GraphActivityInteractionUITest",
+        "methodPrettyName": "Add Value Should Take Current Time As Default",
+        "serial": "emulator-5560",
+        "status": "fail",
+        "screenshots": [
+          {
+            "id": 51,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1454969822883_CreateGraph_addValueShouldTakeCurrentTimeAsDefault_before_graph_name.png",
+            "caption": "CreateGraph AddValueShouldTakeCurrentTimeAsDefault Before Graph Name"
+          },
+          {
+            "id": 52,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1454969824625_CreateGraph_addValueShouldTakeCurrentTimeAsDefault_after_confirm.png",
+            "caption": "CreateGraph AddValueShouldTakeCurrentTimeAsDefault After Confirm"
+          },
+          {
+            "id": 53,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1454969824772_addValueShouldTakeCurrentTimeAsDefault_add_value_before_click.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value Before Click"
+          },
+          {
+            "id": 54,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1454969825348_addValueShouldTakeCurrentTimeAsDefault_add_value_before_add.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value Before Add"
+          },
+          {
+            "id": 55,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1454969826039_addValueShouldTakeCurrentTimeAsDefault_add_value_before_submit.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value Before Submit"
+          },
+          {
+            "id": 56,
+            "path": "image/emulator-5560/org.linesofcode.alltrack.GraphActivityInteractionUITest/addValueShouldTakeCurrentTimeAsDefault/1454969826758_addValueShouldTakeCurrentTimeAsDefault_add_value_after_submit.png",
+            "caption": "AddValueShouldTakeCurrentTimeAsDefault Add Value After Submit"
+          }
+        ]
+      }
+    ]
+  }
+];
+
+            function updateDevice(device) {
+                $('#title').text(device.name);
+                $('#subtitle').text(device.details);
+                $('#total-test-size').text(device.testResults.length)
+
+                testResultIndex = 0
+                updateTest(device.testResults[testResultIndex]);
+            }
+
+            function updateTest(testResult) {
+                $('#current-test-info').removeClass('pass fail error')
+                $('#current-test-info').addClass(testResult.status)
+                $('#test-name').text(testResult.methodPrettyName)
+                $('#test-class-name').text(testResult.classSimpleName)
+
+                $("#slider").empty();
+                $.each(testResult.screenshots, function(index, screenshot) {
+                    tag = '<img alt="' + screenshot.caption + '" src="' + screenshot.path + '" />'
+                    $('#slider').append(tag)
+                });
+
+                $('#current-test-number').text(testResultIndex + 1)
+                screenshotIndex = 0
+
+                // Re-initialize the slider with the new slides
+                $('#slider').nivoSlider({
+                    effect: 'boxRainGrow', // Specify sets like: 'fold,fade,sliceDown'
+                    animSpeed: 500, // Slide transition speed
+                    pauseTime: 3000, // How long each slide will show
+                    directionNav: false, // Next & Prev navigation
+                    controlNavThumbs: false, // Use thumbnails for Control Nav
+                    pauseOnHover: false, // Stop animation while hovering
+                    manualAdvance: false, // Force manual transitions
+                    beforeChange: function(){ // Triggers before a slide transition
+                        screenshotIndex++
+                        if(devices[deviceIndex].testResults[testResultIndex].screenshots[screenshotIndex]) {
+                            $('#caption').text(devices[deviceIndex].testResults[testResultIndex].screenshots[screenshotIndex].caption)
+                        }
+                    },
+                    lastSlide: function(){ // Triggers when last slide is shown
+                        $('#caption').text("")
+                    },
+                    afterLoad: function(){ // Triggers when slider has loaded
+                        $('#caption').text(devices[deviceIndex].testResults[testResultIndex].screenshots[screenshotIndex].caption)
+                    },
+                    slideshowEnd: function() { // Triggers after all slides have been shown
+                        nextTestResult()
+                    }
+                });
+
+                // There's a bug in Nivo where it doesn't know what to do w/ only one screenshot.
+                if(testResult.screenshots.length == 1) {
+                    window.setTimeout(nextTestResult, 3000)
+                }
+            }
+
+            function nextTestResult() {
+                $('#slider').data('nivoslider').stop();
+                $('#slider-wrapper').empty()
+                $('#slider-wrapper').append($('<div id="slider" class="nivoSlider"/>'))
+
+                testResultIndex++
+                tests = devices[deviceIndex].testResults
+                if(testResultIndex < tests.length) {
+                    updateTest(tests[testResultIndex])
+                } else {
+                    nextDevice()
+                }
+            }
+
+            function nextDevice() {
+                if(deviceIndex == devices.length - 1) {
+                    location.reload() // Reload at end to load new spoon results.
+                } else {
+                    deviceIndex++
+                    updateDevice(devices[deviceIndex])
+                }
+            }
+
+            // If we start feeling fancy we could create an actual class. Until then, we're global.
+            var deviceIndex = 0;
+            var testResultIndex = 0;
+            var screenshotIndex = 0;
+
+            // Start it off
+            $(function() {
+                updateDevice(devices[deviceIndex]);
+            });
+        </script>
+    </body>
+</html>

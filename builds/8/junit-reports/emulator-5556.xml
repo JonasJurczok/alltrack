@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.linesofcode.alltrack.test" tests="32" failures="0" errors="0" skipped="0" time="109.0" timestamp="2016-05-01T15:38:08" hostname="localhost">
+  <properties />
+  <testcase name="addValueShouldTakeCurrentTimeAsDefault" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="7.465" />
+  <testcase name="addGraphWithUnitTypeShouldWork" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="6.001" />
+  <testcase name="clickOnCancelShouldNotCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="7.258" />
+  <testcase name="addValueWithRandomDateTimeShouldWork" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="7.506" />
+  <testcase name="clickingAGraphShouldOpenAddValueActivity" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="5.25" />
+  <testcase name="addValueShouldRefreshGraphAndMakeValueVisible" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="12.203" />
+  <testcase name="hittingEnterInGraphNameFieldShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="4.241" />
+  <testcase name="showSimpleGraph" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="0.603" />
+  <testcase name="addValueForUnitGraphShouldWork" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="10.118" />
+  <testcase name="newlyAddedGraphShouldBeDisplayedImmediately" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="9.414" />
+  <testcase name="addNewGraphShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="3.742" />
+  <testcase name="swipeDownShouldMaximizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="3.241" />
+  <testcase name="toolBarShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.655" />
+  <testcase name="mainActivityShouldBeStarted" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.577" />
+  <testcase name="recyclerViewShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.757" />
+  <testcase name="swipeUpShouldMinimizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="1.308" />
+  <testcase name="floatingActionButtonShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.653" />
+  <testcase name="testCreateGraphShouldPersistGraph" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.101" />
+  <testcase name="testDeleteGraphShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.176" />
+  <testcase name="testDeleteGraphShouldWork" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.076" />
+  <testcase name="testGetAllShouldHaveDatapointsOrdererdByTime" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.127" />
+  <testcase name="testGetByIdShouldHaveDatapointsOrderedByTime" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.051" />
+  <testcase name="testSaveShouldCreateNewDatapoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.076" />
+  <testcase name="testSaveShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.026" />
+  <testcase name="testAndroidTestCaseSetupProperly" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.026" />
+  <testcase name="navigationViewShouldBeClosable" classname="org.linesofcode.alltrack.NavigationUITest" time="4.472" />
+  <testcase name="clickOnDataSeriesShouldCloseNavigation" classname="org.linesofcode.alltrack.NavigationUITest" time="3.94" />
+  <testcase name="openNavFromSettingsShouldHaveSettingsChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="4.97" />
+  <testcase name="navigatingBackToGraphActivityShouldHaveNavigationClosed" classname="org.linesofcode.alltrack.NavigationUITest" time="5.676" />
+  <testcase name="clickOnSettingsShouldSwitchActivity" classname="org.linesofcode.alltrack.NavigationUITest" time="3.44" />
+  <testcase name="navigationViewShouldBeRendered" classname="org.linesofcode.alltrack.NavigationUITest" time="3.389" />
+  <testcase name="openNavFromMainShouldHaveMainChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="3.491" />
+</testsuite>

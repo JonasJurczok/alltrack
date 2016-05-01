@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.linesofcode.alltrack.test" tests="32" failures="4" errors="0" skipped="0" time="0.0" timestamp="2016-05-01T15:38:05" hostname="localhost">
+  <properties />
+  <testcase name="addValueShouldTakeCurrentTimeAsDefault" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="7.866" />
+  <testcase name="addGraphWithUnitTypeShouldWork" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="4.644" />
+  <testcase name="clickOnCancelShouldNotCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="6.583" />
+  <testcase name="addValueWithRandomDateTimeShouldWork" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="9.695" />
+  <testcase name="clickingAGraphShouldOpenAddValueActivity" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="4.795" />
+  <testcase name="addValueShouldRefreshGraphAndMakeValueVisible" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="12.178" />
+  <testcase name="hittingEnterInGraphNameFieldShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="8.207" />
+  <testcase name="showSimpleGraph" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="0.628" />
+  <testcase name="addValueForUnitGraphShouldWork" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="8.134" />
+  <testcase name="newlyAddedGraphShouldBeDisplayedImmediately" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="4.267" />
+  <testcase name="addNewGraphShouldCreateNewGraph" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="4.519" />
+  <testcase name="swipeDownShouldMaximizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="3.267" />
+  <testcase name="toolBarShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.755" />
+  <testcase name="mainActivityShouldBeStarted" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.703" />
+  <testcase name="recyclerViewShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.93" />
+  <testcase name="swipeUpShouldMinimizeAppBar" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="1.808" />
+  <testcase name="floatingActionButtonShouldBeRendered" classname="org.linesofcode.alltrack.GraphActivitySetupUITest" time="0.855" />
+  <testcase name="testCreateGraphShouldPersistGraph" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.127" />
+  <testcase name="testDeleteGraphShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.126" />
+  <testcase name="testDeleteGraphShouldWork" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.126" />
+  <testcase name="testGetAllShouldHaveDatapointsOrdererdByTime" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.101" />
+  <testcase name="testGetByIdShouldHaveDatapointsOrderedByTime" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.127" />
+  <testcase name="testSaveShouldCreateNewDatapoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.051" />
+  <testcase name="testSaveShouldDeleteDataPoints" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.076" />
+  <testcase name="testAndroidTestCaseSetupProperly" classname="org.linesofcode.alltrack.GraphServiceTest" time="0.0" />
+  <testcase name="navigationViewShouldBeClosable" classname="org.linesofcode.alltrack.NavigationUITest" time="4.095" />
+  <testcase name="clickOnDataSeriesShouldCloseNavigation" classname="org.linesofcode.alltrack.NavigationUITest" time="4.947" />
+  <testcase name="openNavFromSettingsShouldHaveSettingsChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="5.574" />
+  <testcase name="navigatingBackToGraphActivityShouldHaveNavigationClosed" classname="org.linesofcode.alltrack.NavigationUITest" time="6.443">
+    <failure>java.lang.OutOfMemoryError: Failed to allocate a 3686412 byte allocation with 3371352 free bytes and 3MB until OOM
+at dalvik.system.VMRuntime.newNonMovableArray(Native Method)
+at android.graphics.Bitmap.nativeCreate(Native Method)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:812)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:789)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:756)
+at com.squareup.spoon.Spoon.takeScreenshot(Spoon.java:93)
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:83)
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
+at org.linesofcode.alltrack.NavigationUITest.navigatingBackToGraphActivityShouldHaveNavigationClosed(NavigationUITest.java:158)
+at java.lang.reflect.Method.invoke(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:372)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
+</failure>
+  </testcase>
+  <testcase name="clickOnSettingsShouldSwitchActivity" classname="org.linesofcode.alltrack.NavigationUITest" time="2.965">
+    <failure>java.lang.OutOfMemoryError: Failed to allocate a 3686412 byte allocation with 1805084 free bytes and 1762KB until OOM
+at dalvik.system.VMRuntime.newNonMovableArray(Native Method)
+at android.graphics.Bitmap.nativeCreate(Native Method)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:812)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:789)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:756)
+at com.squareup.spoon.Spoon.takeScreenshot(Spoon.java:93)
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:83)
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
+at org.linesofcode.alltrack.NavigationUITest.clickOnSettingsShouldSwitchActivity(NavigationUITest.java:144)
+at java.lang.reflect.Method.invoke(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:372)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
+</failure>
+  </testcase>
+  <testcase name="navigationViewShouldBeRendered" classname="org.linesofcode.alltrack.NavigationUITest" time="3.268">
+    <failure>java.lang.OutOfMemoryError: Failed to allocate a 3686412 byte allocation with 327504 free bytes and 319KB until OOM
+at dalvik.system.VMRuntime.newNonMovableArray(Native Method)
+at android.graphics.Bitmap.nativeCreate(Native Method)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:812)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:789)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:756)
+at com.squareup.spoon.Spoon.takeScreenshot(Spoon.java:93)
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:83)
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:60)
+at org.linesofcode.alltrack.NavigationUITest.navigationViewShouldBeRendered(NavigationUITest.java:66)
+at java.lang.reflect.Method.invoke(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:372)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:257)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1853)
+</failure>
+  </testcase>
+  <testcase name="openNavFromMainShouldHaveMainChecked" classname="org.linesofcode.alltrack.NavigationUITest" time="1.012">
+    <failure>java.lang.OutOfMemoryError: Failed to allocate a 1440012 byte allocation with 174400 free bytes and 170KB until OOM
+at dalvik.system.VMRuntime.newNonMovableArray(Native Method)
+at android.graphics.Bitmap.nativeCreate(Native Method)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:812)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:789)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:756)
+at com.github.mikephil.charting.renderer.LineChartRenderer.drawData(LineChartRenderer.java:88)
+at com.github.mikephil.charting.charts.BarLineChartBase.onDraw(BarLineChartBase.java:247)
+at android.view.View.draw(View.java:15231)
+at android.view.View.draw(View.java:15140)
+at android.view.ViewGroup.drawChild(ViewGroup.java:3405)
+at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3198)
+at android.view.View.draw(View.java:15138)
+at android.view.ViewGroup.drawChild(ViewGroup.java:3405)
+at android.support.v7.widget.RecyclerView.drawChild(RecyclerView.java:3693)
+at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3198)
+at android.view.View.draw(View.java:15234)
+at android.support.v7.widget.RecyclerView.draw(RecyclerView.java:3171)
+at android.view.View.draw(View.java:15140)
+at android.view.ViewGroup.drawChild(ViewGroup.java:3405)
+at android.support.design.widget.CoordinatorLayout.drawChild(CoordinatorLayout.java:1074)
+at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3198)
+at android.view.View.draw(View.java:15138)
+at android.view.ViewGroup.drawChild(ViewGroup.java:3405)
+at android.support.v4.widget.DrawerLayout.drawChild(DrawerLayout.java:1229)
+at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3198)
+at android.view.View.draw(View.java:15234)
+at android.view.View.draw(View.java:15140)
+at android.view.ViewGroup.drawChild(ViewGroup.java:3405)
+at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3198)
+at android.view.View.draw(View.java:15138)
+at android.view.ViewGroup.drawChild(ViewGroup.java:3405)
+at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3198)
+at android.view.View.draw(View.java:15138)
+at android.view.ViewGroup.drawChild(ViewGroup.java:3405)
+at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3198)
+at android.view.View.draw(View.java:15138)
+at android.view.ViewGroup.drawChild(ViewGroup.java:3405)
+at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3198)
+at android.view.View.draw(View.java:15138)
+at android.view.ViewGroup.drawChild(ViewGroup.java:3405)
+at android.view.ViewGroup.dispatchDraw(ViewGroup.java:3198)
+at android.view.View.draw(View.java:15234)
+at android.widget.FrameLayout.draw(FrameLayout.java:598)
+at com.android.internal.policy.impl.PhoneWindow$DecorView.draw(PhoneWindow.java:2650)
+at android.view.ViewRootImpl.drawSoftware(ViewRootImpl.java:2644)
+at android.view.ViewRootImpl.draw(ViewRootImpl.java:2557)
+at android.view.ViewRootImpl.performDraw(ViewRootImpl.java:2352)
+at android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1982)
+at android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1061)
+at android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:5885)
+at android.view.Choreographer$CallbackRecord.run(Choreographer.java:767)
+at android.view.Choreographer.doCallbacks(Choreographer.java:580)
+at android.view.Choreographer.doFrame(Choreographer.java:550)
+at android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:753)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:135)
+at android.app.ActivityThread.main(ActivityThread.java:5254)
+at java.lang.reflect.Method.invoke(Native Method)
+at java.lang.reflect.Method.invoke(Method.java:372)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:903)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:698)
+</failure>
+  </testcase>
+</testsuite>

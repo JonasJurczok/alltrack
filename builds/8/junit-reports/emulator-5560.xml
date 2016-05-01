@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.linesofcode.alltrack.test" tests="1" failures="1" errors="0" skipped="0" time="0.0" timestamp="2016-05-01T15:36:15" hostname="localhost">
+  <properties />
+  <testcase name="addValueShouldTakeCurrentTimeAsDefault" classname="org.linesofcode.alltrack.GraphActivityInteractionUITest" time="0.296">
+    <failure>Test failed to run to completion. Reason: 'Instrumentation run failed due to 'java.sql.SQLException''. Check device logcat for details</failure>
+  </testcase>
+</testsuite>
