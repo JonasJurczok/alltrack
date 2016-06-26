@@ -1,3 +1,5 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'jacoco'
@@ -99,11 +101,19 @@ spoon {
 }
 
 task grantAnimationPermission(type: Exec, dependsOn: 'installDebug') {
-    commandLine "./adb_all.sh shell pm grant org.linesofcode.alltrack android.permission.SET_ANIMATION_SCALE".split(' ')
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        commandLine "bash adb_all.sh shell pm grant org.linesofcode.alltrack android.permission.SET_ANIMATION_SCALE".split(' ')
+    } else {
+        commandLine "./adb_all.sh shell pm grant org.linesofcode.alltrack android.permission.SET_ANIMATION_SCALE".split(' ')
+    }
 }
 
 task grantWritePermission(type: Exec, dependsOn: 'installDebug') {
-    commandLine "./adb_all.sh shell pm grant org.linesofcode.alltrack android.permission.WRITE_EXTERNAL_STORAGE".split(' ')
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        commandLine "bash adb_all.sh shell pm grant org.linesofcode.alltrack android.permission.WRITE_EXTERNAL_STORAGE".split(' ')
+    } else {
+        commandLine "./adb_all.sh shell pm grant org.linesofcode.alltrack android.permission.WRITE_EXTERNAL_STORAGE".split(' ')
+    }
 }
 
 tasks.whenTaskAdded { task ->
