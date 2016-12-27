@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="org.linesofcode.alltrack">
+	package="org.linesofcode.eatr">
 
 	<uses-permission android:name="android.permission.SET_ANIMATION_SCALE"/>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>

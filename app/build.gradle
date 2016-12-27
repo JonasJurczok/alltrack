@@ -7,13 +7,13 @@ apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: 'spoon'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 25
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "org.linesofcode.alltrack"
+        applicationId "org.linesofcode.eatr"
         minSdkVersion 19
-        targetSdkVersion 23
+        targetSdkVersion 25
         versionCode 1
         versionName "0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -64,9 +64,9 @@ tasks.withType(Test) {
 }
 
 dependencies {
-    compile "com.android.support:appcompat-v7:23.0.1"
-    compile "com.android.support:design:23.0.1"
-    compile "com.android.support:recyclerview-v7:23.0.1"
+    compile "com.android.support:appcompat-v7:25.1.0"
+    compile "com.android.support:design:25.1.0"
+    compile "com.android.support:recyclerview-v7:25.1.0"
 
     compile "com.j256.ormlite:ormlite-core:4.41"
     compile "com.j256.ormlite:ormlite-android:4.41"
@@ -102,17 +102,17 @@ spoon {
 
 task grantAnimationPermission(type: Exec, dependsOn: 'installDebug') {
     if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-        commandLine "bash adb_all.sh shell pm grant org.linesofcode.alltrack android.permission.SET_ANIMATION_SCALE".split(' ')
+        commandLine "bash adb_all.sh shell pm grant org.linesofcode.eatr android.permission.SET_ANIMATION_SCALE".split(' ')
     } else {
-        commandLine "./adb_all.sh shell pm grant org.linesofcode.alltrack android.permission.SET_ANIMATION_SCALE".split(' ')
+        commandLine "./adb_all.sh shell pm grant org.linesofcode.eatr android.permission.SET_ANIMATION_SCALE".split(' ')
     }
 }
 
 task grantWritePermission(type: Exec, dependsOn: 'installDebug') {
     if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-        commandLine "bash adb_all.sh shell pm grant org.linesofcode.alltrack android.permission.WRITE_EXTERNAL_STORAGE".split(' ')
+        commandLine "bash adb_all.sh shell pm grant org.linesofcode.eatr android.permission.WRITE_EXTERNAL_STORAGE".split(' ')
     } else {
-        commandLine "./adb_all.sh shell pm grant org.linesofcode.alltrack android.permission.WRITE_EXTERNAL_STORAGE".split(' ')
+        commandLine "./adb_all.sh shell pm grant org.linesofcode.eatr android.permission.WRITE_EXTERNAL_STORAGE".split(' ')
     }
 }
 

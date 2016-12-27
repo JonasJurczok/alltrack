@@ -1,4 +1,4 @@
-package org.linesofcode.alltrack.graph;
+package org.linesofcode.eatr.day;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,39 +11,18 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
-import org.linesofcode.alltrack.App;
-import org.linesofcode.alltrack.R;
-import org.linesofcode.alltrack.framework.navigation.NavigatableBaseActivity;
+import org.linesofcode.eatr.App;
+import org.linesofcode.eatr.R;
+import org.linesofcode.eatr.framework.navigation.NavigatableBaseActivity;
 
 import javax.inject.Inject;
 
-/**
- * Copyright 2015 Jonas Jurczok (jonasjurczok@gmail.com)
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-public class GraphActivity extends NavigatableBaseActivity implements GraphAdapterClickListener {
+public class GraphActivity extends NavigatableBaseActivity {
 
     private static final String TAG = GraphActivity.class.getName();
     public static final Integer CREATE_GRAPH_INTENT_CODE = 1;
     public static final Integer ADD_VALUE_INTENT_CODE = 2;
 
-
-    @Inject
-    GraphAdapter graphAdapter;
-
-    @Inject
-    GraphService graphService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,48 +43,22 @@ public class GraphActivity extends NavigatableBaseActivity implements GraphAdapt
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        recyclerView.setAdapter(graphAdapter);
-        graphAdapter.setClickListener(this);
+        //recyclerView.setAdapter(graphAdapter);
+        //graphAdapter.setClickListener(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createGraph();
+                Log.d(TAG, "clicked the floating action button.");
             }
         });
     }
 
-    protected void createGraph() {
-        Intent graphDetailIntent = new Intent(this, CreateGraphActivity.class);
-        startActivityForResult(graphDetailIntent, CREATE_GRAPH_INTENT_CODE);
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Log.d(TAG, "Received onActivityResult for request [" + requestCode + "] and result [" + resultCode + "]");
-        if (requestCode == CREATE_GRAPH_INTENT_CODE) {
-            if (resultCode == RESULT_OK) {
-                Log.d(TAG, "updating graphs...");
-                graphAdapter.updateGraphs();
-            }
-        } else if (requestCode == ADD_VALUE_INTENT_CODE) {
-            if (resultCode == RESULT_OK) {
-                Bundle extras = data.getExtras();
-                int position = extras.getInt("org.linesofcode.alltrack.position");
-                int graphId = extras.getInt("org.linesofcode.alltrack.graphId");
-                Log.d(TAG, "Value added. Updating graph [" + graphId + "] for position [" + position + "].");
-                graphAdapter.updateGraph(graphId, position);
-            }
-        }
-    }
-
-    @Override
-    public void onClick(Graph graph, int position) {
-        Intent intent = new Intent(this, AddValueActivity.class);
-        intent.putExtra("graphId", graph.getId());
-        intent.putExtra("position", position);
-        startActivityForResult(intent, ADD_VALUE_INTENT_CODE);
     }
 
     private void initializeToolbar() {
@@ -114,7 +67,7 @@ public class GraphActivity extends NavigatableBaseActivity implements GraphAdapt
 
         DrawerLayout mainLayout = (DrawerLayout) findViewById(R.id.mainLayout);
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, mainLayout, toolbar, R.string.navigation_open, R.string.navigation_close);
-        mainLayout.setDrawerListener(drawerToggle);
+        mainLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
     }
 
